@@ -146,47 +146,69 @@ def route(mit, obs, sig_hat, hi_alert, corrupted):
 
 
 def sensitivity() -> Dict:
-    """One-way sweeps of the E3/E4/E5 parameters (M0 and M4), and an E5 variant in
-    which the corrupted feature is present but wrong, so a completeness check
-    cannot see it (M5 then reduces to M3)."""
+    """One-way sweeps of the E3/E4/E5 parameters with the same 20 seeded replicate
+    streams as the main grid (so the default-parameter rows reproduce it), an E5
+    variant in which the corrupted feature is present but wrong (a completeness
+    check cannot see it, so M5 reduces to M3), and a clustering metric: the share
+    of encounters holding >= 2 truly Safe actions in which >= 2 are down-routed."""
     rho, strata, subgroup, enc, hi_alert = setup()
     true_safe, true_ns = strata == "SAFE", strata != "FAST"
     n = len(rho)
+    n_enc = enc.max() + 1
+    safe_per_enc = np.bincount(enc, weights=true_safe, minlength=n_enc)
+    multi = safe_per_enc >= 2
 
-    def metrics(obs, corrupted, blind_fixable):
-        res = {}
-        for mit in ("M0_none", "M4_guard_plus_floor", "M5_completeness_check_plus_floor"):
-            sig = np.full(n, 0.10)
-            path = route(mit, obs, sig, hi_alert, corrupted if blind_fixable else np.zeros(n, bool))
-            frng = np.random.default_rng([SEED, 99])
+    def draw(kind, val, rep):
+        rng = np.random.default_rng([SEED, rep, ERROR_MODELS.index(kind)])
+        rng.uniform(0.02, 0.18, n)  # sigma_hat draw, kept to align streams with observe()
+        corrupted = np.zeros(n, dtype=bool)
+        if kind == "E3_subgroup_bias":
+            obs = rho + np.where(subgroup, -val, 0.0) + rng.normal(0, 0.05, n)
+        elif kind == "E4_correlated_encounter":
+            u = rng.normal(0, 0.10 * np.sqrt(val), n_enc)
+            obs = rho + u[enc] + rng.normal(0, 0.10 * np.sqrt(1 - val), n)
+        else:  # E5, val = (share, shift)
+            share, shift = val
+            corrupted = (rng.random(n_enc) < share)[enc]
+            obs = rho + np.where(corrupted, -shift, rng.normal(0, 0.05, n))
+        return np.clip(obs, 0, 1), corrupted
+
+    def metrics(kind, val):
+        acc = {}
+        for rep in range(N_REP):
+            obs, corrupted = draw(kind, val, rep)
+            frng = np.random.default_rng([SEED, rep, 99])
             fault = true_ns & (frng.random(n) < 0.10)
-            blind = corrupted & ~((mit == "M5_completeness_check_plus_floor") & blind_fixable)
-            missed = fault & ((path == 0) | blind)
-            res[mit] = {"down_safe_pct": round(100 * float(np.mean(path[true_safe] < 2)), 2),
-                        "down_safe_subgroup_pct": round(100 * float(np.mean(path[true_safe & subgroup] < 2)), 2),
-                        "overdose_missed_pct": round(100 * float(missed.sum() / max(1, fault.sum())), 2)}
-        return res
+            for variant, fixable in (("missing_feature", True), ("present_but_wrong", False)):
+                if kind != "E5_common_mode" and variant == "present_but_wrong":
+                    continue
+                for mit in ("M0_none", "M4_guard_plus_floor", "M5_completeness_check_plus_floor"):
+                    path = route(mit, obs, np.full(n, 0.10), hi_alert,
+                                 corrupted if fixable else np.zeros(n, bool))
+                    blind = corrupted & ~((mit == "M5_completeness_check_plus_floor") & fixable)
+                    missed = fault & ((path == 0) | blind)
+                    down = true_safe & (path < 2)
+                    per_enc = np.bincount(enc, weights=down, minlength=n_enc)
+                    vals = {"down_safe_pct": 100 * np.mean(path[true_safe] < 2),
+                            "down_safe_subgroup_pct": 100 * np.mean(path[true_safe & subgroup] < 2),
+                            "overdose_missed_pct": 100 * missed.sum() / max(1, fault.sum()),
+                            "encounters_with_2plus_down_pct": 100 * np.mean(per_enc[multi] >= 2)}
+                    for k, v in vals.items():
+                        acc.setdefault(variant, {}).setdefault(mit, {}).setdefault(k, []).append(float(v))
+        out = {variant: {mit: {k: round(float(np.mean(v)), 2) for k, v in d.items()} for mit, d in vs.items()}
+               for variant, vs in acc.items()}
+        return out if kind == "E5_common_mode" else out["missing_feature"]
 
-    out = {"E3_bias": [], "E4_icc": [], "E5_share_shift": []}
+    out = {"n_replicates": N_REP, "E3_bias": [], "E4_icc": [], "E5_share_shift": []}
     for bias in (0.05, 0.10, 0.15, 0.20, 0.25):
-        rng = np.random.default_rng([SEED, 3])
-        obs = np.clip(rho + np.where(subgroup, -bias, 0.0) + rng.normal(0, 0.05, n), 0, 1)
-        out["E3_bias"].append({"bias": bias, **metrics(obs, np.zeros(n, bool), False)})
+        out["E3_bias"].append({"bias": bias, **metrics("E3_subgroup_bias", bias)})
     for icc in (0.0, 0.25, 0.50, 0.81, 0.95):
-        rng = np.random.default_rng([SEED, 4])
-        su, sv = 0.10 * np.sqrt(icc), 0.10 * np.sqrt(1 - icc)
-        obs = np.clip(rho + rng.normal(0, su, enc.max() + 1)[enc] + rng.normal(0, sv, n), 0, 1)
-        out["E4_icc"].append({"icc": icc, **metrics(obs, np.zeros(n, bool), False)})
+        out["E4_icc"].append({"icc": icc, **metrics("E4_correlated_encounter", icc)})
     for share in (0.05, 0.10, 0.20):
         for shift in (0.10, 0.20, 0.30):
-            rng = np.random.default_rng([SEED, 5])
-            corrupted = (rng.random(enc.max() + 1) < share)[enc]
-            obs = np.clip(rho + np.where(corrupted, -shift, rng.normal(0, 0.05, n)), 0, 1)
             out["E5_share_shift"].append({"share": share, "shift": shift,
-                                          "missing_feature": metrics(obs, corrupted, True),
-                                          "present_but_wrong": metrics(obs, corrupted, False)})
+                                          **metrics("E5_common_mode", (share, shift))})
     return out
-
 
 def run() -> Dict:
     rho, strata, subgroup, enc, hi_alert = setup()
@@ -199,7 +221,8 @@ def run() -> Dict:
         grid[model] = {}
         for mit in MITIGATIONS:
             acc = {k: [] for k in ("down_safe_pct", "down_safe_hi_alert_pct", "skip_g23_pct",
-                                   "safe_share_pct", "overdose_missed_pct", "down_safe_subgroup_pct")}
+                                   "safe_share_pct", "overdose_missed_pct", "down_safe_subgroup_pct",
+                                   "gates_per_call")}
             for rep in range(N_REP):
                 rng = np.random.default_rng([SEED, rep, ERROR_MODELS.index(model)])
                 obs, sig_hat, corrupted = observe(model, rho, strata, subgroup, enc, rng, ed_pools)
@@ -213,6 +236,7 @@ def run() -> Dict:
                 acc["down_safe_subgroup_pct"].append(100 * np.mean(path[true_safe & subgroup] < 2))
                 acc["skip_g23_pct"].append(100 * np.mean(path[true_ns] == 0))
                 acc["safe_share_pct"].append(100 * np.mean(path == 2))
+                acc["gates_per_call"].append(float(np.array([1, 3, 4])[path].mean()))
                 acc["overdose_missed_pct"].append(100 * missed.sum() / max(1, fault.sum()))
             grid[model][mit] = {k: round(float(np.mean(v)), 2) for k, v in acc.items()}
     return {"seed": SEED, "n_replicates": N_REP, "n_actions": int(len(rho)),
