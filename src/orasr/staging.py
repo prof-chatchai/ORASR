@@ -9,7 +9,9 @@ supports two remedies:
 * **Irreversible actions** are wrapped in :class:`StagedAction`. The router
   calls ``prepare`` (which must have no external effect, e.g. build the order
   message), runs G4 on the *staged* output, and calls ``commit`` only if G4
-  passes; otherwise ``abort`` is called and nothing is committed.
+  passes; otherwise ``abort`` is called and nothing is committed. For an
+  irreversible StagedAction this staged G4 runs on every pathway, so a
+  misrouted irreversible action is still output-checked before commit.
 * **Reversible actions** may supply ``compensate``; if G4 fails after
   execution the router invokes it (e.g. discontinue the order just placed) and
   records the compensation in the result.

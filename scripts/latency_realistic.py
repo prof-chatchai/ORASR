@@ -9,7 +9,7 @@ external service, with latencies drawn (seed 42) from lognormal distributions:
 1,000 requests drawn from the seed-42 cohort mix are issued through a thread
 pool at concurrency 1, 2, 4, 8, 16, 32, 64, for ORASR and for Flat-4 (every
 action on the Safe gate stack). Reported: end-to-end latency p50/p95/p99 and
-throughput. A second scenario gives the G3 service a capacity of 8 concurrent
+throughput. Each level is repeated 5 times; medians and min-max are reported. A second scenario gives the G3 service a capacity of 8 concurrent
 calls (semaphore), so requests queue for it. Values are host-specific (environment block included); the
 simulated service times are an assumption, not a measurement of real services.
 Output: results/latency_realistic.json
@@ -41,6 +41,7 @@ logging.disable(logging.CRITICAL)
 SEED = lb.SEED
 N_REQ = 1000
 LEVELS = (1, 2, 4, 8, 16, 32, 64)
+REPEATS = 5
 SERVICE = {GateType.RISK_ASSESSMENT: (0.002, 0.5), GateType.CONSTRAINT_VALIDATION: (0.005, 0.6),
            GateType.POSTCONDITION: (0.001, 0.5)}
 
@@ -95,8 +96,16 @@ def run() -> Dict:
                          human_approved=True, req_id=q["id"])
         out[scen] = {"orasr": [], "flat4": []}
         for conc in LEVELS:
-            out[scen]["orasr"].append(run_level(router, reqs, conc, False))
-            out[scen]["flat4"].append(run_level(router, reqs, conc, True))
+            for key, force in (("orasr", False), ("flat4", True)):
+                # interleave repeats so slow host phases hit both monitors alike
+                runs = [run_level(router, reqs, conc, force) for _ in range(REPEATS)]
+                agg = {"concurrency": conc, "repeats": REPEATS}
+                for m in ("p50_ms", "p95_ms", "p99_ms", "mean_ms", "throughput_rps"):
+                    vals = sorted(r[m] for r in runs)
+                    agg[m] = round(float(np.median(vals)), 3)
+                    agg[m + "_min"] = vals[0]
+                    agg[m + "_max"] = vals[-1]
+                out[scen][key].append(agg)
     mean_service = {gt.value: round(1000 * float(np.mean([w[gt] for w in waits.values()])), 3)
                     for gt in SERVICE}
     return {"seed": SEED, "n_requests": N_REQ, "service_model": {gt.value: {"median_s": m, "log_sd": s}

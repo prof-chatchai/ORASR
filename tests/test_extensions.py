@@ -38,6 +38,18 @@ def test_staged_irreversible_action_not_committed_when_g4_fails():
     assert res.safe is False and effects == [] and res.metadata["committed"] is False
 
 
+def test_irreversible_staged_action_checked_on_fast_pathway():
+    effects = []
+    act = StagedAction(prepare=lambda d: None, commit=lambda s: effects.append(s) or s)
+    res = ORASRRouter(enable_audit=False).route(action=act, input_data={"a": 1},
+                                                risk_score=0.1, human_approved=True)
+    assert res.path is ReasoningPath.FAST and res.safe is False and effects == []
+    ok = StagedAction(prepare=lambda d: {"o": d}, commit=lambda s: effects.append(s) or s)
+    res2 = ORASRRouter(enable_audit=False).route(action=ok, input_data={"a": 1},
+                                                 risk_score=0.1, human_approved=True)
+    assert res2.safe and effects == [{"o": {"a": 1}}]
+
+
 def test_staged_action_commits_when_g4_passes():
     effects = []
     act = StagedAction(prepare=lambda d: {"order": d}, commit=lambda s: effects.append(s) or s)

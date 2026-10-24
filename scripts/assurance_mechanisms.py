@@ -74,6 +74,11 @@ def part_a() -> Dict:
         act = StagedAction(prepare=lambda d: {"order": d}, commit=lambda s: effects.append(s) or s)
         r.route(action=act, input_data={"i": i}, risk_score=0.9, human_approved=True)
     out["staged_clean"] = {"actions": n, "committed": len(effects)}
+    effects = []
+    for i in range(n):  # irreversible actions misrouted to Fast (rho = 0.1) with a bad output
+        act = StagedAction(prepare=lambda d: None, commit=lambda s: effects.append(s) or s)
+        r.route(action=act, input_data={"i": i}, risk_score=0.1, human_approved=True)
+    out["staged_misrouted_fast"] = {"g4_faults": n, "side_effects_committed": len(effects)}
     return out
 
 

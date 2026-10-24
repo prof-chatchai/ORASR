@@ -39,6 +39,9 @@ Metrics (mean over replicates)
   safe_share_pct     share of all actions on Safe (approval load)
   overdose_missed_pct  overdose faults (injected on 10% of truly Normal-or-Safe
                      actions) that pass undetected: routed Fast, or dose check blind
+Also: one-way sensitivity sweeps of the E3 bias, E4 intra-encounter
+correlation and E5 corrupted share / shift, plus an E5 variant whose corrupted
+feature is present but wrong (key "sensitivity").
 Output: results/structured_misrouting.json, results/mitigation_comparison.json
 """
 
@@ -142,6 +145,49 @@ def route(mit, obs, sig_hat, hi_alert, corrupted):
     return path
 
 
+def sensitivity() -> Dict:
+    """One-way sweeps of the E3/E4/E5 parameters (M0 and M4), and an E5 variant in
+    which the corrupted feature is present but wrong, so a completeness check
+    cannot see it (M5 then reduces to M3)."""
+    rho, strata, subgroup, enc, hi_alert = setup()
+    true_safe, true_ns = strata == "SAFE", strata != "FAST"
+    n = len(rho)
+
+    def metrics(obs, corrupted, blind_fixable):
+        res = {}
+        for mit in ("M0_none", "M4_guard_plus_floor", "M5_completeness_check_plus_floor"):
+            sig = np.full(n, 0.10)
+            path = route(mit, obs, sig, hi_alert, corrupted if blind_fixable else np.zeros(n, bool))
+            frng = np.random.default_rng([SEED, 99])
+            fault = true_ns & (frng.random(n) < 0.10)
+            blind = corrupted & ~((mit == "M5_completeness_check_plus_floor") & blind_fixable)
+            missed = fault & ((path == 0) | blind)
+            res[mit] = {"down_safe_pct": round(100 * float(np.mean(path[true_safe] < 2)), 2),
+                        "down_safe_subgroup_pct": round(100 * float(np.mean(path[true_safe & subgroup] < 2)), 2),
+                        "overdose_missed_pct": round(100 * float(missed.sum() / max(1, fault.sum())), 2)}
+        return res
+
+    out = {"E3_bias": [], "E4_icc": [], "E5_share_shift": []}
+    for bias in (0.05, 0.10, 0.15, 0.20, 0.25):
+        rng = np.random.default_rng([SEED, 3])
+        obs = np.clip(rho + np.where(subgroup, -bias, 0.0) + rng.normal(0, 0.05, n), 0, 1)
+        out["E3_bias"].append({"bias": bias, **metrics(obs, np.zeros(n, bool), False)})
+    for icc in (0.0, 0.25, 0.50, 0.81, 0.95):
+        rng = np.random.default_rng([SEED, 4])
+        su, sv = 0.10 * np.sqrt(icc), 0.10 * np.sqrt(1 - icc)
+        obs = np.clip(rho + rng.normal(0, su, enc.max() + 1)[enc] + rng.normal(0, sv, n), 0, 1)
+        out["E4_icc"].append({"icc": icc, **metrics(obs, np.zeros(n, bool), False)})
+    for share in (0.05, 0.10, 0.20):
+        for shift in (0.10, 0.20, 0.30):
+            rng = np.random.default_rng([SEED, 5])
+            corrupted = (rng.random(enc.max() + 1) < share)[enc]
+            obs = np.clip(rho + np.where(corrupted, -shift, rng.normal(0, 0.05, n)), 0, 1)
+            out["E5_share_shift"].append({"share": share, "shift": shift,
+                                          "missing_feature": metrics(obs, corrupted, True),
+                                          "present_but_wrong": metrics(obs, corrupted, False)})
+    return out
+
+
 def run() -> Dict:
     rho, strata, subgroup, enc, hi_alert = setup()
     ed_pools = load_ed()
@@ -178,9 +224,10 @@ def run() -> Dict:
 
 def main() -> None:
     out = run()
+    out["sensitivity"] = sensitivity()
     res = ROOT / "results"
     (res / "mitigation_comparison.json").write_text(json.dumps(out, indent=2) + "\n", encoding="utf-8")
-    structured = {k: v for k, v in out.items() if k != "grid"}
+    structured = {k: v for k, v in out.items() if k not in ("grid", "sensitivity")}
     structured["no_mitigation"] = {m: out["grid"][m]["M0_none"] for m in out["error_models"]}
     (res / "structured_misrouting.json").write_text(json.dumps(structured, indent=2) + "\n",
                                                     encoding="utf-8")

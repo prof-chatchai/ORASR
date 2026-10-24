@@ -282,11 +282,67 @@
     },
     "note": "Allergy data are not in the MIMIC-IV hosp prescriptions table, so the allergy check cannot fire on real orders. Firings on unmodified orders are alert burden; many duplicate firings are legitimate (e.g., PRN plus scheduled orders)."
   },
+  "rescue_trigger_analysis": {
+    "per_trigger": {
+      "insulin -> dextrose 50% or glucagon": {
+        "index_orders_by_pathway_v2": {
+          "SAFE": 972
+        },
+        "triggered_index_orders_by_pathway_v2": {
+          "SAFE": 52
+        }
+      },
+      "opioid -> naloxone": {
+        "index_orders_by_pathway_v2": {
+          "SAFE": 904,
+          "NORMAL": 38
+        },
+        "triggered_index_orders_by_pathway_v2": {
+          "SAFE": 2
+        }
+      },
+      "benzodiazepine -> flumazenil": {
+        "index_orders_by_pathway_v2": {
+          "SAFE": 265,
+          "NORMAL": 63
+        },
+        "triggered_index_orders_by_pathway_v2": {}
+      },
+      "warfarin -> phytonadione": {
+        "index_orders_by_pathway_v2": {
+          "SAFE": 129
+        },
+        "triggered_index_orders_by_pathway_v2": {}
+      },
+      "heparin -> protamine": {
+        "index_orders_by_pathway_v2": {
+          "SAFE": 446
+        },
+        "triggered_index_orders_by_pathway_v2": {
+          "SAFE": 1
+        }
+      }
+    },
+    "total_index_orders_v2": {
+      "SAFE": 2716,
+      "NORMAL": 101
+    },
+    "total_triggered_v2": {
+      "SAFE": 55
+    },
+    "triggered_on_safe_pct_v2": 100.0,
+    "total_triggered_v1": {
+      "SAFE": 55
+    },
+    "triggered_on_safe_pct_v1": 100.0,
+    "definition": "index order of implicated class followed within 24 h (same admission) by a rescue-drug order; heparin flushes excluded",
+    "caveat": "Surrogate trigger, not a confirmed adverse drug event; rescue drugs are also given for other reasons."
+  },
   "routing_thresholds": {
     "fast_lt": 0.3,
     "safe_ge": 0.7
   },
-  "timestamp_utc": "2026-10-24T15:02:17Z",
+  "timestamp_utc": "2026-10-24T15:33:54Z",
   "ed_demo_pyxis": {
     "n_dispensations": 1082,
     "pathway_counts": {

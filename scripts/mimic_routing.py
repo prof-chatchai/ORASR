@@ -243,6 +243,67 @@ def clinical_on_real(rx: List[Dict[str, str]], sup: Suppressor) -> Dict[str, Any
     }
 
 
+
+# Rescue-medication triggers (in the spirit of trigger-tool methods for adverse
+# drug events): an index order of an implicated class is "triggered" when a
+# rescue drug for that class is ordered in the same admission within 24 h after
+# the index order starts. A trigger is a surrogate for possible harm, not a
+# confirmed adverse event.
+TRIGGERS = {
+    "insulin -> dextrose 50% or glucagon": (("insulin",), ("dextrose 50%", "glucagon")),
+    "opioid -> naloxone": (("morphine", "hydromorphone", "oxycodone", "fentanyl", "methadone",
+                            "tramadol", "meperidine"), ("naloxone",)),
+    "benzodiazepine -> flumazenil": (("lorazepam", "midazolam", "diazepam", "alprazolam",
+                                      "clonazepam"), ("flumazenil",)),
+    "warfarin -> phytonadione": (("warfarin",), ("phytonadione", "vitamin k")),
+    "heparin -> protamine": (("heparin",), ("protamine",)),
+}
+
+
+def trigger_analysis(rx: List[Dict[str, str]], sup: "Suppressor") -> Dict[str, Any]:
+    by_adm: Dict[str, List[Dict[str, Any]]] = defaultdict(list)
+    for r in rx:
+        st = ts(r.get("starttime", ""))
+        if st is not None:
+            by_adm[r.get("hadm_id", "")].append({"drug": r.get("drug", "").lower(), "start": st})
+    router = ORASRRouter(enable_audit=False)
+    out: Dict[str, Any] = {}
+    tot = {"index": Counter(), "triggered": Counter()}
+    tot_v1 = {"index": Counter(), "triggered": Counter()}
+    for name, (implicated, rescue) in TRIGGERS.items():
+        idx_c, trig_c, trig_v1 = Counter(), Counter(), Counter()
+        idx_v1 = Counter()
+        for orders in by_adm.values():
+            rescues = [o["start"] for o in orders if _has(o["drug"], rescue)]
+            for o in orders:
+                if not _has(o["drug"], implicated) or _has(o["drug"], ("flush",)):
+                    continue
+                p2 = router._select_pathway(score_v2_med(o["drug"]), False).name
+                p1 = router._select_pathway(score_v1((o["drug"],)), False).name
+                idx_c[p2] += 1
+                idx_v1[p1] += 1
+                hit = any(o["start"] < t <= o["start"] + timedelta(hours=24) for t in rescues)
+                if hit:
+                    trig_c[p2] += 1
+                    trig_v1[p1] += 1
+        tot["index"].update(idx_c); tot["triggered"].update(trig_c)
+        tot_v1["index"].update(idx_v1); tot_v1["triggered"].update(trig_v1)
+        out[name] = {"index_orders_by_pathway_v2": sup.counts(dict(idx_c)),
+                     "triggered_index_orders_by_pathway_v2": sup.counts(dict(trig_c))}
+    n_trig = sum(tot["triggered"].values())
+    n_trig_v1 = sum(tot_v1["triggered"].values())
+    return {
+        "per_trigger": out,
+        "total_index_orders_v2": sup.counts(dict(tot["index"])),
+        "total_triggered_v2": sup.counts(dict(tot["triggered"])),
+        "triggered_on_safe_pct_v2": round(100.0 * tot["triggered"]["SAFE"] / n_trig, 2) if n_trig else None,
+        "total_triggered_v1": sup.counts(dict(tot_v1["triggered"])),
+        "triggered_on_safe_pct_v1": round(100.0 * tot_v1["triggered"]["SAFE"] / n_trig_v1, 2) if n_trig_v1 else None,
+        "definition": "index order of implicated class followed within 24 h (same admission) by a rescue-drug order; heparin flushes excluded",
+        "caveat": "Surrogate trigger, not a confirmed adverse drug event; rescue drugs are also given for other reasons.",
+    }
+
+
 def run(root: Path, label: str, ed_root: Optional[Path], limit: Optional[int]) -> Dict[str, Any]:
     sup = Suppressor(MIN_CELL_FULL if label == "full" else 1)
     router = ORASRRouter(enable_audit=False)
@@ -293,6 +354,7 @@ def run(root: Path, label: str, ed_root: Optional[Path], limit: Optional[int]) -
         "v1_to_v2_band_changes_prescriptions": sup.counts(dict(changes)),
         "v1_to_v2_top_moved_drugs": top_moved,
         "clinical_gates_on_real_orders": clinical_on_real(rx, sup),
+        "rescue_trigger_analysis": trigger_analysis(rx, sup),
         "routing_thresholds": {"fast_lt": router.FAST_PATH_THRESHOLD, "safe_ge": router.SAFE_PATH_THRESHOLD},
         "timestamp_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
     }
@@ -327,6 +389,9 @@ def main() -> None:
     cg = out["clinical_gates_on_real_orders"]
     print("clinical", cg["n_by_pathway"], cg["dose_check_coverage_pct"], cg["checks_firing_pct_of_pathway"])
     print("inject", cg["fault_injection_on_real_orders"])
+    ta = out["rescue_trigger_analysis"]
+    print("triggers", ta["total_index_orders_v2"], ta["total_triggered_v2"], ta["triggered_on_safe_pct_v2"],
+          "v1", ta["total_triggered_v1"], ta["triggered_on_safe_pct_v1"])
     if "ed_demo_pyxis" in out:
         print("pyxis", out["ed_demo_pyxis"])
     print("wrote", path.relative_to(ROOT))

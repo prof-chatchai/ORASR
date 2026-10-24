@@ -481,5 +481,535 @@
     "SAFE": 103,
     "FAST": 2,
     "NORMAL": 88
+  },
+  "sensitivity": {
+    "E3_bias": [
+      {
+        "bias": 0.05,
+        "M0_none": {
+          "down_safe_pct": 11.05,
+          "down_safe_subgroup_pct": 20.57,
+          "overdose_missed_pct": 5.21
+        },
+        "M4_guard_plus_floor": {
+          "down_safe_pct": 0.3,
+          "down_safe_subgroup_pct": 0.84,
+          "overdose_missed_pct": 5.06
+        },
+        "M5_completeness_check_plus_floor": {
+          "down_safe_pct": 5.8,
+          "down_safe_subgroup_pct": 12.04,
+          "overdose_missed_pct": 5.06
+        }
+      },
+      {
+        "bias": 0.1,
+        "M0_none": {
+          "down_safe_pct": 15.3,
+          "down_safe_subgroup_pct": 34.78,
+          "overdose_missed_pct": 8.21
+        },
+        "M4_guard_plus_floor": {
+          "down_safe_pct": 1.3,
+          "down_safe_subgroup_pct": 4.18,
+          "overdose_missed_pct": 7.9
+        },
+        "M5_completeness_check_plus_floor": {
+          "down_safe_pct": 7.9,
+          "down_safe_subgroup_pct": 19.06,
+          "overdose_missed_pct": 7.9
+        }
+      },
+      {
+        "bias": 0.15,
+        "M0_none": {
+          "down_safe_pct": 19.55,
+          "down_safe_subgroup_pct": 49.0,
+          "overdose_missed_pct": 10.74
+        },
+        "M4_guard_plus_floor": {
+          "down_safe_pct": 3.65,
+          "down_safe_subgroup_pct": 12.04,
+          "overdose_missed_pct": 10.11
+        },
+        "M5_completeness_check_plus_floor": {
+          "down_safe_pct": 10.1,
+          "down_safe_subgroup_pct": 26.42,
+          "overdose_missed_pct": 10.11
+        }
+      },
+      {
+        "bias": 0.2,
+        "M0_none": {
+          "down_safe_pct": 24.5,
+          "down_safe_subgroup_pct": 65.55,
+          "overdose_missed_pct": 14.22
+        },
+        "M4_guard_plus_floor": {
+          "down_safe_pct": 5.75,
+          "down_safe_subgroup_pct": 19.06,
+          "overdose_missed_pct": 13.43
+        },
+        "M5_completeness_check_plus_floor": {
+          "down_safe_pct": 12.65,
+          "down_safe_subgroup_pct": 34.95,
+          "overdose_missed_pct": 13.43
+        }
+      },
+      {
+        "bias": 0.25,
+        "M0_none": {
+          "down_safe_pct": 28.95,
+          "down_safe_subgroup_pct": 80.43,
+          "overdose_missed_pct": 17.38
+        },
+        "M4_guard_plus_floor": {
+          "down_safe_pct": 7.95,
+          "down_safe_subgroup_pct": 26.42,
+          "overdose_missed_pct": 16.11
+        },
+        "M5_completeness_check_plus_floor": {
+          "down_safe_pct": 14.8,
+          "down_safe_subgroup_pct": 42.14,
+          "overdose_missed_pct": 16.11
+        }
+      }
+    ],
+    "E4_icc": [
+      {
+        "icc": 0.0,
+        "M0_none": {
+          "down_safe_pct": 14.65,
+          "down_safe_subgroup_pct": 15.22,
+          "overdose_missed_pct": 5.53
+        },
+        "M4_guard_plus_floor": {
+          "down_safe_pct": 1.6,
+          "down_safe_subgroup_pct": 2.17,
+          "overdose_missed_pct": 5.37
+        },
+        "M5_completeness_check_plus_floor": {
+          "down_safe_pct": 7.05,
+          "down_safe_subgroup_pct": 8.53,
+          "overdose_missed_pct": 5.37
+        }
+      },
+      {
+        "icc": 0.25,
+        "M0_none": {
+          "down_safe_pct": 13.55,
+          "down_safe_subgroup_pct": 13.21,
+          "overdose_missed_pct": 5.37
+        },
+        "M4_guard_plus_floor": {
+          "down_safe_pct": 1.5,
+          "down_safe_subgroup_pct": 2.34,
+          "overdose_missed_pct": 5.06
+        },
+        "M5_completeness_check_plus_floor": {
+          "down_safe_pct": 6.75,
+          "down_safe_subgroup_pct": 7.36,
+          "overdose_missed_pct": 5.06
+        }
+      },
+      {
+        "icc": 0.5,
+        "M0_none": {
+          "down_safe_pct": 13.6,
+          "down_safe_subgroup_pct": 12.88,
+          "overdose_missed_pct": 5.69
+        },
+        "M4_guard_plus_floor": {
+          "down_safe_pct": 1.4,
+          "down_safe_subgroup_pct": 2.17,
+          "overdose_missed_pct": 5.21
+        },
+        "M5_completeness_check_plus_floor": {
+          "down_safe_pct": 6.75,
+          "down_safe_subgroup_pct": 7.69,
+          "overdose_missed_pct": 5.21
+        }
+      },
+      {
+        "icc": 0.81,
+        "M0_none": {
+          "down_safe_pct": 13.35,
+          "down_safe_subgroup_pct": 13.21,
+          "overdose_missed_pct": 6.79
+        },
+        "M4_guard_plus_floor": {
+          "down_safe_pct": 1.3,
+          "down_safe_subgroup_pct": 1.84,
+          "overdose_missed_pct": 6.32
+        },
+        "M5_completeness_check_plus_floor": {
+          "down_safe_pct": 6.95,
+          "down_safe_subgroup_pct": 8.03,
+          "overdose_missed_pct": 6.32
+        }
+      },
+      {
+        "icc": 0.95,
+        "M0_none": {
+          "down_safe_pct": 13.35,
+          "down_safe_subgroup_pct": 13.04,
+          "overdose_missed_pct": 6.32
+        },
+        "M4_guard_plus_floor": {
+          "down_safe_pct": 1.25,
+          "down_safe_subgroup_pct": 1.34,
+          "overdose_missed_pct": 5.85
+        },
+        "M5_completeness_check_plus_floor": {
+          "down_safe_pct": 6.9,
+          "down_safe_subgroup_pct": 8.03,
+          "overdose_missed_pct": 5.85
+        }
+      }
+    ],
+    "E5_share_shift": [
+      {
+        "share": 0.05,
+        "shift": 0.1,
+        "missing_feature": {
+          "M0_none": {
+            "down_safe_pct": 8.85,
+            "down_safe_subgroup_pct": 9.7,
+            "overdose_missed_pct": 9.16
+          },
+          "M4_guard_plus_floor": {
+            "down_safe_pct": 0.05,
+            "down_safe_subgroup_pct": 0.17,
+            "overdose_missed_pct": 9.0
+          },
+          "M5_completeness_check_plus_floor": {
+            "down_safe_pct": 3.05,
+            "down_safe_subgroup_pct": 2.84,
+            "overdose_missed_pct": 3.32
+          }
+        },
+        "present_but_wrong": {
+          "M0_none": {
+            "down_safe_pct": 8.85,
+            "down_safe_subgroup_pct": 9.7,
+            "overdose_missed_pct": 9.16
+          },
+          "M4_guard_plus_floor": {
+            "down_safe_pct": 0.05,
+            "down_safe_subgroup_pct": 0.17,
+            "overdose_missed_pct": 9.0
+          },
+          "M5_completeness_check_plus_floor": {
+            "down_safe_pct": 4.05,
+            "down_safe_subgroup_pct": 4.52,
+            "overdose_missed_pct": 9.0
+          }
+        }
+      },
+      {
+        "share": 0.05,
+        "shift": 0.2,
+        "missing_feature": {
+          "M0_none": {
+            "down_safe_pct": 10.85,
+            "down_safe_subgroup_pct": 11.37,
+            "overdose_missed_pct": 9.16
+          },
+          "M4_guard_plus_floor": {
+            "down_safe_pct": 1.05,
+            "down_safe_subgroup_pct": 1.84,
+            "overdose_missed_pct": 9.0
+          },
+          "M5_completeness_check_plus_floor": {
+            "down_safe_pct": 3.05,
+            "down_safe_subgroup_pct": 2.84,
+            "overdose_missed_pct": 3.32
+          }
+        },
+        "present_but_wrong": {
+          "M0_none": {
+            "down_safe_pct": 10.85,
+            "down_safe_subgroup_pct": 11.37,
+            "overdose_missed_pct": 9.16
+          },
+          "M4_guard_plus_floor": {
+            "down_safe_pct": 1.05,
+            "down_safe_subgroup_pct": 1.84,
+            "overdose_missed_pct": 9.0
+          },
+          "M5_completeness_check_plus_floor": {
+            "down_safe_pct": 4.85,
+            "down_safe_subgroup_pct": 4.85,
+            "overdose_missed_pct": 9.0
+          }
+        }
+      },
+      {
+        "share": 0.05,
+        "shift": 0.3,
+        "missing_feature": {
+          "M0_none": {
+            "down_safe_pct": 12.65,
+            "down_safe_subgroup_pct": 12.21,
+            "overdose_missed_pct": 9.16
+          },
+          "M4_guard_plus_floor": {
+            "down_safe_pct": 1.85,
+            "down_safe_subgroup_pct": 2.17,
+            "overdose_missed_pct": 9.0
+          },
+          "M5_completeness_check_plus_floor": {
+            "down_safe_pct": 3.05,
+            "down_safe_subgroup_pct": 2.84,
+            "overdose_missed_pct": 3.32
+          }
+        },
+        "present_but_wrong": {
+          "M0_none": {
+            "down_safe_pct": 12.65,
+            "down_safe_subgroup_pct": 12.21,
+            "overdose_missed_pct": 9.16
+          },
+          "M4_guard_plus_floor": {
+            "down_safe_pct": 1.85,
+            "down_safe_subgroup_pct": 2.17,
+            "overdose_missed_pct": 9.0
+          },
+          "M5_completeness_check_plus_floor": {
+            "down_safe_pct": 5.9,
+            "down_safe_subgroup_pct": 5.35,
+            "overdose_missed_pct": 9.0
+          }
+        }
+      },
+      {
+        "share": 0.1,
+        "shift": 0.1,
+        "missing_feature": {
+          "M0_none": {
+            "down_safe_pct": 10.75,
+            "down_safe_subgroup_pct": 12.04,
+            "overdose_missed_pct": 15.8
+          },
+          "M4_guard_plus_floor": {
+            "down_safe_pct": 0.05,
+            "down_safe_subgroup_pct": 0.17,
+            "overdose_missed_pct": 15.64
+          },
+          "M5_completeness_check_plus_floor": {
+            "down_safe_pct": 2.9,
+            "down_safe_subgroup_pct": 2.84,
+            "overdose_missed_pct": 3.0
+          }
+        },
+        "present_but_wrong": {
+          "M0_none": {
+            "down_safe_pct": 10.75,
+            "down_safe_subgroup_pct": 12.04,
+            "overdose_missed_pct": 15.8
+          },
+          "M4_guard_plus_floor": {
+            "down_safe_pct": 0.05,
+            "down_safe_subgroup_pct": 0.17,
+            "overdose_missed_pct": 15.64
+          },
+          "M5_completeness_check_plus_floor": {
+            "down_safe_pct": 5.0,
+            "down_safe_subgroup_pct": 6.02,
+            "overdose_missed_pct": 15.64
+          }
+        }
+      },
+      {
+        "share": 0.1,
+        "shift": 0.2,
+        "missing_feature": {
+          "M0_none": {
+            "down_safe_pct": 14.9,
+            "down_safe_subgroup_pct": 16.56,
+            "overdose_missed_pct": 15.8
+          },
+          "M4_guard_plus_floor": {
+            "down_safe_pct": 2.15,
+            "down_safe_subgroup_pct": 3.34,
+            "overdose_missed_pct": 15.64
+          },
+          "M5_completeness_check_plus_floor": {
+            "down_safe_pct": 2.9,
+            "down_safe_subgroup_pct": 2.84,
+            "overdose_missed_pct": 3.0
+          }
+        },
+        "present_but_wrong": {
+          "M0_none": {
+            "down_safe_pct": 14.9,
+            "down_safe_subgroup_pct": 16.56,
+            "overdose_missed_pct": 15.8
+          },
+          "M4_guard_plus_floor": {
+            "down_safe_pct": 2.15,
+            "down_safe_subgroup_pct": 3.34,
+            "overdose_missed_pct": 15.64
+          },
+          "M5_completeness_check_plus_floor": {
+            "down_safe_pct": 7.2,
+            "down_safe_subgroup_pct": 8.36,
+            "overdose_missed_pct": 15.64
+          }
+        }
+      },
+      {
+        "share": 0.1,
+        "shift": 0.3,
+        "missing_feature": {
+          "M0_none": {
+            "down_safe_pct": 19.1,
+            "down_safe_subgroup_pct": 19.9,
+            "overdose_missed_pct": 15.8
+          },
+          "M4_guard_plus_floor": {
+            "down_safe_pct": 4.35,
+            "down_safe_subgroup_pct": 5.69,
+            "overdose_missed_pct": 15.64
+          },
+          "M5_completeness_check_plus_floor": {
+            "down_safe_pct": 2.9,
+            "down_safe_subgroup_pct": 2.84,
+            "overdose_missed_pct": 3.0
+          }
+        },
+        "present_but_wrong": {
+          "M0_none": {
+            "down_safe_pct": 19.1,
+            "down_safe_subgroup_pct": 19.9,
+            "overdose_missed_pct": 15.8
+          },
+          "M4_guard_plus_floor": {
+            "down_safe_pct": 4.35,
+            "down_safe_subgroup_pct": 5.69,
+            "overdose_missed_pct": 15.64
+          },
+          "M5_completeness_check_plus_floor": {
+            "down_safe_pct": 9.2,
+            "down_safe_subgroup_pct": 9.53,
+            "overdose_missed_pct": 15.64
+          }
+        }
+      },
+      {
+        "share": 0.2,
+        "shift": 0.1,
+        "missing_feature": {
+          "M0_none": {
+            "down_safe_pct": 13.0,
+            "down_safe_subgroup_pct": 14.38,
+            "overdose_missed_pct": 24.64
+          },
+          "M4_guard_plus_floor": {
+            "down_safe_pct": 0.05,
+            "down_safe_subgroup_pct": 0.17,
+            "overdose_missed_pct": 24.49
+          },
+          "M5_completeness_check_plus_floor": {
+            "down_safe_pct": 2.7,
+            "down_safe_subgroup_pct": 2.68,
+            "overdose_missed_pct": 2.37
+          }
+        },
+        "present_but_wrong": {
+          "M0_none": {
+            "down_safe_pct": 13.0,
+            "down_safe_subgroup_pct": 14.38,
+            "overdose_missed_pct": 24.64
+          },
+          "M4_guard_plus_floor": {
+            "down_safe_pct": 0.05,
+            "down_safe_subgroup_pct": 0.17,
+            "overdose_missed_pct": 24.49
+          },
+          "M5_completeness_check_plus_floor": {
+            "down_safe_pct": 6.35,
+            "down_safe_subgroup_pct": 7.53,
+            "overdose_missed_pct": 24.49
+          }
+        }
+      },
+      {
+        "share": 0.2,
+        "shift": 0.2,
+        "missing_feature": {
+          "M0_none": {
+            "down_safe_pct": 20.05,
+            "down_safe_subgroup_pct": 21.57,
+            "overdose_missed_pct": 24.64
+          },
+          "M4_guard_plus_floor": {
+            "down_safe_pct": 3.7,
+            "down_safe_subgroup_pct": 5.02,
+            "overdose_missed_pct": 24.49
+          },
+          "M5_completeness_check_plus_floor": {
+            "down_safe_pct": 2.7,
+            "down_safe_subgroup_pct": 2.68,
+            "overdose_missed_pct": 2.37
+          }
+        },
+        "present_but_wrong": {
+          "M0_none": {
+            "down_safe_pct": 20.05,
+            "down_safe_subgroup_pct": 21.57,
+            "overdose_missed_pct": 24.64
+          },
+          "M4_guard_plus_floor": {
+            "down_safe_pct": 3.7,
+            "down_safe_subgroup_pct": 5.02,
+            "overdose_missed_pct": 24.49
+          },
+          "M5_completeness_check_plus_floor": {
+            "down_safe_pct": 10.1,
+            "down_safe_subgroup_pct": 10.7,
+            "overdose_missed_pct": 24.49
+          }
+        }
+      },
+      {
+        "share": 0.2,
+        "shift": 0.3,
+        "missing_feature": {
+          "M0_none": {
+            "down_safe_pct": 27.5,
+            "down_safe_subgroup_pct": 28.26,
+            "overdose_missed_pct": 24.64
+          },
+          "M4_guard_plus_floor": {
+            "down_safe_pct": 7.45,
+            "down_safe_subgroup_pct": 8.19,
+            "overdose_missed_pct": 24.49
+          },
+          "M5_completeness_check_plus_floor": {
+            "down_safe_pct": 2.7,
+            "down_safe_subgroup_pct": 2.68,
+            "overdose_missed_pct": 2.37
+          }
+        },
+        "present_but_wrong": {
+          "M0_none": {
+            "down_safe_pct": 27.5,
+            "down_safe_subgroup_pct": 28.26,
+            "overdose_missed_pct": 24.64
+          },
+          "M4_guard_plus_floor": {
+            "down_safe_pct": 7.45,
+            "down_safe_subgroup_pct": 8.19,
+            "overdose_missed_pct": 24.49
+          },
+          "M5_completeness_check_plus_floor": {
+            "down_safe_pct": 13.75,
+            "down_safe_subgroup_pct": 13.38,
+            "overdose_missed_pct": 24.49
+          }
+        }
+      }
+    ]
   }
 }

@@ -321,8 +321,11 @@ class ORASRRouter:
         action_result = None
         committed = None
         compensated = False
+        # Two-phase execution runs G4 on the staged output before commit. It applies on
+        # every pathway for irreversible actions (so a misrouted irreversible action still
+        # gets the output check) and on pathways that include G4 for reversible ones.
         staged = (self.staged_execution and isinstance(action, StagedAction)
-                  and GateType.POSTCONDITION in config.gates)
+                  and (GateType.POSTCONDITION in config.gates or not action.reversible))
         if safe and staged:
             # Two-phase execution: G4 checks the staged output before commit.
             try:
