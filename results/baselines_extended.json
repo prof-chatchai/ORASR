@@ -1,0 +1,124 @@
+{
+  "seed": 42,
+  "gate_cost_ms": 10.0,
+  "approval_wait_s": [
+    30.0,
+    300.0
+  ],
+  "high_alert_share_of_all": 0.1427,
+  "results": {
+    "exact": {
+      "flat4_no_approval": {
+        "gates_per_call": 4.0,
+        "approvals_per_1000": 0.0,
+        "missed_approval_per_1000": 200.0,
+        "missed_hi_alert_approval_per_1000": 142.7,
+        "g23_skipped_on_true_normal_or_safe_pct": 0.0,
+        "expected_time_s_A30": 0.04,
+        "expected_time_s_A300": 0.04
+      },
+      "flat4_universal_approval": {
+        "gates_per_call": 4.0,
+        "approvals_per_1000": 1000.0,
+        "missed_approval_per_1000": 0.0,
+        "missed_hi_alert_approval_per_1000": 0.0,
+        "g23_skipped_on_true_normal_or_safe_pct": 0.0,
+        "expected_time_s_A30": 30.04,
+        "expected_time_s_A300": 300.04
+      },
+      "flat4_risk_approval": {
+        "gates_per_call": 4.0,
+        "approvals_per_1000": 200.0,
+        "missed_approval_per_1000": 0.0,
+        "missed_hi_alert_approval_per_1000": 42.3,
+        "g23_skipped_on_true_normal_or_safe_pct": 0.0,
+        "expected_time_s_A30": 6.04,
+        "expected_time_s_A300": 60.04
+      },
+      "flat4_type_approval": {
+        "gates_per_call": 4.0,
+        "approvals_per_1000": 142.7,
+        "missed_approval_per_1000": 99.6,
+        "missed_hi_alert_approval_per_1000": 0.0,
+        "g23_skipped_on_true_normal_or_safe_pct": 0.0,
+        "expected_time_s_A30": 4.321,
+        "expected_time_s_A300": 42.85
+      },
+      "orasr": {
+        "gates_per_call": 2.5,
+        "approvals_per_1000": 200.0,
+        "missed_approval_per_1000": 0.0,
+        "missed_hi_alert_approval_per_1000": 42.3,
+        "g23_skipped_on_true_normal_or_safe_pct": 0.0,
+        "expected_time_s_A30": 6.025,
+        "expected_time_s_A300": 60.025
+      },
+      "orasr_type_floor": {
+        "gates_per_call": 2.5423,
+        "approvals_per_1000": 242.3,
+        "missed_approval_per_1000": 0.0,
+        "missed_hi_alert_approval_per_1000": 0.0,
+        "g23_skipped_on_true_normal_or_safe_pct": 0.0,
+        "expected_time_s_A30": 7.2944,
+        "expected_time_s_A300": 72.7154
+      }
+    },
+    "noise_sigma_0.10": {
+      "flat4_no_approval": {
+        "gates_per_call": 4.0,
+        "approvals_per_1000": 0.0,
+        "missed_approval_per_1000": 200.0,
+        "missed_hi_alert_approval_per_1000": 142.7,
+        "g23_skipped_on_true_normal_or_safe_pct": 0.0,
+        "expected_time_s_A30": 0.04,
+        "expected_time_s_A300": 0.04
+      },
+      "flat4_universal_approval": {
+        "gates_per_call": 4.0,
+        "approvals_per_1000": 1000.0,
+        "missed_approval_per_1000": 0.0,
+        "missed_hi_alert_approval_per_1000": 0.0,
+        "g23_skipped_on_true_normal_or_safe_pct": 0.0,
+        "expected_time_s_A30": 30.04,
+        "expected_time_s_A300": 300.04
+      },
+      "flat4_risk_approval": {
+        "gates_per_call": 4.0,
+        "approvals_per_1000": 217.36,
+        "missed_approval_per_1000": 26.845,
+        "missed_hi_alert_approval_per_1000": 51.745,
+        "g23_skipped_on_true_normal_or_safe_pct": 0.0,
+        "expected_time_s_A30": 6.5608,
+        "expected_time_s_A300": 65.248
+      },
+      "flat4_type_approval": {
+        "gates_per_call": 4.0,
+        "approvals_per_1000": 142.7,
+        "missed_approval_per_1000": 99.6,
+        "missed_hi_alert_approval_per_1000": 0.0,
+        "g23_skipped_on_true_normal_or_safe_pct": 0.0,
+        "expected_time_s_A30": 4.321,
+        "expected_time_s_A300": 42.85
+      },
+      "orasr": {
+        "gates_per_call": 2.5238,
+        "approvals_per_1000": 217.36,
+        "missed_approval_per_1000": 26.845,
+        "missed_hi_alert_approval_per_1000": 51.745,
+        "g23_skipped_on_true_normal_or_safe_pct": 6.7623,
+        "expected_time_s_A30": 6.546,
+        "expected_time_s_A300": 65.2332
+      },
+      "orasr_type_floor": {
+        "gates_per_call": 2.5846,
+        "approvals_per_1000": 269.105,
+        "missed_approval_per_1000": 13.42,
+        "missed_hi_alert_approval_per_1000": 0.0,
+        "g23_skipped_on_true_normal_or_safe_pct": 6.0677,
+        "expected_time_s_A30": 8.099,
+        "expected_time_s_A300": 80.7573
+      }
+    }
+  },
+  "note": "parametric cost model; approval assumed to catch the hazard when requested"
+}

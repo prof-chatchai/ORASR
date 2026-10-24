@@ -3,7 +3,7 @@
 P1  every rho selects exactly one pathway, in the correct band
 P2  rho1 < rho2  =>  gates(path(rho1)) is a subset of gates(path(rho2))
 P4  reasoning-trace length = 1 + number of pre-execution gates, also when BLOCKED
-Remark 1  rho < 0 -> FAST; NaN or rho > 1 -> SAFE and G2 fails
+Remark 1  (v1.3.0) any invalid rho (negative, NaN, inf, > 1, None, non-numeric) -> SAFE and blocked
 
 A mutation test swaps in a non-monotone gate table and asserts the P2 checker
 finds a violation, so the P2 property is not vacuously true.
@@ -91,9 +91,13 @@ def test_p4_trace_length_including_blocked(rho, malformed, approved):
 
 @SETTINGS
 @given(st.floats(max_value=-1e-300, allow_nan=False, allow_infinity=True))
-def test_remark1_negative_routes_fast(rho):
+def test_remark1_negative_fails_closed_to_safe(rho):
+    """v1.3.0: negative scores are invalid input -> SAFE pathway and blocked."""
     COUNTS["remark1_negative"] += 1
-    assert ROUTER._select_pathway(rho, False) is ReasoningPath.FAST
+    assert ROUTER._select_pathway(rho, False) is ReasoningPath.SAFE
+    res = ROUTER.route(action=lambda d: d, input_data={"a": 1}, risk_score=rho, human_approved=True)
+    assert res.path is ReasoningPath.SAFE and res.safe is False and res.action_result is None
+    assert any(v.startswith("R0_RiskInput") for v in res.violations)
 
 
 @SETTINGS
@@ -105,7 +109,39 @@ def test_remark1_nan_or_above_one_routes_safe_and_g2_fails(rho):
                        human_approved=True)
     assert res.path is ReasoningPath.SAFE
     assert res.safe is False
+    assert any(v.startswith("R0_RiskInput") for v in res.violations)
     assert any(v.startswith("G2_RiskAssessment") for v in res.violations)
+
+
+@SETTINGS
+@given(st.one_of(st.none(), st.text(max_size=5), st.booleans(), st.just(float("inf")),
+                 st.just(float("-inf")), st.lists(st.floats(0, 1), max_size=2)))
+def test_fail_closed_on_missing_or_non_numeric_risk(rho):
+    COUNTS["fail_closed_non_numeric"] = COUNTS.get("fail_closed_non_numeric", 0) + 1
+    res = ROUTER.route(action=lambda d: d, input_data={"a": 1}, risk_score=rho, human_approved=True)
+    assert res.path is ReasoningPath.SAFE and res.safe is False and res.action_result is None
+    assert any(v.startswith("R0_RiskInput") for v in res.violations)
+
+
+@SETTINGS
+@given(rho_unit, st.one_of(st.just(float("nan")), st.floats(max_value=-1e-9, allow_nan=False)))
+def test_fail_closed_on_invalid_uncertainty(rho, sigma):
+    COUNTS["fail_closed_bad_sigma"] = COUNTS.get("fail_closed_bad_sigma", 0) + 1
+    res = ROUTER.route(action=lambda d: d, input_data={"a": 1}, risk_score=rho,
+                       risk_uncertainty=sigma, human_approved=True)
+    assert res.path is ReasoningPath.SAFE and res.safe is False
+
+
+@SETTINGS
+@given(rho_unit, st.floats(0, 0.5))
+def test_uncertainty_aware_routing_never_lowers_pathway(rho, sigma):
+    COUNTS["uncertainty_monotone"] = COUNTS.get("uncertainty_monotone", 0) + 1
+    order = {ReasoningPath.FAST: 0, ReasoningPath.NORMAL: 1, ReasoningPath.SAFE: 2}
+    ua = ORASRRouter(enable_audit=False, uncertainty_k=1.0)
+    base = ROUTER._select_pathway(rho, False)
+    res = ua.route(action=lambda d: d, input_data={"a": 1}, risk_score=rho,
+                   risk_uncertainty=sigma, human_approved=True)
+    assert order[res.path] >= order[base]
 
 
 def test_mutation_non_monotone_table_is_detected(monkeypatch):

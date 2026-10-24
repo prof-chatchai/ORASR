@@ -1,0 +1,267 @@
+{
+  "seed": 42,
+  "n_requests": 1000,
+  "service_model": {
+    "risk_assessment": {
+      "median_s": 0.002,
+      "log_sd": 0.5
+    },
+    "constraint_validation": {
+      "median_s": 0.005,
+      "log_sd": 0.6
+    },
+    "postcondition": {
+      "median_s": 0.001,
+      "log_sd": 0.5
+    }
+  },
+  "realised_mean_service_ms": {
+    "risk_assessment": 2.265,
+    "constraint_validation": 5.857,
+    "postcondition": 1.114
+  },
+  "results": {
+    "unlimited_services": {
+      "orasr": [
+        {
+          "concurrency": 1,
+          "p50_ms": 7.142,
+          "p95_ms": 16.659,
+          "p99_ms": 23.631,
+          "mean_ms": 6.664,
+          "throughput_rps": 148.7
+        },
+        {
+          "concurrency": 2,
+          "p50_ms": 7.616,
+          "p95_ms": 20.339,
+          "p99_ms": 71.573,
+          "mean_ms": 8.667,
+          "throughput_rps": 226.4
+        },
+        {
+          "concurrency": 4,
+          "p50_ms": 7.374,
+          "p95_ms": 16.708,
+          "p99_ms": 23.987,
+          "mean_ms": 6.841,
+          "throughput_rps": 570.7
+        },
+        {
+          "concurrency": 8,
+          "p50_ms": 7.07,
+          "p95_ms": 17.461,
+          "p99_ms": 41.193,
+          "mean_ms": 7.065,
+          "throughput_rps": 1111.4
+        },
+        {
+          "concurrency": 16,
+          "p50_ms": 7.026,
+          "p95_ms": 16.267,
+          "p99_ms": 22.514,
+          "mean_ms": 6.582,
+          "throughput_rps": 2346.3
+        },
+        {
+          "concurrency": 32,
+          "p50_ms": 6.845,
+          "p95_ms": 16.111,
+          "p99_ms": 22.457,
+          "mean_ms": 6.506,
+          "throughput_rps": 4377.3
+        },
+        {
+          "concurrency": 64,
+          "p50_ms": 7.142,
+          "p95_ms": 17.104,
+          "p99_ms": 22.517,
+          "mean_ms": 6.759,
+          "throughput_rps": 6490.4
+        }
+      ],
+      "flat4": [
+        {
+          "concurrency": 1,
+          "p50_ms": 11.237,
+          "p95_ms": 23.406,
+          "p99_ms": 49.171,
+          "mean_ms": 13.471,
+          "throughput_rps": 71.3
+        },
+        {
+          "concurrency": 2,
+          "p50_ms": 10.375,
+          "p95_ms": 19.938,
+          "p99_ms": 29.63,
+          "mean_ms": 11.62,
+          "throughput_rps": 166.9
+        },
+        {
+          "concurrency": 4,
+          "p50_ms": 10.205,
+          "p95_ms": 19.577,
+          "p99_ms": 26.287,
+          "mean_ms": 11.172,
+          "throughput_rps": 355.0
+        },
+        {
+          "concurrency": 8,
+          "p50_ms": 9.811,
+          "p95_ms": 18.762,
+          "p99_ms": 23.725,
+          "mean_ms": 10.656,
+          "throughput_rps": 741.3
+        },
+        {
+          "concurrency": 16,
+          "p50_ms": 10.004,
+          "p95_ms": 18.708,
+          "p99_ms": 24.041,
+          "mean_ms": 10.81,
+          "throughput_rps": 1448.3
+        },
+        {
+          "concurrency": 32,
+          "p50_ms": 9.73,
+          "p95_ms": 18.594,
+          "p99_ms": 24.173,
+          "mean_ms": 10.643,
+          "throughput_rps": 2832.5
+        },
+        {
+          "concurrency": 64,
+          "p50_ms": 9.949,
+          "p95_ms": 41.803,
+          "p99_ms": 48.284,
+          "mean_ms": 12.556,
+          "throughput_rps": 4035.3
+        }
+      ]
+    },
+    "g3_capacity_8": {
+      "orasr": [
+        {
+          "concurrency": 1,
+          "p50_ms": 7.115,
+          "p95_ms": 16.444,
+          "p99_ms": 23.301,
+          "mean_ms": 6.628,
+          "throughput_rps": 149.2
+        },
+        {
+          "concurrency": 2,
+          "p50_ms": 7.156,
+          "p95_ms": 16.298,
+          "p99_ms": 23.691,
+          "mean_ms": 6.68,
+          "throughput_rps": 297.1
+        },
+        {
+          "concurrency": 4,
+          "p50_ms": 7.221,
+          "p95_ms": 16.163,
+          "p99_ms": 22.62,
+          "mean_ms": 6.646,
+          "throughput_rps": 595.4
+        },
+        {
+          "concurrency": 8,
+          "p50_ms": 7.064,
+          "p95_ms": 16.508,
+          "p99_ms": 32.216,
+          "mean_ms": 6.786,
+          "throughput_rps": 1157.5
+        },
+        {
+          "concurrency": 16,
+          "p50_ms": 9.603,
+          "p95_ms": 20.112,
+          "p99_ms": 27.161,
+          "mean_ms": 8.655,
+          "throughput_rps": 1804.3
+        },
+        {
+          "concurrency": 32,
+          "p50_ms": 19.355,
+          "p95_ms": 43.919,
+          "p99_ms": 56.199,
+          "mean_ms": 16.891,
+          "throughput_rps": 1785.2
+        },
+        {
+          "concurrency": 64,
+          "p50_ms": 37.649,
+          "p95_ms": 93.032,
+          "p99_ms": 122.764,
+          "mean_ms": 31.766,
+          "throughput_rps": 1794.6
+        }
+      ],
+      "flat4": [
+        {
+          "concurrency": 1,
+          "p50_ms": 10.293,
+          "p95_ms": 19.511,
+          "p99_ms": 28.28,
+          "mean_ms": 11.211,
+          "throughput_rps": 88.7
+        },
+        {
+          "concurrency": 2,
+          "p50_ms": 10.104,
+          "p95_ms": 19.125,
+          "p99_ms": 26.253,
+          "mean_ms": 11.014,
+          "throughput_rps": 180.5
+        },
+        {
+          "concurrency": 4,
+          "p50_ms": 10.08,
+          "p95_ms": 18.943,
+          "p99_ms": 24.46,
+          "mean_ms": 10.898,
+          "throughput_rps": 364.3
+        },
+        {
+          "concurrency": 8,
+          "p50_ms": 9.948,
+          "p95_ms": 19.707,
+          "p99_ms": 28.929,
+          "mean_ms": 10.915,
+          "throughput_rps": 724.7
+        },
+        {
+          "concurrency": 16,
+          "p50_ms": 11.941,
+          "p95_ms": 21.343,
+          "p99_ms": 27.571,
+          "mean_ms": 12.733,
+          "throughput_rps": 1236.4
+        },
+        {
+          "concurrency": 32,
+          "p50_ms": 24.72,
+          "p95_ms": 46.191,
+          "p99_ms": 56.246,
+          "mean_ms": 25.441,
+          "throughput_rps": 1215.4
+        },
+        {
+          "concurrency": 64,
+          "p50_ms": 50.513,
+          "p95_ms": 106.218,
+          "p99_ms": 147.44,
+          "mean_ms": 52.356,
+          "throughput_rps": 1144.8
+        }
+      ]
+    }
+  },
+  "environment": {
+    "python": "3.11.15",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 158 Stepping 9, GenuineIntel"
+  },
+  "note": "flat4 = require_human_approval=True forces the Safe gate stack for every request"
+}

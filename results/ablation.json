@@ -1,11 +1,11 @@
 {
   "environment": {
-    "python": "3.13.14",
-    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.11.15",
+    "platform": "Windows-10-10.0.26200-SP0",
     "processor": "Intel64 Family 6 Model 158 Stepping 9, GenuineIntel",
     "machine": "AMD64",
     "seed": 42,
-    "timestamp_utc": "2026-09-08T16:21:10Z"
+    "timestamp_utc": "2026-10-24T14:59:41Z"
   },
   "seed": 42,
   "n_per_gate": 1000,

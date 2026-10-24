@@ -25,14 +25,20 @@
     "P2": 2000,
     "P4": 2000,
     "remark1_negative": 2000,
-    "remark1_out_of_range": 2000
+    "remark1_out_of_range": 2000,
+    "fail_closed_non_numeric": 2000,
+    "fail_closed_bad_sigma": 2000,
+    "uncertainty_monotone": 2000
   },
   "tests": {
     "test_p1_exactly_one_pathway_in_band": "passed",
     "test_p2_gate_set_inclusion": "passed",
     "test_p4_trace_length_including_blocked": "passed",
-    "test_remark1_negative_routes_fast": "passed",
+    "test_remark1_negative_fails_closed_to_safe": "passed",
     "test_remark1_nan_or_above_one_routes_safe_and_g2_fails": "passed",
+    "test_fail_closed_on_missing_or_non_numeric_risk": "passed",
+    "test_fail_closed_on_invalid_uncertainty": "passed",
+    "test_uncertainty_aware_routing_never_lowers_pathway": "passed",
     "test_mutation_non_monotone_table_is_detected": "passed"
   },
   "failures": 0,

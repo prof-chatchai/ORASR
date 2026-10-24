@@ -1,0 +1,67 @@
+{
+  "source": "MIMIC-IV-ED demo (public, open access) ed/triage.csv.gz",
+  "n_triage_rows": 222,
+  "excluded": {
+    "missing_acuity": 15,
+    "missing_vitals": 13,
+    "implausible_vitals": 1
+  },
+  "n_usable": 193,
+  "esi_counts": {
+    "1": 9,
+    "2": 94,
+    "3": 88,
+    "4": 2,
+    "5": 0
+  },
+  "confusion_reference_band_vs_rule_band": {
+    "SAFE": {
+      "NORMAL": 14,
+      "FAST": 86,
+      "SAFE": 3
+    },
+    "FAST": {
+      "FAST": 2
+    },
+    "NORMAL": {
+      "FAST": 87,
+      "NORMAL": 1
+    }
+  },
+  "esi_1_2": {
+    "n": 103,
+    "rule_below_safe": 100,
+    "rule_below_safe_pct": 97.09,
+    "rule_fast": 86
+  },
+  "esi_3_5": {
+    "n": 90,
+    "rule_safe": 0,
+    "rule_safe_pct": 0.0
+  },
+  "residual_rule_minus_reference": {
+    "mean": -0.4759,
+    "counts": {
+      "-0.30": 9,
+      "-0.65": 84,
+      "+0.05": 1,
+      "-0.80": 2,
+      "-0.10": 2,
+      "-0.45": 5,
+      "-0.05": 2,
+      "-0.35": 87,
+      "+0.00": 1
+    }
+  },
+  "mapping": {
+    "news2": ">=7 -> 0.85; 5-6 or any single 3 -> 0.50; else 0.15",
+    "esi_reference": {
+      "1": 0.95,
+      "2": 0.8,
+      "3": 0.5,
+      "4": 0.2,
+      "5": 0.1
+    }
+  },
+  "caveat": "Partial NEWS2 (no consciousness or supplemental-oxygen item); ESI is a nurse triage judgement, not an outcome. The residual distribution is used only as an empirical error model for routing, not as evidence about either score."
+}

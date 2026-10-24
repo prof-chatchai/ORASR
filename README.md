@@ -130,3 +130,20 @@ Released under the MIT License (see `LICENSE`).
 | Selective-CDSS | Risk-controlled selective-prediction (abstention) component |
 | Causal-CDSS | Causal-inference evaluation component |
 | Beyond-Accuracy | Simulation-based safety/calibration evaluation framework |
+
+
+## v1.3.0 resubmission analyses
+
+`python scripts/run_all.py` now also regenerates the v1.3.0 analyses listed in
+`CHANGELOG.md`. Real-data analyses need the **public, open-access** PhysioNet demo
+datasets (no credentialing), which are *not* redistributed here:
+
+* MIMIC-IV Clinical Database Demo v2.2 (doi:10.13026/dp1f-ex47): `hosp/prescriptions.csv.gz`,
+  `hosp/poe.csv.gz`, `hosp/patients.csv.gz`, `hosp/admissions.csv.gz` -> set `MIMIC_DEMO_PATH`
+* MIMIC-IV-ED Demo v2.2 (doi:10.13026/jzz5-vs76): `ed/triage.csv.gz`, `ed/pyxis.csv.gz`
+  -> set `MIMIC_ED_PATH`
+
+With credentialed access, `MIMIC_IV_PATH=/path/to/mimiciv python -I scripts/mimic_routing.py --label full`
+runs the identical pipeline on the full database and writes aggregate counts only
+(cells < 10 suppressed) to `results/mimic_full_routing.json`. Run scripts that read
+downloaded data with `python -I`.

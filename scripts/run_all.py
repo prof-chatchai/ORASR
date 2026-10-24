@@ -548,6 +548,42 @@ def main() -> None:
                 misrouting_analysis, adversarial_shift):
         mod.main()
     run_property_tests.main()
+
+    # v1.3.0 resubmission analyses (deterministic counts, seed 42).
+    import os  # noqa: E402
+    import subprocess  # noqa: E402
+    import detection_clinical  # noqa: E402
+    import ed_acuity_disagreement  # noqa: E402
+    import structured_misrouting  # noqa: E402
+    import upstream_reliability  # noqa: E402
+    import baselines_extended  # noqa: E402
+    import assurance_mechanisms  # noqa: E402
+    import threshold_derivation  # noqa: E402
+    import latency_realistic  # noqa: E402
+
+    detection_clinical.main()
+    ed_path = os.environ.get("MIMIC_ED_PATH", "D:/AVS/Datasets/mimic-ed-demo")
+    demo_path = os.environ.get("MIMIC_DEMO_PATH", "D:/AVS/Datasets/mimic-iv-demo")
+    py = [sys.executable, "-I"]
+    if (Path(ed_path) / "ed" / "triage.csv.gz").exists():
+        subprocess.run(py + [str(ROOT / "scripts" / "ed_acuity_disagreement.py"), "--ed-path", ed_path],
+                       check=True)
+    else:
+        print("MIMIC-IV-ED demo not found; ed_acuity_disagreement skipped (E8 omitted)")
+    if (Path(demo_path) / "hosp" / "prescriptions.csv.gz").exists():
+        subprocess.run(py + [str(ROOT / "scripts" / "mimic_routing.py"), "--mimic-path", demo_path,
+                             "--label", "demo", "--ed-path", ed_path], check=True)
+    else:
+        print("MIMIC-IV demo not found; mimic_routing (demo) skipped")
+    full_path = os.environ.get("MIMIC_IV_PATH")
+    if full_path and (Path(full_path) / "hosp" / "prescriptions.csv.gz").exists():
+        subprocess.run(py + [str(ROOT / "scripts" / "mimic_routing.py"), "--mimic-path", full_path,
+                             "--label", "full"], check=True)
+    for mod in (structured_misrouting, upstream_reliability, baselines_extended,
+                assurance_mechanisms, threshold_derivation):
+        mod.main()
+    # Host-specific timing (kept last).
+    latency_realistic.main()
     print("Artifacts written to", RESULTS)
 
 

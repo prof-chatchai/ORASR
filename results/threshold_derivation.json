@@ -1,0 +1,1066 @@
+{
+  "seed": 42,
+  "approval_cost_s": 30.0,
+  "gate_cost_s_for_theta2": 0.01,
+  "theta1_star": [
+    {
+      "c_s": 0.01,
+      "r": 3.0,
+      "dN": 0.25,
+      "theta1_star": 0.000889
+    },
+    {
+      "c_s": 0.01,
+      "r": 3.0,
+      "dN": 0.5,
+      "theta1_star": 0.000444
+    },
+    {
+      "c_s": 0.01,
+      "r": 10.0,
+      "dN": 0.25,
+      "theta1_star": 0.000267
+    },
+    {
+      "c_s": 0.01,
+      "r": 10.0,
+      "dN": 0.5,
+      "theta1_star": 0.000133
+    },
+    {
+      "c_s": 1.0,
+      "r": 3.0,
+      "dN": 0.25,
+      "theta1_star": 0.088889
+    },
+    {
+      "c_s": 1.0,
+      "r": 3.0,
+      "dN": 0.5,
+      "theta1_star": 0.044444
+    },
+    {
+      "c_s": 1.0,
+      "r": 10.0,
+      "dN": 0.25,
+      "theta1_star": 0.026667
+    },
+    {
+      "c_s": 1.0,
+      "r": 10.0,
+      "dN": 0.5,
+      "theta1_star": 0.013333
+    },
+    {
+      "c_s": 10.0,
+      "r": 3.0,
+      "dN": 0.25,
+      "theta1_star": 0.888889
+    },
+    {
+      "c_s": 10.0,
+      "r": 3.0,
+      "dN": 0.5,
+      "theta1_star": 0.444444
+    },
+    {
+      "c_s": 10.0,
+      "r": 10.0,
+      "dN": 0.25,
+      "theta1_star": 0.266667
+    },
+    {
+      "c_s": 10.0,
+      "r": 10.0,
+      "dN": 0.5,
+      "theta1_star": 0.133333
+    }
+  ],
+  "default_theta2_0.7_implies": [
+    {
+      "dS": 0.25,
+      "r_for_theta2_0.7": 5.716
+    },
+    {
+      "dS": 0.5,
+      "r_for_theta2_0.7": 2.858
+    },
+    {
+      "dS": 0.9,
+      "r_for_theta2_0.7": 1.588
+    }
+  ],
+  "synthetic": [
+    {
+      "r_harm_over_approval": 1.5,
+      "dS": 0.25,
+      "theta2_star_analytic": 1.0,
+      "sigma_0.00": {
+        "theta2_obs": 1.0,
+        "rel_cost_s": 0.0,
+        "safe_share_pct": 0.0,
+        "missed_beneficial_approvals_pct": 0.0
+      },
+      "sigma_0.05": {
+        "theta2_obs": 1.0,
+        "rel_cost_s": 0.2609,
+        "safe_share_pct": 1.366,
+        "missed_beneficial_approvals_pct": 0.0
+      },
+      "sigma_0.10": {
+        "theta2_obs": 1.0,
+        "rel_cost_s": 0.5193,
+        "safe_share_pct": 2.67,
+        "missed_beneficial_approvals_pct": 0.0
+      }
+    },
+    {
+      "r_harm_over_approval": 1.5,
+      "dS": 0.5,
+      "theta2_star_analytic": 1.0,
+      "sigma_0.00": {
+        "theta2_obs": 1.0,
+        "rel_cost_s": 0.0,
+        "safe_share_pct": 0.0,
+        "missed_beneficial_approvals_pct": 0.0
+      },
+      "sigma_0.05": {
+        "theta2_obs": 1.0,
+        "rel_cost_s": 0.1119,
+        "safe_share_pct": 1.366,
+        "missed_beneficial_approvals_pct": 0.0
+      },
+      "sigma_0.10": {
+        "theta2_obs": 1.0,
+        "rel_cost_s": 0.2373,
+        "safe_share_pct": 2.67,
+        "missed_beneficial_approvals_pct": 0.0
+      }
+    },
+    {
+      "r_harm_over_approval": 1.5,
+      "dS": 0.9,
+      "theta2_star_analytic": 0.741,
+      "sigma_0.00": {
+        "theta2_obs": 0.74,
+        "rel_cost_s": -0.9084,
+        "safe_share_pct": 17.2,
+        "missed_beneficial_approvals_pct": 0.0
+      },
+      "sigma_0.05": {
+        "theta2_obs": 0.755,
+        "rel_cost_s": -0.8695,
+        "safe_share_pct": 16.453,
+        "missed_beneficial_approvals_pct": 1.841
+      },
+      "sigma_0.10": {
+        "theta2_obs": 0.765,
+        "rel_cost_s": -0.7465,
+        "safe_share_pct": 16.445,
+        "missed_beneficial_approvals_pct": 3.408
+      }
+    },
+    {
+      "r_harm_over_approval": 2.0,
+      "dS": 0.25,
+      "theta2_star_analytic": 1.0,
+      "sigma_0.00": {
+        "theta2_obs": 1.0,
+        "rel_cost_s": 0.0,
+        "safe_share_pct": 0.0,
+        "missed_beneficial_approvals_pct": 0.0
+      },
+      "sigma_0.05": {
+        "theta2_obs": 1.0,
+        "rel_cost_s": 0.2112,
+        "safe_share_pct": 1.366,
+        "missed_beneficial_approvals_pct": 0.0
+      },
+      "sigma_0.10": {
+        "theta2_obs": 1.0,
+        "rel_cost_s": 0.4253,
+        "safe_share_pct": 2.67,
+        "missed_beneficial_approvals_pct": 0.0
+      }
+    },
+    {
+      "r_harm_over_approval": 2.0,
+      "dS": 0.5,
+      "theta2_star_analytic": 1.0,
+      "sigma_0.00": {
+        "theta2_obs": 1.0,
+        "rel_cost_s": 0.0,
+        "safe_share_pct": 0.0,
+        "missed_beneficial_approvals_pct": 0.0
+      },
+      "sigma_0.05": {
+        "theta2_obs": 1.0,
+        "rel_cost_s": 0.0125,
+        "safe_share_pct": 1.366,
+        "missed_beneficial_approvals_pct": 0.0
+      },
+      "sigma_0.10": {
+        "theta2_obs": 1.0,
+        "rel_cost_s": 0.0492,
+        "safe_share_pct": 2.67,
+        "missed_beneficial_approvals_pct": 0.0
+      }
+    },
+    {
+      "r_harm_over_approval": 2.0,
+      "dS": 0.9,
+      "theta2_star_analytic": 0.5557,
+      "sigma_0.00": {
+        "theta2_obs": 0.555,
+        "rel_cost_s": -3.7901,
+        "safe_share_pct": 36.14,
+        "missed_beneficial_approvals_pct": 0.0
+      },
+      "sigma_0.05": {
+        "theta2_obs": 0.55,
+        "rel_cost_s": -3.7138,
+        "safe_share_pct": 36.548,
+        "missed_beneficial_approvals_pct": 2.079
+      },
+      "sigma_0.10": {
+        "theta2_obs": 0.565,
+        "rel_cost_s": -3.5097,
+        "safe_share_pct": 35.028,
+        "missed_beneficial_approvals_pct": 4.98
+      }
+    },
+    {
+      "r_harm_over_approval": 3.0,
+      "dS": 0.25,
+      "theta2_star_analytic": 1.0,
+      "sigma_0.00": {
+        "theta2_obs": 1.0,
+        "rel_cost_s": 0.0,
+        "safe_share_pct": 0.0,
+        "missed_beneficial_approvals_pct": 0.0
+      },
+      "sigma_0.05": {
+        "theta2_obs": 1.0,
+        "rel_cost_s": 0.1119,
+        "safe_share_pct": 1.366,
+        "missed_beneficial_approvals_pct": 0.0
+      },
+      "sigma_0.10": {
+        "theta2_obs": 1.0,
+        "rel_cost_s": 0.2373,
+        "safe_share_pct": 2.67,
+        "missed_beneficial_approvals_pct": 0.0
+      }
+    },
+    {
+      "r_harm_over_approval": 3.0,
+      "dS": 0.5,
+      "theta2_star_analytic": 0.6669,
+      "sigma_0.00": {
+        "theta2_obs": 0.665,
+        "rel_cost_s": -1.6778,
+        "safe_share_pct": 23.79,
+        "missed_beneficial_approvals_pct": 0.0
+      },
+      "sigma_0.05": {
+        "theta2_obs": 0.68,
+        "rel_cost_s": -1.6237,
+        "safe_share_pct": 22.6,
+        "missed_beneficial_approvals_pct": 2.486
+      },
+      "sigma_0.10": {
+        "theta2_obs": 0.69,
+        "rel_cost_s": -1.477,
+        "safe_share_pct": 22.602,
+        "missed_beneficial_approvals_pct": 4.233
+      }
+    },
+    {
+      "r_harm_over_approval": 3.0,
+      "dS": 0.9,
+      "theta2_star_analytic": 0.3705,
+      "sigma_0.00": {
+        "theta2_obs": 0.37,
+        "rel_cost_s": -12.6848,
+        "safe_share_pct": 57.12,
+        "missed_beneficial_approvals_pct": 0.0
+      },
+      "sigma_0.05": {
+        "theta2_obs": 0.37,
+        "rel_cost_s": -12.5661,
+        "safe_share_pct": 57.239,
+        "missed_beneficial_approvals_pct": 2.184
+      },
+      "sigma_0.10": {
+        "theta2_obs": 0.375,
+        "rel_cost_s": -12.2133,
+        "safe_share_pct": 56.619,
+        "missed_beneficial_approvals_pct": 4.796
+      }
+    },
+    {
+      "r_harm_over_approval": 5.0,
+      "dS": 0.25,
+      "theta2_star_analytic": 0.8003,
+      "sigma_0.00": {
+        "theta2_obs": 0.8,
+        "rel_cost_s": -0.5031,
+        "safe_share_pct": 13.34,
+        "missed_beneficial_approvals_pct": 0.0
+      },
+      "sigma_0.05": {
+        "theta2_obs": 0.805,
+        "rel_cost_s": -0.4718,
+        "safe_share_pct": 12.979,
+        "missed_beneficial_approvals_pct": 1.465
+      },
+      "sigma_0.10": {
+        "theta2_obs": 0.82,
+        "rel_cost_s": -0.3668,
+        "safe_share_pct": 12.326,
+        "missed_beneficial_approvals_pct": 3.25
+      }
+    },
+    {
+      "r_harm_over_approval": 5.0,
+      "dS": 0.5,
+      "theta2_star_analytic": 0.4001,
+      "sigma_0.00": {
+        "theta2_obs": 0.4,
+        "rel_cost_s": -10.5154,
+        "safe_share_pct": 53.81,
+        "missed_beneficial_approvals_pct": 0.0
+      },
+      "sigma_0.05": {
+        "theta2_obs": 0.405,
+        "rel_cost_s": -10.4072,
+        "safe_share_pct": 53.181,
+        "missed_beneficial_approvals_pct": 2.542
+      },
+      "sigma_0.10": {
+        "theta2_obs": 0.395,
+        "rel_cost_s": -10.0753,
+        "safe_share_pct": 54.344,
+        "missed_beneficial_approvals_pct": 4.314
+      }
+    },
+    {
+      "r_harm_over_approval": 5.0,
+      "dS": 0.9,
+      "theta2_star_analytic": 0.2223,
+      "sigma_0.00": {
+        "theta2_obs": 0.22,
+        "rel_cost_s": -34.2487,
+        "safe_share_pct": 74.32,
+        "missed_beneficial_approvals_pct": 0.0
+      },
+      "sigma_0.05": {
+        "theta2_obs": 0.22,
+        "rel_cost_s": -34.0594,
+        "safe_share_pct": 74.407,
+        "missed_beneficial_approvals_pct": 2.17
+      },
+      "sigma_0.10": {
+        "theta2_obs": 0.225,
+        "rel_cost_s": -33.5051,
+        "safe_share_pct": 73.966,
+        "missed_beneficial_approvals_pct": 4.631
+      }
+    },
+    {
+      "r_harm_over_approval": 10.0,
+      "dS": 0.25,
+      "theta2_star_analytic": 0.4001,
+      "sigma_0.00": {
+        "theta2_obs": 0.4,
+        "rel_cost_s": -10.5154,
+        "safe_share_pct": 53.81,
+        "missed_beneficial_approvals_pct": 0.0
+      },
+      "sigma_0.05": {
+        "theta2_obs": 0.405,
+        "rel_cost_s": -10.4072,
+        "safe_share_pct": 53.181,
+        "missed_beneficial_approvals_pct": 2.542
+      },
+      "sigma_0.10": {
+        "theta2_obs": 0.395,
+        "rel_cost_s": -10.0753,
+        "safe_share_pct": 54.344,
+        "missed_beneficial_approvals_pct": 4.314
+      }
+    },
+    {
+      "r_harm_over_approval": 10.0,
+      "dS": 0.5,
+      "theta2_star_analytic": 0.2001,
+      "sigma_0.00": {
+        "theta2_obs": 0.2,
+        "rel_cost_s": -40.5698,
+        "safe_share_pct": 76.88,
+        "missed_beneficial_approvals_pct": 0.0
+      },
+      "sigma_0.05": {
+        "theta2_obs": 0.2,
+        "rel_cost_s": -40.3561,
+        "safe_share_pct": 76.802,
+        "missed_beneficial_approvals_pct": 2.384
+      },
+      "sigma_0.10": {
+        "theta2_obs": 0.2,
+        "rel_cost_s": -39.7453,
+        "safe_share_pct": 76.697,
+        "missed_beneficial_approvals_pct": 4.663
+      }
+    },
+    {
+      "r_harm_over_approval": 10.0,
+      "dS": 0.9,
+      "theta2_star_analytic": 0.1111,
+      "sigma_0.00": {
+        "theta2_obs": 0.11,
+        "rel_cost_s": -92.7262,
+        "safe_share_pct": 87.25,
+        "missed_beneficial_approvals_pct": 0.0
+      },
+      "sigma_0.05": {
+        "theta2_obs": 0.11,
+        "rel_cost_s": -92.3215,
+        "safe_share_pct": 87.22,
+        "missed_beneficial_approvals_pct": 2.322
+      },
+      "sigma_0.10": {
+        "theta2_obs": 0.065,
+        "rel_cost_s": -91.6115,
+        "safe_share_pct": 90.689,
+        "missed_beneficial_approvals_pct": 2.476
+      }
+    },
+    {
+      "r_harm_over_approval": 20.0,
+      "dS": 0.25,
+      "theta2_star_analytic": 0.2001,
+      "sigma_0.00": {
+        "theta2_obs": 0.2,
+        "rel_cost_s": -40.5698,
+        "safe_share_pct": 76.88,
+        "missed_beneficial_approvals_pct": 0.0
+      },
+      "sigma_0.05": {
+        "theta2_obs": 0.2,
+        "rel_cost_s": -40.3561,
+        "safe_share_pct": 76.802,
+        "missed_beneficial_approvals_pct": 2.384
+      },
+      "sigma_0.10": {
+        "theta2_obs": 0.2,
+        "rel_cost_s": -39.7453,
+        "safe_share_pct": 76.697,
+        "missed_beneficial_approvals_pct": 4.663
+      }
+    },
+    {
+      "r_harm_over_approval": 20.0,
+      "dS": 0.5,
+      "theta2_star_analytic": 0.1,
+      "sigma_0.00": {
+        "theta2_obs": 0.1,
+        "rel_cost_s": -105.952,
+        "safe_share_pct": 88.21,
+        "missed_beneficial_approvals_pct": 0.0
+      },
+      "sigma_0.05": {
+        "theta2_obs": 0.095,
+        "rel_cost_s": -105.5132,
+        "safe_share_pct": 88.976,
+        "missed_beneficial_approvals_pct": 1.971
+      },
+      "sigma_0.10": {
+        "theta2_obs": 0.055,
+        "rel_cost_s": -104.8158,
+        "safe_share_pct": 91.513,
+        "missed_beneficial_approvals_pct": 2.476
+      }
+    },
+    {
+      "r_harm_over_approval": 20.0,
+      "dS": 0.9,
+      "theta2_star_analytic": 0.0556,
+      "sigma_0.00": {
+        "theta2_obs": 0.055,
+        "rel_cost_s": -212.5681,
+        "safe_share_pct": 93.62,
+        "missed_beneficial_approvals_pct": 0.0
+      },
+      "sigma_0.05": {
+        "theta2_obs": 0.035,
+        "rel_cost_s": -212.0139,
+        "safe_share_pct": 95.173,
+        "missed_beneficial_approvals_pct": 1.289
+      },
+      "sigma_0.10": {
+        "theta2_obs": 0.0,
+        "rel_cost_s": -211.6238,
+        "safe_share_pct": 100.0,
+        "missed_beneficial_approvals_pct": 0.0
+      }
+    },
+    {
+      "r_harm_over_approval": 50.0,
+      "dS": 0.25,
+      "theta2_star_analytic": 0.08,
+      "sigma_0.00": {
+        "theta2_obs": 0.08,
+        "rel_cost_s": -139.1563,
+        "safe_share_pct": 90.85,
+        "missed_beneficial_approvals_pct": 0.0
+      },
+      "sigma_0.05": {
+        "theta2_obs": 0.075,
+        "rel_cost_s": -138.6639,
+        "safe_share_pct": 91.137,
+        "missed_beneficial_approvals_pct": 2.157
+      },
+      "sigma_0.10": {
+        "theta2_obs": 0.005,
+        "rel_cost_s": -138.0449,
+        "safe_share_pct": 95.014,
+        "missed_beneficial_approvals_pct": 1.663
+      }
+    },
+    {
+      "r_harm_over_approval": 50.0,
+      "dS": 0.5,
+      "theta2_star_analytic": 0.04,
+      "sigma_0.00": {
+        "theta2_obs": 0.04,
+        "rel_cost_s": -306.2558,
+        "safe_share_pct": 95.39,
+        "missed_beneficial_approvals_pct": 0.0
+      },
+      "sigma_0.05": {
+        "theta2_obs": 0.005,
+        "rel_cost_s": -305.7237,
+        "safe_share_pct": 97.406,
+        "missed_beneficial_approvals_pct": 0.848
+      },
+      "sigma_0.10": {
+        "theta2_obs": 0.0,
+        "rel_cost_s": -305.5925,
+        "safe_share_pct": 100.0,
+        "missed_beneficial_approvals_pct": 0.0
+      }
+    },
+    {
+      "r_harm_over_approval": 50.0,
+      "dS": 0.9,
+      "theta2_star_analytic": 0.0222,
+      "sigma_0.00": {
+        "theta2_obs": 0.02,
+        "rel_cost_s": -574.4183,
+        "safe_share_pct": 97.9,
+        "missed_beneficial_approvals_pct": 0.0
+      },
+      "sigma_0.05": {
+        "theta2_obs": 0.0,
+        "rel_cost_s": -574.0746,
+        "safe_share_pct": 100.0,
+        "missed_beneficial_approvals_pct": 0.0
+      },
+      "sigma_0.10": {
+        "theta2_obs": 0.0,
+        "rel_cost_s": -574.0746,
+        "safe_share_pct": 100.0,
+        "missed_beneficial_approvals_pct": 0.0
+      }
+    }
+  ],
+  "mimic_demo": {
+    "n_actions": 42913,
+    "sweep": [
+      {
+        "r_harm_over_approval": 1.5,
+        "dS": 0.25,
+        "theta2_star_analytic": 1.0,
+        "sigma_0.00": {
+          "theta2_obs": 0.855,
+          "rel_cost_s": 0.0,
+          "safe_share_pct": 0.0,
+          "missed_beneficial_approvals_pct": 0.0
+        },
+        "sigma_0.05": {
+          "theta2_obs": 1.0,
+          "rel_cost_s": 0.0035,
+          "safe_share_pct": 0.017,
+          "missed_beneficial_approvals_pct": 0.0
+        },
+        "sigma_0.10": {
+          "theta2_obs": 1.0,
+          "rel_cost_s": 0.184,
+          "safe_share_pct": 0.9,
+          "missed_beneficial_approvals_pct": 0.0
+        }
+      },
+      {
+        "r_harm_over_approval": 1.5,
+        "dS": 0.5,
+        "theta2_star_analytic": 1.0,
+        "sigma_0.00": {
+          "theta2_obs": 0.855,
+          "rel_cost_s": 0.0,
+          "safe_share_pct": 0.0,
+          "missed_beneficial_approvals_pct": 0.0
+        },
+        "sigma_0.05": {
+          "theta2_obs": 1.0,
+          "rel_cost_s": 0.0019,
+          "safe_share_pct": 0.017,
+          "missed_beneficial_approvals_pct": 0.0
+        },
+        "sigma_0.10": {
+          "theta2_obs": 1.0,
+          "rel_cost_s": 0.098,
+          "safe_share_pct": 0.9,
+          "missed_beneficial_approvals_pct": 0.0
+        }
+      },
+      {
+        "r_harm_over_approval": 1.5,
+        "dS": 0.9,
+        "theta2_star_analytic": 0.741,
+        "sigma_0.00": {
+          "theta2_obs": 0.505,
+          "rel_cost_s": -0.59,
+          "safe_share_pct": 13.3642,
+          "missed_beneficial_approvals_pct": 0.0
+        },
+        "sigma_0.05": {
+          "theta2_obs": 0.69,
+          "rel_cost_s": -0.5892,
+          "safe_share_pct": 13.3617,
+          "missed_beneficial_approvals_pct": 0.0077
+        },
+        "sigma_0.10": {
+          "theta2_obs": 0.74,
+          "rel_cost_s": -0.4628,
+          "safe_share_pct": 12.0462,
+          "missed_beneficial_approvals_pct": 1.805
+        }
+      },
+      {
+        "r_harm_over_approval": 2.0,
+        "dS": 0.25,
+        "theta2_star_analytic": 1.0,
+        "sigma_0.00": {
+          "theta2_obs": 0.855,
+          "rel_cost_s": 0.0,
+          "safe_share_pct": 0.0,
+          "missed_beneficial_approvals_pct": 0.0
+        },
+        "sigma_0.05": {
+          "theta2_obs": 1.0,
+          "rel_cost_s": 0.0029,
+          "safe_share_pct": 0.017,
+          "missed_beneficial_approvals_pct": 0.0
+        },
+        "sigma_0.10": {
+          "theta2_obs": 1.0,
+          "rel_cost_s": 0.1553,
+          "safe_share_pct": 0.9,
+          "missed_beneficial_approvals_pct": 0.0
+        }
+      },
+      {
+        "r_harm_over_approval": 2.0,
+        "dS": 0.5,
+        "theta2_star_analytic": 1.0,
+        "sigma_0.00": {
+          "theta2_obs": 0.855,
+          "rel_cost_s": 0.0,
+          "safe_share_pct": 0.0,
+          "missed_beneficial_approvals_pct": 0.0
+        },
+        "sigma_0.05": {
+          "theta2_obs": 1.0,
+          "rel_cost_s": 0.0008,
+          "safe_share_pct": 0.017,
+          "missed_beneficial_approvals_pct": 0.0
+        },
+        "sigma_0.10": {
+          "theta2_obs": 1.0,
+          "rel_cost_s": 0.0406,
+          "safe_share_pct": 0.9,
+          "missed_beneficial_approvals_pct": 0.0
+        }
+      },
+      {
+        "r_harm_over_approval": 2.0,
+        "dS": 0.9,
+        "theta2_star_analytic": 0.5557,
+        "sigma_0.00": {
+          "theta2_obs": 0.505,
+          "rel_cost_s": -2.1236,
+          "safe_share_pct": 13.3642,
+          "missed_beneficial_approvals_pct": 0.0
+        },
+        "sigma_0.05": {
+          "theta2_obs": 0.675,
+          "rel_cost_s": -2.1227,
+          "safe_share_pct": 13.3757,
+          "missed_beneficial_approvals_pct": 0.0028
+        },
+        "sigma_0.10": {
+          "theta2_obs": 0.665,
+          "rel_cost_s": -1.9691,
+          "safe_share_pct": 15.8045,
+          "missed_beneficial_approvals_pct": 0.4285
+        }
+      },
+      {
+        "r_harm_over_approval": 3.0,
+        "dS": 0.25,
+        "theta2_star_analytic": 1.0,
+        "sigma_0.00": {
+          "theta2_obs": 0.855,
+          "rel_cost_s": 0.0,
+          "safe_share_pct": 0.0,
+          "missed_beneficial_approvals_pct": 0.0
+        },
+        "sigma_0.05": {
+          "theta2_obs": 1.0,
+          "rel_cost_s": 0.0019,
+          "safe_share_pct": 0.017,
+          "missed_beneficial_approvals_pct": 0.0
+        },
+        "sigma_0.10": {
+          "theta2_obs": 1.0,
+          "rel_cost_s": 0.098,
+          "safe_share_pct": 0.9,
+          "missed_beneficial_approvals_pct": 0.0
+        }
+      },
+      {
+        "r_harm_over_approval": 3.0,
+        "dS": 0.5,
+        "theta2_star_analytic": 0.6669,
+        "sigma_0.00": {
+          "theta2_obs": 0.505,
+          "rel_cost_s": -1.1012,
+          "safe_share_pct": 13.3642,
+          "missed_beneficial_approvals_pct": 0.0
+        },
+        "sigma_0.05": {
+          "theta2_obs": 0.69,
+          "rel_cost_s": -1.1002,
+          "safe_share_pct": 13.3617,
+          "missed_beneficial_approvals_pct": 0.0077
+        },
+        "sigma_0.10": {
+          "theta2_obs": 0.72,
+          "rel_cost_s": -0.9335,
+          "safe_share_pct": 12.8768,
+          "missed_beneficial_approvals_pct": 1.2973
+        }
+      },
+      {
+        "r_harm_over_approval": 3.0,
+        "dS": 0.9,
+        "theta2_star_analytic": 0.3705,
+        "sigma_0.00": {
+          "theta2_obs": 0.155,
+          "rel_cost_s": -11.2114,
+          "safe_share_pct": 70.7594,
+          "missed_beneficial_approvals_pct": 0.0
+        },
+        "sigma_0.05": {
+          "theta2_obs": 0.325,
+          "rel_cost_s": -11.2089,
+          "safe_share_pct": 70.752,
+          "missed_beneficial_approvals_pct": 0.0135
+        },
+        "sigma_0.10": {
+          "theta2_obs": 0.32,
+          "rel_cost_s": -10.7614,
+          "safe_share_pct": 70.0184,
+          "missed_beneficial_approvals_pct": 2.0544
+        }
+      },
+      {
+        "r_harm_over_approval": 5.0,
+        "dS": 0.25,
+        "theta2_star_analytic": 0.8003,
+        "sigma_0.00": {
+          "theta2_obs": 0.505,
+          "rel_cost_s": -0.2492,
+          "safe_share_pct": 13.3642,
+          "missed_beneficial_approvals_pct": 0.0
+        },
+        "sigma_0.05": {
+          "theta2_obs": 0.7,
+          "rel_cost_s": -0.2487,
+          "safe_share_pct": 13.3505,
+          "missed_beneficial_approvals_pct": 0.0161
+        },
+        "sigma_0.10": {
+          "theta2_obs": 0.77,
+          "rel_cost_s": -0.1733,
+          "safe_share_pct": 10.7399,
+          "missed_beneficial_approvals_pct": 2.8299
+        }
+      },
+      {
+        "r_harm_over_approval": 5.0,
+        "dS": 0.5,
+        "theta2_star_analytic": 0.4001,
+        "sigma_0.00": {
+          "theta2_obs": 0.155,
+          "rel_cost_s": -8.808,
+          "safe_share_pct": 70.7594,
+          "missed_beneficial_approvals_pct": 0.0
+        },
+        "sigma_0.05": {
+          "theta2_obs": 0.325,
+          "rel_cost_s": -8.8058,
+          "safe_share_pct": 70.752,
+          "missed_beneficial_approvals_pct": 0.0135
+        },
+        "sigma_0.10": {
+          "theta2_obs": 0.33,
+          "rel_cost_s": -8.4186,
+          "safe_share_pct": 69.289,
+          "missed_beneficial_approvals_pct": 2.5342
+        }
+      },
+      {
+        "r_harm_over_approval": 5.0,
+        "dS": 0.9,
+        "theta2_star_analytic": 0.2223,
+        "sigma_0.00": {
+          "theta2_obs": 0.155,
+          "rel_cost_s": -32.8423,
+          "safe_share_pct": 70.7594,
+          "missed_beneficial_approvals_pct": 0.0
+        },
+        "sigma_0.05": {
+          "theta2_obs": 0.31,
+          "rel_cost_s": -32.8388,
+          "safe_share_pct": 70.7727,
+          "missed_beneficial_approvals_pct": 0.0047
+        },
+        "sigma_0.10": {
+          "theta2_obs": 0.265,
+          "rel_cost_s": -32.2794,
+          "safe_share_pct": 73.9121,
+          "missed_beneficial_approvals_pct": 0.5402
+        }
+      },
+      {
+        "r_harm_over_approval": 10.0,
+        "dS": 0.25,
+        "theta2_star_analytic": 0.4001,
+        "sigma_0.00": {
+          "theta2_obs": 0.155,
+          "rel_cost_s": -8.808,
+          "safe_share_pct": 70.7594,
+          "missed_beneficial_approvals_pct": 0.0
+        },
+        "sigma_0.05": {
+          "theta2_obs": 0.325,
+          "rel_cost_s": -8.8058,
+          "safe_share_pct": 70.752,
+          "missed_beneficial_approvals_pct": 0.0135
+        },
+        "sigma_0.10": {
+          "theta2_obs": 0.33,
+          "rel_cost_s": -8.4186,
+          "safe_share_pct": 69.289,
+          "missed_beneficial_approvals_pct": 2.5342
+        }
+      },
+      {
+        "r_harm_over_approval": 10.0,
+        "dS": 0.5,
+        "theta2_star_analytic": 0.2001,
+        "sigma_0.00": {
+          "theta2_obs": 0.155,
+          "rel_cost_s": -38.8509,
+          "safe_share_pct": 70.7594,
+          "missed_beneficial_approvals_pct": 0.0
+        },
+        "sigma_0.05": {
+          "theta2_obs": 0.305,
+          "rel_cost_s": -38.8477,
+          "safe_share_pct": 70.7827,
+          "missed_beneficial_approvals_pct": 0.0028
+        },
+        "sigma_0.10": {
+          "theta2_obs": 0.255,
+          "rel_cost_s": -38.3365,
+          "safe_share_pct": 74.6443,
+          "missed_beneficial_approvals_pct": 0.4241
+        }
+      },
+      {
+        "r_harm_over_approval": 10.0,
+        "dS": 0.9,
+        "theta2_star_analytic": 0.1111,
+        "sigma_0.00": {
+          "theta2_obs": 0.0,
+          "rel_cost_s": -89.9869,
+          "safe_share_pct": 100.0,
+          "missed_beneficial_approvals_pct": 0.0
+        },
+        "sigma_0.05": {
+          "theta2_obs": 0.0,
+          "rel_cost_s": -89.9869,
+          "safe_share_pct": 100.0,
+          "missed_beneficial_approvals_pct": 0.0
+        },
+        "sigma_0.10": {
+          "theta2_obs": 0.0,
+          "rel_cost_s": -89.9869,
+          "safe_share_pct": 100.0,
+          "missed_beneficial_approvals_pct": 0.0
+        }
+      },
+      {
+        "r_harm_over_approval": 20.0,
+        "dS": 0.25,
+        "theta2_star_analytic": 0.2001,
+        "sigma_0.00": {
+          "theta2_obs": 0.155,
+          "rel_cost_s": -38.8509,
+          "safe_share_pct": 70.7594,
+          "missed_beneficial_approvals_pct": 0.0
+        },
+        "sigma_0.05": {
+          "theta2_obs": 0.305,
+          "rel_cost_s": -38.8477,
+          "safe_share_pct": 70.7827,
+          "missed_beneficial_approvals_pct": 0.0028
+        },
+        "sigma_0.10": {
+          "theta2_obs": 0.255,
+          "rel_cost_s": -38.3365,
+          "safe_share_pct": 74.6443,
+          "missed_beneficial_approvals_pct": 0.4241
+        }
+      },
+      {
+        "r_harm_over_approval": 20.0,
+        "dS": 0.5,
+        "theta2_star_analytic": 0.1,
+        "sigma_0.00": {
+          "theta2_obs": 0.0,
+          "rel_cost_s": -103.3199,
+          "safe_share_pct": 100.0,
+          "missed_beneficial_approvals_pct": 0.0
+        },
+        "sigma_0.05": {
+          "theta2_obs": 0.0,
+          "rel_cost_s": -103.3199,
+          "safe_share_pct": 100.0,
+          "missed_beneficial_approvals_pct": 0.0
+        },
+        "sigma_0.10": {
+          "theta2_obs": 0.0,
+          "rel_cost_s": -103.3199,
+          "safe_share_pct": 100.0,
+          "missed_beneficial_approvals_pct": 0.0
+        }
+      },
+      {
+        "r_harm_over_approval": 20.0,
+        "dS": 0.9,
+        "theta2_star_analytic": 0.0556,
+        "sigma_0.00": {
+          "theta2_obs": 0.0,
+          "rel_cost_s": -209.9838,
+          "safe_share_pct": 100.0,
+          "missed_beneficial_approvals_pct": 0.0
+        },
+        "sigma_0.05": {
+          "theta2_obs": 0.0,
+          "rel_cost_s": -209.9838,
+          "safe_share_pct": 100.0,
+          "missed_beneficial_approvals_pct": 0.0
+        },
+        "sigma_0.10": {
+          "theta2_obs": 0.0,
+          "rel_cost_s": -209.9838,
+          "safe_share_pct": 100.0,
+          "missed_beneficial_approvals_pct": 0.0
+        }
+      },
+      {
+        "r_harm_over_approval": 50.0,
+        "dS": 0.25,
+        "theta2_star_analytic": 0.08,
+        "sigma_0.00": {
+          "theta2_obs": 0.0,
+          "rel_cost_s": -136.6523,
+          "safe_share_pct": 100.0,
+          "missed_beneficial_approvals_pct": 0.0
+        },
+        "sigma_0.05": {
+          "theta2_obs": 0.0,
+          "rel_cost_s": -136.6523,
+          "safe_share_pct": 100.0,
+          "missed_beneficial_approvals_pct": 0.0
+        },
+        "sigma_0.10": {
+          "theta2_obs": 0.0,
+          "rel_cost_s": -136.6523,
+          "safe_share_pct": 100.0,
+          "missed_beneficial_approvals_pct": 0.0
+        }
+      },
+      {
+        "r_harm_over_approval": 50.0,
+        "dS": 0.5,
+        "theta2_star_analytic": 0.04,
+        "sigma_0.00": {
+          "theta2_obs": 0.0,
+          "rel_cost_s": -303.3147,
+          "safe_share_pct": 100.0,
+          "missed_beneficial_approvals_pct": 0.0
+        },
+        "sigma_0.05": {
+          "theta2_obs": 0.0,
+          "rel_cost_s": -303.3147,
+          "safe_share_pct": 100.0,
+          "missed_beneficial_approvals_pct": 0.0
+        },
+        "sigma_0.10": {
+          "theta2_obs": 0.0,
+          "rel_cost_s": -303.3147,
+          "safe_share_pct": 100.0,
+          "missed_beneficial_approvals_pct": 0.0
+        }
+      },
+      {
+        "r_harm_over_approval": 50.0,
+        "dS": 0.9,
+        "theta2_star_analytic": 0.0222,
+        "sigma_0.00": {
+          "theta2_obs": 0.0,
+          "rel_cost_s": -569.9744,
+          "safe_share_pct": 100.0,
+          "missed_beneficial_approvals_pct": 0.0
+        },
+        "sigma_0.05": {
+          "theta2_obs": 0.0,
+          "rel_cost_s": -569.9744,
+          "safe_share_pct": 100.0,
+          "missed_beneficial_approvals_pct": 0.0
+        },
+        "sigma_0.10": {
+          "theta2_obs": 0.0,
+          "rel_cost_s": -569.9744,
+          "safe_share_pct": 100.0,
+          "missed_beneficial_approvals_pct": 0.0
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,309 @@
+{
+  "label": "demo",
+  "source_root_kind": "public demo",
+  "n_patients": 100,
+  "n_admissions": 275,
+  "n_prescriptions": 18087,
+  "n_poe": 45154,
+  "n_poe_non_medication": 24826,
+  "mapping_v1": {
+    "description": "extract_mimic.RISK_RULES as released (substring)",
+    "n_actions": 63241,
+    "pathway_counts": {
+      "FAST": 0,
+      "NORMAL": 59685,
+      "SAFE": 3556
+    },
+    "pathway_pct": {
+      "FAST": 0.0,
+      "NORMAL": 94.38,
+      "SAFE": 5.62
+    },
+    "workload": {
+      "gates_per_call": 3.0562,
+      "approvals_per_1000": 56.2,
+      "expected_time_s_c10ms_A30s": 1.717,
+      "flat4_universal_approval_time_s": 30.04
+    }
+  },
+  "mapping_v2": {
+    "description": "word-boundary high-alert list; meds from prescriptions, non-medication orders from POE",
+    "n_actions": 42913,
+    "pathway_counts": {
+      "FAST": 12548,
+      "NORMAL": 24630,
+      "SAFE": 5735
+    },
+    "pathway_pct": {
+      "FAST": 29.24,
+      "NORMAL": 57.4,
+      "SAFE": 13.36
+    },
+    "workload": {
+      "gates_per_call": 2.5488,
+      "approvals_per_1000": 133.6,
+      "expected_time_s_c10ms_A30s": 4.035,
+      "flat4_universal_approval_time_s": 30.04
+    },
+    "prescriptions_pathway_pct": {
+      "FAST": 9.38,
+      "NORMAL": 64.41,
+      "SAFE": 26.21
+    },
+    "poe_nonmed_pathway_pct": {
+      "FAST": 43.71,
+      "NORMAL": 52.28,
+      "SAFE": 4.0
+    },
+    "risk_value_counts": {
+      "0.85": 5735,
+      "0.50": 24630,
+      "0.15": 12548
+    },
+    "top_safe_drugs": [
+      {
+        "drug": "insulin",
+        "n": 915
+      },
+      {
+        "drug": "potassium chloride",
+        "n": 610
+      },
+      {
+        "drug": "magnesium sulfate",
+        "n": 402
+      },
+      {
+        "drug": "hydromorphone (dilaudid)",
+        "n": 326
+      },
+      {
+        "drug": "heparin",
+        "n": 287
+      },
+      {
+        "drug": "lorazepam",
+        "n": 225
+      },
+      {
+        "drug": "oxycodone (immediate release)",
+        "n": 215
+      },
+      {
+        "drug": "potassium chloride replacement (critical care and oncology)",
+        "n": 154
+      },
+      {
+        "drug": "warfarin",
+        "n": 129
+      },
+      {
+        "drug": "heparin flush (10 units/ml)",
+        "n": 126
+      }
+    ]
+  },
+  "v1_to_v2_band_changes_prescriptions": {
+    "NORMAL->SAFE": 1454,
+    "SAFE->NORMAL": 167,
+    "NORMAL->FAST": 1696
+  },
+  "v1_to_v2_top_moved_drugs": [
+    {
+      "drug": "sodium chloride 0.9%  flush",
+      "v1": "NORMAL",
+      "v2": "FAST",
+      "n": 585
+    },
+    {
+      "drug": "magnesium sulfate",
+      "v1": "NORMAL",
+      "v2": "SAFE",
+      "n": 402
+    },
+    {
+      "drug": "docusate sodium",
+      "v1": "NORMAL",
+      "v2": "FAST",
+      "n": 250
+    },
+    {
+      "drug": "lorazepam",
+      "v1": "NORMAL",
+      "v2": "SAFE",
+      "n": 225
+    },
+    {
+      "drug": "senna",
+      "v1": "NORMAL",
+      "v2": "FAST",
+      "n": 217
+    },
+    {
+      "drug": "oxycodone (immediate release)",
+      "v1": "NORMAL",
+      "v2": "SAFE",
+      "n": 215
+    },
+    {
+      "drug": "bisacodyl",
+      "v1": "NORMAL",
+      "v2": "FAST",
+      "n": 159
+    },
+    {
+      "drug": "amiodarone",
+      "v1": "NORMAL",
+      "v2": "SAFE",
+      "n": 113
+    },
+    {
+      "drug": "phenylephrine",
+      "v1": "NORMAL",
+      "v2": "SAFE",
+      "n": 85
+    },
+    {
+      "drug": "polyethylene glycol",
+      "v1": "NORMAL",
+      "v2": "FAST",
+      "n": 82
+    },
+    {
+      "drug": "atorvastatin",
+      "v1": "SAFE",
+      "v2": "NORMAL",
+      "n": 80
+    },
+    {
+      "drug": "thiamine",
+      "v1": "NORMAL",
+      "v2": "FAST",
+      "n": 56
+    }
+  ],
+  "clinical_gates_on_real_orders": {
+    "n_prescriptions_routed": 18087,
+    "n_by_pathway": {
+      "SAFE": 4741,
+      "NORMAL": 11650,
+      "FAST": 1696
+    },
+    "dose_check_coverage_pct": 38.04,
+    "checks_firing_on_unmodified_orders": {
+      "FAST": {
+        "chk_dose_over_ceiling": 0,
+        "chk_duplicate_ingredient": 175,
+        "chk_interaction": 0
+      },
+      "NORMAL": {
+        "chk_dose_over_ceiling": 36,
+        "chk_duplicate_ingredient": 875,
+        "chk_interaction": 174,
+        "G3_ConstraintValidation": 1014,
+        "any_block": 1027,
+        "G2_RiskAssessment": 36
+      },
+      "SAFE": {
+        "G3_ConstraintValidation": 2812,
+        "any_block": 2866,
+        "chk_dose_over_ceiling": 358,
+        "chk_duplicate_ingredient": 2428,
+        "chk_interaction": 739,
+        "G2_RiskAssessment": 358
+      }
+    },
+    "checks_firing_pct_of_pathway": {
+      "FAST": {
+        "chk_dose_over_ceiling": 0.0,
+        "chk_duplicate_ingredient": 10.32,
+        "chk_interaction": 0.0
+      },
+      "NORMAL": {
+        "chk_dose_over_ceiling": 0.31,
+        "chk_duplicate_ingredient": 7.51,
+        "chk_interaction": 1.49,
+        "G3_ConstraintValidation": 8.7,
+        "any_block": 8.82,
+        "G2_RiskAssessment": 0.31
+      },
+      "SAFE": {
+        "G3_ConstraintValidation": 59.31,
+        "any_block": 60.45,
+        "chk_dose_over_ceiling": 7.55,
+        "chk_duplicate_ingredient": 51.21,
+        "chk_interaction": 15.59,
+        "G2_RiskAssessment": 7.55
+      }
+    },
+    "fault_injection_on_real_orders": {
+      "FAST": {
+        "dose_x10": {
+          "injected": 78,
+          "detected": 0
+        },
+        "duplicate": {
+          "injected": 85,
+          "detected": 0
+        },
+        "interaction": {
+          "injected": 0,
+          "detected": 0
+        }
+      },
+      "NORMAL": {
+        "dose_x10": {
+          "injected": 286,
+          "detected": 218
+        },
+        "duplicate": {
+          "injected": 310,
+          "detected": 310
+        },
+        "interaction": {
+          "injected": 20,
+          "detected": 20
+        }
+      },
+      "SAFE": {
+        "dose_x10": {
+          "injected": 166,
+          "detected": 127
+        },
+        "duplicate": {
+          "injected": 210,
+          "detected": 210
+        },
+        "interaction": {
+          "injected": 147,
+          "detected": 147
+        }
+      }
+    },
+    "note": "Allergy data are not in the MIMIC-IV hosp prescriptions table, so the allergy check cannot fire on real orders. Firings on unmodified orders are alert burden; many duplicate firings are legitimate (e.g., PRN plus scheduled orders)."
+  },
+  "routing_thresholds": {
+    "fast_lt": 0.3,
+    "safe_ge": 0.7
+  },
+  "timestamp_utc": "2026-10-24T15:02:17Z",
+  "ed_demo_pyxis": {
+    "n_dispensations": 1082,
+    "pathway_counts": {
+      "FAST": 63,
+      "NORMAL": 728,
+      "SAFE": 291
+    },
+    "pathway_pct": {
+      "FAST": 5.82,
+      "NORMAL": 67.28,
+      "SAFE": 26.89
+    },
+    "workload": {
+      "gates_per_call": 3.1525,
+      "approvals_per_1000": 268.9,
+      "expected_time_s_c10ms_A30s": 8.1,
+      "flat4_universal_approval_time_s": 30.04
+    }
+  }
+}

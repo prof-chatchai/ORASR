@@ -1,0 +1,193 @@
+{
+  "seed": 42,
+  "staged_execution": {
+    "plain_callable": {
+      "g4_faults": 500,
+      "side_effects_committed": 500,
+      "blocked_reported": 500
+    },
+    "staged_two_phase": {
+      "g4_faults": 500,
+      "side_effects_committed": 0,
+      "blocked_reported": 500
+    },
+    "compensable": {
+      "g4_faults": 500,
+      "executed": 500,
+      "compensated": 500
+    },
+    "staged_clean": {
+      "actions": 500,
+      "committed": 500
+    }
+  },
+  "approval_tokens": {
+    "cases": {
+      "valid": {
+        "attempts": 1000,
+        "accepted": 1000
+      },
+      "replay": {
+        "attempts": 1000,
+        "accepted": 0
+      },
+      "forged_key": {
+        "attempts": 1000,
+        "accepted": 0
+      },
+      "unauthorised_role": {
+        "attempts": 1000,
+        "accepted": 0
+      },
+      "other_action": {
+        "attempts": 1000,
+        "accepted": 0
+      },
+      "expired": {
+        "attempts": 1000,
+        "accepted": 0
+      },
+      "boolean_flag": {
+        "attempts": 1000,
+        "accepted": 0
+      }
+    },
+    "mean_route_with_verification_us": 45.85,
+    "timing_note": "host-specific"
+  },
+  "approval_delay": {
+    "n_draws": 100000,
+    "rows": [
+      {
+        "median_response_s": 30.0,
+        "escalate_after_s": 60.0,
+        "deadline_s": 900.0,
+        "approved_by_deadline_pct": 100.0,
+        "default_safe_fallback_pct": 0.0,
+        "median_wait_s": 29.7,
+        "p95_wait_s": 96.9,
+        "escalations_pct": 24.31
+      },
+      {
+        "median_response_s": 30.0,
+        "escalate_after_s": 120.0,
+        "deadline_s": 900.0,
+        "approved_by_deadline_pct": 100.0,
+        "default_safe_fallback_pct": 0.0,
+        "median_wait_s": 29.7,
+        "p95_wait_s": 135.0,
+        "escalations_pct": 8.35
+      },
+      {
+        "median_response_s": 30.0,
+        "escalate_after_s": 300.0,
+        "deadline_s": 900.0,
+        "approved_by_deadline_pct": 100.0,
+        "default_safe_fallback_pct": 0.0,
+        "median_wait_s": 29.7,
+        "p95_wait_s": 155.7,
+        "escalations_pct": 1.11
+      },
+      {
+        "median_response_s": 30.0,
+        "escalate_after_s": 600.0,
+        "deadline_s": 900.0,
+        "approved_by_deadline_pct": 100.0,
+        "default_safe_fallback_pct": 0.0,
+        "median_wait_s": 29.7,
+        "p95_wait_s": 155.7,
+        "escalations_pct": 0.14
+      },
+      {
+        "median_response_s": 30.0,
+        "escalate_after_s": null,
+        "deadline_s": 900.0,
+        "approved_by_deadline_pct": 99.96,
+        "default_safe_fallback_pct": 0.04,
+        "median_wait_s": 29.7,
+        "p95_wait_s": 155.7,
+        "escalations_pct": null
+      },
+      {
+        "median_response_s": 300.0,
+        "escalate_after_s": 60.0,
+        "deadline_s": 900.0,
+        "approved_by_deadline_pct": 97.95,
+        "default_safe_fallback_pct": 2.04,
+        "median_wait_s": 204.6,
+        "p95_wait_s": 667.6,
+        "escalations_pct": 94.71
+      },
+      {
+        "median_response_s": 300.0,
+        "escalate_after_s": 120.0,
+        "deadline_s": 900.0,
+        "approved_by_deadline_pct": 97.73,
+        "default_safe_fallback_pct": 2.27,
+        "median_wait_s": 234.1,
+        "p95_wait_s": 698.2,
+        "escalations_pct": 82.15
+      },
+      {
+        "median_response_s": 300.0,
+        "escalate_after_s": 300.0,
+        "deadline_s": 900.0,
+        "approved_by_deadline_pct": 96.75,
+        "default_safe_fallback_pct": 3.25,
+        "median_wait_s": 300.3,
+        "p95_wait_s": 794.3,
+        "escalations_pct": 50.04
+      },
+      {
+        "median_response_s": 300.0,
+        "escalate_after_s": 600.0,
+        "deadline_s": 900.0,
+        "approved_by_deadline_pct": 93.31,
+        "default_safe_fallback_pct": 6.69,
+        "median_wait_s": 300.3,
+        "p95_wait_s": 900.0,
+        "escalations_pct": 24.37
+      },
+      {
+        "median_response_s": 300.0,
+        "escalate_after_s": null,
+        "deadline_s": 900.0,
+        "approved_by_deadline_pct": 86.52,
+        "default_safe_fallback_pct": 13.48,
+        "median_wait_s": 300.3,
+        "p95_wait_s": 900.0,
+        "escalations_pct": null
+      }
+    ]
+  },
+  "audit_log": {
+    "records": 10000,
+    "verifies": true,
+    "bytes_per_record": 578.0,
+    "write_s_total": 5.119,
+    "verify_s_total": 0.208,
+    "tamper_detection": {
+      "edit_field": {
+        "tampers": 200,
+        "detected": 200
+      },
+      "delete_record": {
+        "tampers": 200,
+        "detected": 200
+      },
+      "swap_adjacent": {
+        "tampers": 200,
+        "detected": 200
+      },
+      "truncate_tail_anchored": {
+        "tampers": 200,
+        "detected": 200
+      },
+      "truncate_tail_unanchored": {
+        "tampers": 200,
+        "detected": 0
+      }
+    },
+    "timing_note": "host-specific; fsync disabled"
+  }
+}

@@ -1,0 +1,382 @@
+{
+  "seed": 42,
+  "n_per_stratum_and_class": 500,
+  "n_faults_total": 9000,
+  "hazard_table": [
+    {
+      "hazard": "malformed or missing order payload",
+      "control": "schema check",
+      "gate": "G1",
+      "fault_test": "G1 input_data=None"
+    },
+    {
+      "hazard": "overdose (unit or decimal error)",
+      "control": "dose-range ceiling",
+      "gate": "G2",
+      "fault_test": "G2_dose dose x10"
+    },
+    {
+      "hazard": "risk above the declared action class",
+      "control": "class risk ceiling",
+      "gate": "G2",
+      "fault_test": "G2_ceiling"
+    },
+    {
+      "hazard": "drug given despite documented allergy",
+      "control": "allergy-class check",
+      "gate": "G3",
+      "fault_test": "G3_allergy"
+    },
+    {
+      "hazard": "dangerous drug-drug combination",
+      "control": "class-pair interaction check",
+      "gate": "G3",
+      "fault_test": "G3_interaction"
+    },
+    {
+      "hazard": "duplicate therapy (same ingredient active)",
+      "control": "duplicate-order check",
+      "gate": "G3",
+      "fault_test": "G3_duplicate"
+    },
+    {
+      "hazard": "invalid or empty action output",
+      "control": "output check",
+      "gate": "G4",
+      "fault_test": "G4 result=None"
+    }
+  ],
+  "interactions": [
+    [
+      "anticoagulant",
+      "nsaid",
+      "bleeding"
+    ],
+    [
+      "anticoagulant",
+      "sulfonamide",
+      "warfarin potentiation / bleeding"
+    ],
+    [
+      "opioid",
+      "benzodiazepine",
+      "respiratory depression"
+    ],
+    [
+      "potassium",
+      "k_sparing_diuretic",
+      "hyperkalaemia"
+    ]
+  ],
+  "detected_definition": "route() returned safe == False with human_approved=True",
+  "configurations": {
+    "default": {
+      "clean_false_blocks_by_pathway": {
+        "FAST": 0,
+        "NORMAL": 0,
+        "SAFE": 0
+      },
+      "faults_by_pathway": {
+        "FAST": {
+          "G1": {
+            "injected": 500,
+            "detected": 500
+          },
+          "G2_dose": {
+            "injected": 500,
+            "detected": 0
+          },
+          "G3_allergy": {
+            "injected": 500,
+            "detected": 0
+          },
+          "G3_interaction": {
+            "injected": 500,
+            "detected": 0
+          },
+          "G3_duplicate": {
+            "injected": 500,
+            "detected": 0
+          },
+          "G4": {
+            "injected": 500,
+            "detected": 0
+          }
+        },
+        "NORMAL": {
+          "G1": {
+            "injected": 500,
+            "detected": 500
+          },
+          "G2_dose": {
+            "injected": 500,
+            "detected": 0
+          },
+          "G3_allergy": {
+            "injected": 500,
+            "detected": 0
+          },
+          "G3_interaction": {
+            "injected": 500,
+            "detected": 0
+          },
+          "G3_duplicate": {
+            "injected": 500,
+            "detected": 0
+          },
+          "G4": {
+            "injected": 500,
+            "detected": 0
+          }
+        },
+        "SAFE": {
+          "G1": {
+            "injected": 500,
+            "detected": 500
+          },
+          "G2_dose": {
+            "injected": 500,
+            "detected": 0
+          },
+          "G3_allergy": {
+            "injected": 500,
+            "detected": 0
+          },
+          "G3_interaction": {
+            "injected": 500,
+            "detected": 0
+          },
+          "G3_duplicate": {
+            "injected": 500,
+            "detected": 0
+          },
+          "G4": {
+            "injected": 500,
+            "detected": 500
+          }
+        }
+      },
+      "fault_classes_detected_by_pathway": {
+        "FAST": [
+          "G1"
+        ],
+        "NORMAL": [
+          "G1"
+        ],
+        "SAFE": [
+          "G1",
+          "G4"
+        ]
+      },
+      "pathway_mismatches": 0
+    },
+    "demo_v120": {
+      "clean_false_blocks_by_pathway": {
+        "FAST": 0,
+        "NORMAL": 0,
+        "SAFE": 0
+      },
+      "faults_by_pathway": {
+        "FAST": {
+          "G1": {
+            "injected": 500,
+            "detected": 500
+          },
+          "G2_dose": {
+            "injected": 500,
+            "detected": 0
+          },
+          "G3_allergy": {
+            "injected": 500,
+            "detected": 0
+          },
+          "G3_interaction": {
+            "injected": 500,
+            "detected": 0
+          },
+          "G3_duplicate": {
+            "injected": 500,
+            "detected": 0
+          },
+          "G4": {
+            "injected": 500,
+            "detected": 0
+          }
+        },
+        "NORMAL": {
+          "G1": {
+            "injected": 500,
+            "detected": 500
+          },
+          "G2_dose": {
+            "injected": 500,
+            "detected": 0
+          },
+          "G3_allergy": {
+            "injected": 500,
+            "detected": 0
+          },
+          "G3_interaction": {
+            "injected": 500,
+            "detected": 0
+          },
+          "G3_duplicate": {
+            "injected": 500,
+            "detected": 0
+          },
+          "G4": {
+            "injected": 500,
+            "detected": 0
+          }
+        },
+        "SAFE": {
+          "G1": {
+            "injected": 500,
+            "detected": 500
+          },
+          "G2_dose": {
+            "injected": 500,
+            "detected": 0
+          },
+          "G3_allergy": {
+            "injected": 500,
+            "detected": 0
+          },
+          "G3_interaction": {
+            "injected": 500,
+            "detected": 0
+          },
+          "G3_duplicate": {
+            "injected": 500,
+            "detected": 0
+          },
+          "G4": {
+            "injected": 500,
+            "detected": 500
+          }
+        }
+      },
+      "fault_classes_detected_by_pathway": {
+        "FAST": [
+          "G1"
+        ],
+        "NORMAL": [
+          "G1"
+        ],
+        "SAFE": [
+          "G1",
+          "G4"
+        ]
+      },
+      "pathway_mismatches": 0
+    },
+    "clinical": {
+      "clean_false_blocks_by_pathway": {
+        "FAST": 0,
+        "NORMAL": 0,
+        "SAFE": 0
+      },
+      "faults_by_pathway": {
+        "FAST": {
+          "G1": {
+            "injected": 500,
+            "detected": 500
+          },
+          "G2_dose": {
+            "injected": 500,
+            "detected": 0
+          },
+          "G3_allergy": {
+            "injected": 500,
+            "detected": 0
+          },
+          "G3_interaction": {
+            "injected": 500,
+            "detected": 0
+          },
+          "G3_duplicate": {
+            "injected": 500,
+            "detected": 0
+          },
+          "G4": {
+            "injected": 500,
+            "detected": 0
+          }
+        },
+        "NORMAL": {
+          "G1": {
+            "injected": 500,
+            "detected": 500
+          },
+          "G2_dose": {
+            "injected": 500,
+            "detected": 500
+          },
+          "G3_allergy": {
+            "injected": 500,
+            "detected": 500
+          },
+          "G3_interaction": {
+            "injected": 500,
+            "detected": 500
+          },
+          "G3_duplicate": {
+            "injected": 500,
+            "detected": 500
+          },
+          "G4": {
+            "injected": 500,
+            "detected": 0
+          }
+        },
+        "SAFE": {
+          "G1": {
+            "injected": 500,
+            "detected": 500
+          },
+          "G2_dose": {
+            "injected": 500,
+            "detected": 500
+          },
+          "G3_allergy": {
+            "injected": 500,
+            "detected": 500
+          },
+          "G3_interaction": {
+            "injected": 500,
+            "detected": 500
+          },
+          "G3_duplicate": {
+            "injected": 500,
+            "detected": 500
+          },
+          "G4": {
+            "injected": 500,
+            "detected": 500
+          }
+        }
+      },
+      "fault_classes_detected_by_pathway": {
+        "FAST": [
+          "G1"
+        ],
+        "NORMAL": [
+          "G1",
+          "G2_dose",
+          "G3_allergy",
+          "G3_interaction",
+          "G3_duplicate"
+        ],
+        "SAFE": [
+          "G1",
+          "G2_dose",
+          "G3_allergy",
+          "G3_interaction",
+          "G3_duplicate",
+          "G4"
+        ]
+      },
+      "pathway_mismatches": 0
+    }
+  }
+}

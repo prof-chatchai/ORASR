@@ -1,0 +1,485 @@
+{
+  "seed": 42,
+  "n_replicates": 20,
+  "n_actions": 10000,
+  "high_alert_share": {
+    "SAFE": 0.502,
+    "NORMAL": 0.094
+  },
+  "error_models": [
+    "E0_none",
+    "E1_gaussian",
+    "E2_heteroscedastic",
+    "E3_subgroup_bias",
+    "E4_correlated_encounter",
+    "E5_common_mode",
+    "E6_calibration_drift",
+    "E7_attack",
+    "E8_empirical_ED"
+  ],
+  "mitigations": [
+    "M0_none",
+    "M1_guard_band_0.60",
+    "M2_uncertainty_k1",
+    "M3_type_floor",
+    "M4_guard_plus_floor",
+    "M5_completeness_check_plus_floor"
+  ],
+  "grid": {
+    "E0_none": {
+      "M0_none": {
+        "down_safe_pct": 0.0,
+        "down_safe_hi_alert_pct": 0.0,
+        "skip_g23_pct": 0.0,
+        "safe_share_pct": 20.0,
+        "overdose_missed_pct": 0.0,
+        "down_safe_subgroup_pct": 0.0
+      },
+      "M1_guard_band_0.60": {
+        "down_safe_pct": 0.0,
+        "down_safe_hi_alert_pct": 0.0,
+        "skip_g23_pct": 0.0,
+        "safe_share_pct": 30.83,
+        "overdose_missed_pct": 0.0,
+        "down_safe_subgroup_pct": 0.0
+      },
+      "M2_uncertainty_k1": {
+        "down_safe_pct": 0.0,
+        "down_safe_hi_alert_pct": 0.0,
+        "skip_g23_pct": 0.0,
+        "safe_share_pct": 30.95,
+        "overdose_missed_pct": 0.0,
+        "down_safe_subgroup_pct": 0.0
+      },
+      "M3_type_floor": {
+        "down_safe_pct": 0.0,
+        "down_safe_hi_alert_pct": 0.0,
+        "skip_g23_pct": 0.0,
+        "safe_share_pct": 24.23,
+        "overdose_missed_pct": 0.0,
+        "down_safe_subgroup_pct": 0.0
+      },
+      "M4_guard_plus_floor": {
+        "down_safe_pct": 0.0,
+        "down_safe_hi_alert_pct": 0.0,
+        "skip_g23_pct": 0.0,
+        "safe_share_pct": 34.05,
+        "overdose_missed_pct": 0.0,
+        "down_safe_subgroup_pct": 0.0
+      },
+      "M5_completeness_check_plus_floor": {
+        "down_safe_pct": 0.0,
+        "down_safe_hi_alert_pct": 0.0,
+        "skip_g23_pct": 0.0,
+        "safe_share_pct": 24.23,
+        "overdose_missed_pct": 0.0,
+        "down_safe_subgroup_pct": 0.0
+      }
+    },
+    "E1_gaussian": {
+      "M0_none": {
+        "down_safe_pct": 13.35,
+        "down_safe_hi_alert_pct": 13.55,
+        "skip_g23_pct": 6.79,
+        "safe_share_pct": 21.71,
+        "overdose_missed_pct": 6.84,
+        "down_safe_subgroup_pct": 13.12
+      },
+      "M1_guard_band_0.60": {
+        "down_safe_pct": 2.84,
+        "down_safe_hi_alert_pct": 2.94,
+        "skip_g23_pct": 6.79,
+        "safe_share_pct": 31.46,
+        "overdose_missed_pct": 6.84,
+        "down_safe_subgroup_pct": 2.6
+      },
+      "M2_uncertainty_k1": {
+        "down_safe_pct": 3.81,
+        "down_safe_hi_alert_pct": 3.88,
+        "skip_g23_pct": 1.82,
+        "safe_share_pct": 31.6,
+        "overdose_missed_pct": 1.87,
+        "down_safe_subgroup_pct": 3.59
+      },
+      "M3_type_floor": {
+        "down_safe_pct": 6.54,
+        "down_safe_hi_alert_pct": 0.0,
+        "skip_g23_pct": 6.03,
+        "safe_share_pct": 26.9,
+        "overdose_missed_pct": 6.08,
+        "down_safe_subgroup_pct": 7.17
+      },
+      "M4_guard_plus_floor": {
+        "down_safe_pct": 1.36,
+        "down_safe_hi_alert_pct": 0.0,
+        "skip_g23_pct": 6.03,
+        "safe_share_pct": 34.88,
+        "overdose_missed_pct": 6.08,
+        "down_safe_subgroup_pct": 1.42
+      },
+      "M5_completeness_check_plus_floor": {
+        "down_safe_pct": 6.54,
+        "down_safe_hi_alert_pct": 0.0,
+        "skip_g23_pct": 6.03,
+        "safe_share_pct": 26.9,
+        "overdose_missed_pct": 6.08,
+        "down_safe_subgroup_pct": 7.17
+      }
+    },
+    "E2_heteroscedastic": {
+      "M0_none": {
+        "down_safe_pct": 12.88,
+        "down_safe_hi_alert_pct": 13.21,
+        "skip_g23_pct": 6.87,
+        "safe_share_pct": 21.72,
+        "overdose_missed_pct": 7.08,
+        "down_safe_subgroup_pct": 12.93
+      },
+      "M1_guard_band_0.60": {
+        "down_safe_pct": 3.65,
+        "down_safe_hi_alert_pct": 3.77,
+        "skip_g23_pct": 6.87,
+        "safe_share_pct": 31.51,
+        "overdose_missed_pct": 7.08,
+        "down_safe_subgroup_pct": 3.65
+      },
+      "M2_uncertainty_k1": {
+        "down_safe_pct": 2.85,
+        "down_safe_hi_alert_pct": 2.88,
+        "skip_g23_pct": 1.36,
+        "safe_share_pct": 31.35,
+        "overdose_missed_pct": 1.4,
+        "down_safe_subgroup_pct": 2.97
+      },
+      "M3_type_floor": {
+        "down_safe_pct": 6.25,
+        "down_safe_hi_alert_pct": 0.0,
+        "skip_g23_pct": 6.16,
+        "safe_share_pct": 26.9,
+        "overdose_missed_pct": 6.36,
+        "down_safe_subgroup_pct": 6.99
+      },
+      "M4_guard_plus_floor": {
+        "down_safe_pct": 1.75,
+        "down_safe_hi_alert_pct": 0.0,
+        "skip_g23_pct": 6.16,
+        "safe_share_pct": 35.03,
+        "overdose_missed_pct": 6.36,
+        "down_safe_subgroup_pct": 2.03
+      },
+      "M5_completeness_check_plus_floor": {
+        "down_safe_pct": 6.25,
+        "down_safe_hi_alert_pct": 0.0,
+        "skip_g23_pct": 6.16,
+        "safe_share_pct": 26.9,
+        "overdose_missed_pct": 6.36,
+        "down_safe_subgroup_pct": 6.99
+      }
+    },
+    "E3_subgroup_bias": {
+      "M0_none": {
+        "down_safe_pct": 19.77,
+        "down_safe_hi_alert_pct": 19.07,
+        "skip_g23_pct": 10.62,
+        "safe_share_pct": 17.56,
+        "overdose_missed_pct": 10.65,
+        "down_safe_subgroup_pct": 50.53
+      },
+      "M1_guard_band_0.60": {
+        "down_safe_pct": 5.4,
+        "down_safe_hi_alert_pct": 4.7,
+        "skip_g23_pct": 10.62,
+        "safe_share_pct": 26.7,
+        "overdose_missed_pct": 10.65,
+        "down_safe_subgroup_pct": 17.74
+      },
+      "M2_uncertainty_k1": {
+        "down_safe_pct": 6.38,
+        "down_safe_hi_alert_pct": 5.65,
+        "skip_g23_pct": 3.52,
+        "safe_share_pct": 26.82,
+        "overdose_missed_pct": 3.38,
+        "down_safe_subgroup_pct": 19.84
+      },
+      "M3_type_floor": {
+        "down_safe_pct": 10.19,
+        "down_safe_hi_alert_pct": 0.0,
+        "skip_g23_pct": 9.49,
+        "safe_share_pct": 23.56,
+        "overdose_missed_pct": 9.31,
+        "down_safe_subgroup_pct": 27.37
+      },
+      "M4_guard_plus_floor": {
+        "down_safe_pct": 3.04,
+        "down_safe_hi_alert_pct": 0.0,
+        "skip_g23_pct": 9.49,
+        "safe_share_pct": 30.69,
+        "overdose_missed_pct": 9.31,
+        "down_safe_subgroup_pct": 10.06
+      },
+      "M5_completeness_check_plus_floor": {
+        "down_safe_pct": 10.19,
+        "down_safe_hi_alert_pct": 0.0,
+        "skip_g23_pct": 9.49,
+        "safe_share_pct": 23.56,
+        "overdose_missed_pct": 9.31,
+        "down_safe_subgroup_pct": 27.37
+      }
+    },
+    "E4_correlated_encounter": {
+      "M0_none": {
+        "down_safe_pct": 13.55,
+        "down_safe_hi_alert_pct": 13.41,
+        "skip_g23_pct": 6.86,
+        "safe_share_pct": 21.68,
+        "overdose_missed_pct": 7.09,
+        "down_safe_subgroup_pct": 13.89
+      },
+      "M1_guard_band_0.60": {
+        "down_safe_pct": 2.84,
+        "down_safe_hi_alert_pct": 2.94,
+        "skip_g23_pct": 6.86,
+        "safe_share_pct": 31.47,
+        "overdose_missed_pct": 7.09,
+        "down_safe_subgroup_pct": 2.92
+      },
+      "M2_uncertainty_k1": {
+        "down_safe_pct": 3.72,
+        "down_safe_hi_alert_pct": 3.86,
+        "skip_g23_pct": 1.9,
+        "safe_share_pct": 31.59,
+        "overdose_missed_pct": 1.84,
+        "down_safe_subgroup_pct": 3.65
+      },
+      "M3_type_floor": {
+        "down_safe_pct": 6.82,
+        "down_safe_hi_alert_pct": 0.0,
+        "skip_g23_pct": 6.14,
+        "safe_share_pct": 26.87,
+        "overdose_missed_pct": 6.24,
+        "down_safe_subgroup_pct": 7.78
+      },
+      "M4_guard_plus_floor": {
+        "down_safe_pct": 1.36,
+        "down_safe_hi_alert_pct": 0.0,
+        "skip_g23_pct": 6.14,
+        "safe_share_pct": 34.9,
+        "overdose_missed_pct": 6.24,
+        "down_safe_subgroup_pct": 1.6
+      },
+      "M5_completeness_check_plus_floor": {
+        "down_safe_pct": 6.82,
+        "down_safe_hi_alert_pct": 0.0,
+        "skip_g23_pct": 6.14,
+        "safe_share_pct": 26.87,
+        "overdose_missed_pct": 6.24,
+        "down_safe_subgroup_pct": 7.78
+      }
+    },
+    "E5_common_mode": {
+      "M0_none": {
+        "down_safe_pct": 12.87,
+        "down_safe_hi_alert_pct": 12.75,
+        "skip_g23_pct": 6.55,
+        "safe_share_pct": 19.32,
+        "overdose_missed_pct": 13.49,
+        "down_safe_subgroup_pct": 12.92
+      },
+      "M1_guard_band_0.60": {
+        "down_safe_pct": 3.51,
+        "down_safe_hi_alert_pct": 3.48,
+        "skip_g23_pct": 6.55,
+        "safe_share_pct": 29.18,
+        "overdose_missed_pct": 13.49,
+        "down_safe_subgroup_pct": 3.44
+      },
+      "M2_uncertainty_k1": {
+        "down_safe_pct": 3.97,
+        "down_safe_hi_alert_pct": 3.99,
+        "skip_g23_pct": 2.02,
+        "safe_share_pct": 29.26,
+        "overdose_missed_pct": 10.46,
+        "down_safe_subgroup_pct": 3.88
+      },
+      "M3_type_floor": {
+        "down_safe_pct": 6.47,
+        "down_safe_hi_alert_pct": 0.0,
+        "skip_g23_pct": 5.87,
+        "safe_share_pct": 24.66,
+        "overdose_missed_pct": 13.08,
+        "down_safe_subgroup_pct": 7.52
+      },
+      "M4_guard_plus_floor": {
+        "down_safe_pct": 1.76,
+        "down_safe_hi_alert_pct": 0.0,
+        "skip_g23_pct": 5.87,
+        "safe_share_pct": 32.86,
+        "overdose_missed_pct": 13.08,
+        "down_safe_subgroup_pct": 1.94
+      },
+      "M5_completeness_check_plus_floor": {
+        "down_safe_pct": 2.94,
+        "down_safe_hi_alert_pct": 0.0,
+        "skip_g23_pct": 2.72,
+        "safe_share_pct": 33.09,
+        "overdose_missed_pct": 2.98,
+        "down_safe_subgroup_pct": 3.55
+      }
+    },
+    "E6_calibration_drift": {
+      "M0_none": {
+        "down_safe_pct": 47.85,
+        "down_safe_hi_alert_pct": 47.71,
+        "skip_g23_pct": 16.17,
+        "safe_share_pct": 10.43,
+        "overdose_missed_pct": 16.25,
+        "down_safe_subgroup_pct": 47.99
+      },
+      "M1_guard_band_0.60": {
+        "down_safe_pct": 19.85,
+        "down_safe_hi_alert_pct": 20.92,
+        "skip_g23_pct": 16.17,
+        "safe_share_pct": 16.03,
+        "overdose_missed_pct": 16.25,
+        "down_safe_subgroup_pct": 19.9
+      },
+      "M2_uncertainty_k1": {
+        "down_safe_pct": 19.0,
+        "down_safe_hi_alert_pct": 19.22,
+        "skip_g23_pct": 1.54,
+        "safe_share_pct": 16.4,
+        "overdose_missed_pct": 1.63,
+        "down_safe_subgroup_pct": 19.18
+      },
+      "M3_type_floor": {
+        "down_safe_pct": 23.9,
+        "down_safe_hi_alert_pct": 0.0,
+        "skip_g23_pct": 14.48,
+        "safe_share_pct": 19.45,
+        "overdose_missed_pct": 14.38,
+        "down_safe_subgroup_pct": 25.42
+      },
+      "M4_guard_plus_floor": {
+        "down_safe_pct": 9.35,
+        "down_safe_hi_alert_pct": 0.0,
+        "skip_g23_pct": 14.48,
+        "safe_share_pct": 22.36,
+        "overdose_missed_pct": 14.38,
+        "down_safe_subgroup_pct": 11.2
+      },
+      "M5_completeness_check_plus_floor": {
+        "down_safe_pct": 23.9,
+        "down_safe_hi_alert_pct": 0.0,
+        "skip_g23_pct": 14.48,
+        "safe_share_pct": 19.45,
+        "overdose_missed_pct": 14.38,
+        "down_safe_subgroup_pct": 25.42
+      }
+    },
+    "E7_attack": {
+      "M0_none": {
+        "down_safe_pct": 33.3,
+        "down_safe_hi_alert_pct": 33.37,
+        "skip_g23_pct": 17.22,
+        "safe_share_pct": 13.34,
+        "overdose_missed_pct": 17.37,
+        "down_safe_subgroup_pct": 33.11
+      },
+      "M1_guard_band_0.60": {
+        "down_safe_pct": 0.0,
+        "down_safe_hi_alert_pct": 0.0,
+        "skip_g23_pct": 17.22,
+        "safe_share_pct": 20.0,
+        "overdose_missed_pct": 17.37,
+        "down_safe_subgroup_pct": 0.0
+      },
+      "M2_uncertainty_k1": {
+        "down_safe_pct": 6.77,
+        "down_safe_hi_alert_pct": 7.01,
+        "skip_g23_pct": 3.44,
+        "safe_share_pct": 20.77,
+        "overdose_missed_pct": 3.46,
+        "down_safe_subgroup_pct": 6.68
+      },
+      "M3_type_floor": {
+        "down_safe_pct": 16.55,
+        "down_safe_hi_alert_pct": 0.0,
+        "skip_g23_pct": 15.46,
+        "safe_share_pct": 20.92,
+        "overdose_missed_pct": 15.47,
+        "down_safe_subgroup_pct": 18.39
+      },
+      "M4_guard_plus_floor": {
+        "down_safe_pct": 0.0,
+        "down_safe_hi_alert_pct": 0.0,
+        "skip_g23_pct": 15.46,
+        "safe_share_pct": 24.23,
+        "overdose_missed_pct": 15.47,
+        "down_safe_subgroup_pct": 0.0
+      },
+      "M5_completeness_check_plus_floor": {
+        "down_safe_pct": 16.55,
+        "down_safe_hi_alert_pct": 0.0,
+        "skip_g23_pct": 15.46,
+        "safe_share_pct": 20.92,
+        "overdose_missed_pct": 15.47,
+        "down_safe_subgroup_pct": 18.39
+      }
+    },
+    "E8_empirical_ED": {
+      "M0_none": {
+        "down_safe_pct": 97.05,
+        "down_safe_hi_alert_pct": 96.94,
+        "skip_g23_pct": 94.13,
+        "safe_share_pct": 0.59,
+        "overdose_missed_pct": 94.18,
+        "down_safe_subgroup_pct": 97.26
+      },
+      "M1_guard_band_0.60": {
+        "down_safe_pct": 97.05,
+        "down_safe_hi_alert_pct": 96.94,
+        "skip_g23_pct": 94.13,
+        "safe_share_pct": 0.59,
+        "overdose_missed_pct": 94.18,
+        "down_safe_subgroup_pct": 97.26
+      },
+      "M2_uncertainty_k1": {
+        "down_safe_pct": 97.05,
+        "down_safe_hi_alert_pct": 96.94,
+        "skip_g23_pct": 76.45,
+        "safe_share_pct": 0.59,
+        "overdose_missed_pct": 76.58,
+        "down_safe_subgroup_pct": 97.26
+      },
+      "M3_type_floor": {
+        "down_safe_pct": 48.39,
+        "down_safe_hi_alert_pct": 0.0,
+        "skip_g23_pct": 74.85,
+        "safe_share_pct": 14.55,
+        "overdose_missed_pct": 75.0,
+        "down_safe_subgroup_pct": 49.63
+      },
+      "M4_guard_plus_floor": {
+        "down_safe_pct": 48.39,
+        "down_safe_hi_alert_pct": 0.0,
+        "skip_g23_pct": 74.85,
+        "safe_share_pct": 14.55,
+        "overdose_missed_pct": 75.0,
+        "down_safe_subgroup_pct": 49.63
+      },
+      "M5_completeness_check_plus_floor": {
+        "down_safe_pct": 48.39,
+        "down_safe_hi_alert_pct": 0.0,
+        "skip_g23_pct": 74.85,
+        "safe_share_pct": 14.55,
+        "overdose_missed_pct": 75.0,
+        "down_safe_subgroup_pct": 49.63
+      }
+    }
+  },
+  "ed_pools_n": {
+    "SAFE": 103,
+    "FAST": 2,
+    "NORMAL": 88
+  }
+}

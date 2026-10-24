@@ -8,6 +8,8 @@ Main routing engine for safety-aware action execution.
 from typing import Callable, Dict, Any, List, Optional
 from dataclasses import dataclass
 from enum import Enum
+import math
+import numbers
 import time
 import logging
 
@@ -15,6 +17,28 @@ from .pathways import ReasoningPath, PathwayConfig
 from .gates import SafetyGate, GateType, GateResult
 from .reasoning import ReasoningTrace, ReasoningStep
 from .constraints import RoutingConstraint
+from .staging import StagedAction, CompensableAction
+from .approval import action_hash as _action_hash
+
+INVALID_RISK_VIOLATION = (
+    "R0_RiskInput: risk score missing, non-numeric, NaN or outside [0,1] (fail-closed)")
+
+
+def _is_real(value: Any) -> bool:
+    return isinstance(value, numbers.Real) and not isinstance(value, bool)
+
+
+def risk_is_valid(value: Any) -> bool:
+    """A risk score is valid iff it is a real number (not bool), finite and in [0, 1]."""
+    if not _is_real(value):
+        return False
+    v = float(value)
+    return math.isfinite(v) and 0.0 <= v <= 1.0
+
+
+def uncertainty_is_valid(value: Any) -> bool:
+    """A risk uncertainty (standard deviation) must be a finite, non-negative real."""
+    return _is_real(value) and math.isfinite(float(value)) and float(value) >= 0.0
 
 logger = logging.getLogger(__name__)
 
@@ -51,6 +75,11 @@ class ORASRRouter:
         enable_fast_path: bool = True,
         enable_audit: bool = True,
         default_path: ReasoningPath = ReasoningPath.NORMAL,
+        uncertainty_k: float = 0.0,
+        high_alert_types: Optional[Any] = None,
+        approval_verifier: Optional[Any] = None,
+        audit_log: Optional[Any] = None,
+        staged_execution: bool = True,
     ):
         """
         Initialize ORASR router.
@@ -59,7 +88,20 @@ class ORASRRouter:
             enable_fast_path: Enable fast path for low-risk actions
             enable_audit: Enable audit logging
             default_path: Default pathway when risk unknown
+            uncertainty_k: routing uses rho + k * sigma when the caller passes
+                ``risk_uncertainty=sigma`` (0 = ignore uncertainty)
+            high_alert_types: action types always routed SAFE regardless of rho
+            approval_verifier: if set, approval must be a signed token
+                (``approval_token=``) accepted by this verifier
+            audit_log: optional HashChainAuditLog for durable, tamper-evident records
+            staged_execution: run G4 on the staged output of a StagedAction
+                before commit (two-phase execution)
         """
+        self.uncertainty_k = float(uncertainty_k)
+        self.high_alert_types = frozenset(high_alert_types or ())
+        self.approval_verifier = approval_verifier
+        self.audit_log = audit_log
+        self.staged_execution = staged_execution
         self.enable_fast_path = enable_fast_path
         self.enable_audit = enable_audit
         self.default_path = default_path
@@ -194,8 +236,20 @@ class ORASRRouter:
         if reasoning_trace is None:
             reasoning_trace = ReasoningTrace()
 
+        # Validate upstream inputs: anything unusable fails closed to SAFE and blocks.
+        action_type = kwargs.get("action_type")
+        sigma = kwargs.get("risk_uncertainty")
+        invalid_risk = not risk_is_valid(risk_score)
+        if sigma is not None and not uncertainty_is_valid(sigma):
+            invalid_risk = True
+        effective_risk = risk_score
+        if not invalid_risk and sigma is not None and self.uncertainty_k:
+            effective_risk = min(1.0, float(risk_score) + self.uncertainty_k * float(sigma))
+        forced = bool(require_human_approval or invalid_risk or (
+            action_type is not None and action_type in self.high_alert_types))
+
         # Select pathway
-        pathway = self._select_pathway(risk_score, require_human_approval)
+        pathway = self._select_pathway(effective_risk, forced)
 
         reasoning_trace.add_step(
             ReasoningStep(
@@ -218,6 +272,9 @@ class ORASRRouter:
         gates_passed = []
         violations = []
         safe = True
+        if invalid_risk:
+            safe = False
+            violations.append(INVALID_RISK_VIOLATION)
 
         for gate_type in config.gates:
             if gate_type == GateType.POSTCONDITION:
@@ -246,15 +303,49 @@ class ORASRRouter:
         # Check human approval if required
         human_approved = False
         if config.requires_approval or require_human_approval:
-            # In real system, this would prompt for approval
-            human_approved = kwargs.get("human_approved", False)
-            if not human_approved:
-                safe = False
-                violations.append("Human approval required but not provided")
+            if self.approval_verifier is not None:
+                ok, why = self.approval_verifier.verify(
+                    kwargs.get("approval_token"), action_type, input_data)
+                human_approved = ok
+                if not ok:
+                    safe = False
+                    violations.append(f"Approval token rejected: {why}")
+            else:
+                # Legacy boolean flag (prototype); see orasr.approval for signed tokens.
+                human_approved = kwargs.get("human_approved", False)
+                if not human_approved:
+                    safe = False
+                    violations.append("Human approval required but not provided")
 
         # Execute action if safe
         action_result = None
-        if safe:
+        committed = None
+        compensated = False
+        staged = (self.staged_execution and isinstance(action, StagedAction)
+                  and GateType.POSTCONDITION in config.gates)
+        if safe and staged:
+            # Two-phase execution: G4 checks the staged output before commit.
+            try:
+                prepared = action.prepare(input_data)
+                context["action_result"] = prepared
+                post_gate = self.gates[GateType.POSTCONDITION]
+                post_result = post_gate.check(context)
+                if post_result.passed:
+                    gates_passed.append(post_gate.name)
+                    action_result = action.commit(prepared)
+                    committed = True
+                else:
+                    safe = False
+                    committed = False
+                    violations.append(
+                        f"Postcondition failed on staged output: {post_result.message}; not committed")
+                    if action.abort is not None:
+                        action.abort(prepared)
+            except Exception as e:
+                safe = False
+                committed = False
+                violations.append(f"Action execution failed: {e}")
+        elif safe:
             try:
                 action_result = action(input_data)
 
@@ -267,6 +358,10 @@ class ORASRRouter:
                     if not post_result.passed:
                         safe = False
                         violations.append(f"Postcondition failed: {post_result.message}")
+                        if isinstance(action, CompensableAction):
+                            action.compensate(action_result)
+                            compensated = True
+                            violations.append("Compensating action executed")
                     else:
                         gates_passed.append(post_gate.name)
 
@@ -291,8 +386,29 @@ class ORASRRouter:
                 "risk_score": risk_score,
                 "pathway_config": config.name,
                 "constraints_checked": len(self.constraints),
+                "effective_risk": effective_risk,
+                "invalid_risk": invalid_risk,
+                "action_type": action_type,
+                "committed": committed,
+                "compensated": compensated,
             },
         )
+
+        if self.audit_log is not None:
+            self.audit_log.append({
+                "timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+                "pathway": pathway.name,
+                "risk_score": risk_score if not invalid_risk else repr(risk_score),
+                "effective_risk": None if invalid_risk else effective_risk,
+                "action_type": action_type,
+                "action_hash": _action_hash(action_type, input_data),
+                "gates_passed": gates_passed,
+                "violations": violations,
+                "safe": safe,
+                "approver": getattr(kwargs.get("approval_token"), "approver_id", None),
+                "committed": committed,
+                "compensated": compensated,
+            })
 
         # Log to history
         if self.enable_audit:
@@ -308,8 +424,8 @@ class ORASRRouter:
     def _select_pathway(self, risk_score: float, require_approval: bool) -> ReasoningPath:
         """Select appropriate reasoning pathway"""
 
-        if require_approval:
-            return ReasoningPath.SAFE
+        if require_approval or not risk_is_valid(risk_score):
+            return ReasoningPath.SAFE  # fail-closed for unusable scores
 
         if self.enable_fast_path and risk_score < self.FAST_PATH_THRESHOLD:
             return ReasoningPath.FAST

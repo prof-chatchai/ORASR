@@ -46,7 +46,11 @@ RANK = {"FAST": 0, "NORMAL": 1, "SAFE": 2}
 
 
 def route_names(router: ORASRRouter, values: np.ndarray) -> np.ndarray:
-    return np.array([RANK[router._select_pathway(float(v), False).name] for v in values])
+    # Noisy scores are clipped to [0, 1] as a probability-valued upstream would emit
+    # them. (Since v1.3.0 the router fails closed on out-of-range scores; that
+    # behaviour is analysed separately in scripts/upstream_reliability.py.)
+    vals = np.clip(values, 0.0, 1.0)
+    return np.array([RANK[router._select_pathway(float(v), False).name] for v in vals])
 
 
 def part_a(router, strata: np.ndarray, rho: np.ndarray) -> List[Dict]:

@@ -86,11 +86,11 @@
     ],
     "violations": [],
     "trace": {
-      "start_time": 1789305001.5783427,
+      "start_time": 1792853987.5562425,
       "elapsed_time": 0.0,
       "steps": [
         {
-          "timestamp": 1789305001.5783427,
+          "timestamp": 1792853987.5562425,
           "description": "Selected pathway: SAFE",
           "gate": "ROUTER",
           "result": "PASS",
@@ -100,7 +100,7 @@
           }
         },
         {
-          "timestamp": 1789305001.5783427,
+          "timestamp": 1792853987.5562425,
           "description": "Gate check: G1_Precondition",
           "gate": "G1_Precondition",
           "result": "PASS",
@@ -111,7 +111,7 @@
           }
         },
         {
-          "timestamp": 1789305001.5783427,
+          "timestamp": 1792853987.5562425,
           "description": "Gate check: G2_RiskAssessment",
           "gate": "G2_RiskAssessment",
           "result": "PASS",
@@ -122,7 +122,7 @@
           }
         },
         {
-          "timestamp": 1789305001.5783427,
+          "timestamp": 1792853987.5562425,
           "description": "Gate check: G3_ConstraintValidation",
           "gate": "G3_ConstraintValidation",
           "result": "PASS",
@@ -138,15 +138,18 @@
   "edge_cases": [
     {
       "risk_score": -0.2,
-      "path": "FAST",
-      "safe": true,
-      "violations": []
+      "path": "SAFE",
+      "safe": false,
+      "violations": [
+        "R0_RiskInput: risk score missing, non-numeric, NaN or outside [0,1] (fail-closed)"
+      ]
     },
     {
       "risk_score": "NaN",
       "path": "SAFE",
       "safe": false,
       "violations": [
+        "R0_RiskInput: risk score missing, non-numeric, NaN or outside [0,1] (fail-closed)",
         "G2_RiskAssessment: Gate failed"
       ]
     },
@@ -155,6 +158,7 @@
       "path": "SAFE",
       "safe": false,
       "violations": [
+        "R0_RiskInput: risk score missing, non-numeric, NaN or outside [0,1] (fail-closed)",
         "G2_RiskAssessment: Gate failed"
       ]
     },
