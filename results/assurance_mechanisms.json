@@ -56,7 +56,7 @@
         "accepted": 0
       }
     },
-    "mean_route_with_verification_us": 60.43,
+    "mean_route_with_verification_us": 40.74,
     "timing_note": "host-specific"
   },
   "approval_delay": {
@@ -168,8 +168,8 @@
     "records": 10000,
     "verifies": true,
     "bytes_per_record": 578.0,
-    "write_s_total": 7.991,
-    "verify_s_total": 0.369,
+    "write_s_total": 4.366,
+    "verify_s_total": 0.205,
     "tamper_detection": {
       "edit_field": {
         "tampers": 200,

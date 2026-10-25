@@ -582,6 +582,8 @@ def main() -> None:
     for mod in (structured_misrouting, upstream_reliability, baselines_extended,
                 assurance_mechanisms, threshold_derivation):
         mod.main()
+    # v1.3.1 supplementary analyses (CIs, harmonised error models, analytic checks).
+    subprocess.run(py + [str(ROOT / "scripts" / "tier1_supplement.py"), "--mimic-path", demo_path], check=True)
     # Host-specific timing (kept last).
     latency_realistic.main()
     print("Artifacts written to", RESULTS)

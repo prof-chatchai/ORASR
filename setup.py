@@ -21,7 +21,7 @@ else:
 
 setup(
     name="orasr",
-    version="1.3.0",
+    version="1.3.1",
     author="Chatchai Tritham, Chakkrit Snae Namahoot",
     author_email="chatchait66@nu.ac.th, chakkrits@nu.ac.th",
     description="ORASR: Operational Reasoning-Action Safety Routing for Critical AI Systems",

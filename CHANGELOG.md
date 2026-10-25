@@ -2,6 +2,29 @@
 
 All notable changes to this repository are documented here.
 
+## 1.3.1 (2026-10-25) - second-review hardening
+
+Library
+- `ORASRRouter(require_verified_approval=True)` refuses the legacy Boolean approval when no
+  verifier is configured (recommended for deployment; default keeps v1.2.0/v1.3.0 behaviour).
+- Approval tokens are evaluated only after every pre-execution check passed, so a blocked call
+  no longer consumes the single-use nonce of a valid approval.
+- `action_hash` uses a strict canonical JSON form (JSON types only, string keys, finite numbers);
+  non-canonical inputs are rejected instead of being serialised with `str()` (collision fix).
+- `ApprovalVerifier(clock_skew_s=...)` tolerance for issuer/verifier clock skew.
+- `uncertainty_k` must be finite and non-negative (a negative weight could lower pathways).
+- Exceptions raised by `prepare`/`commit` of a `StagedAction` now call `abort`.
+- New regression tests: tests/test_v131.py (58 tests in total).
+
+Analyses
+- scripts/tier1_supplement.py -> results/tier1_supplement.json: replicate CIs and paired
+  differences for the mitigation grid; E3/E5 with harmonised noise; attack-size sweep; router
+  equivalence check of the vectorised analyses; cohort-conditional misrouting expectation;
+  MIMIC-IV demo cluster-bootstrap CIs, Wilson CIs, approvals per patient-day, route-aware
+  mapping v2r, structural tenfold-dose escape, potential duplicates by ingredient; extended
+  threshold derivation with false-block cost; closed-form approval delay; analytic latency bound.
+  No v1.3.0 result file changes except host-specific timings in assurance_mechanisms.json.
+
 ## 1.3.0 (2026-10-24) - resubmission analyses
 
 Library

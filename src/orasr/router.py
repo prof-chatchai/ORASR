@@ -80,6 +80,7 @@ class ORASRRouter:
         approval_verifier: Optional[Any] = None,
         audit_log: Optional[Any] = None,
         staged_execution: bool = True,
+        require_verified_approval: bool = False,
     ):
         """
         Initialize ORASR router.
@@ -95,9 +96,18 @@ class ORASRRouter:
                 (``approval_token=``) accepted by this verifier
             audit_log: optional HashChainAuditLog for durable, tamper-evident records
             staged_execution: run G4 on the staged output of a StagedAction
-                before commit (two-phase execution)
+                before commit (staged prepare-validate-commit execution)
+            require_verified_approval: if True and no ``approval_verifier`` is
+                configured, the legacy boolean ``human_approved`` flag is refused,
+                so the Safe pathway can never execute on an unverified assertion
+                (recommended for any deployment; default False keeps v1.2.0
+                behaviour for the published experiments)
         """
-        self.uncertainty_k = float(uncertainty_k)
+        k = float(uncertainty_k)
+        if not math.isfinite(k) or k < 0.0:
+            raise ValueError("uncertainty_k must be finite and >= 0 (a negative k would lower pathways)")
+        self.uncertainty_k = k
+        self.require_verified_approval = bool(require_verified_approval)
         self.high_alert_types = frozenset(high_alert_types or ())
         self.approval_verifier = approval_verifier
         self.audit_log = audit_log
@@ -300,19 +310,31 @@ class ORASRRouter:
                 violations.append(f"{gate.name}: {gate_result.message}")
                 logger.warning(f"Gate {gate.name} failed: {gate_result.message}")
 
-        # Check human approval if required
+        # Check human approval if required. The token is evaluated only when every
+        # pre-execution check has passed, so a blocked call does not consume the
+        # single-use nonce of a valid approval (the approver need not re-sign a retry).
         human_approved = False
-        if config.requires_approval or require_human_approval:
+        approval_mode = None
+        if (config.requires_approval or require_human_approval) and not safe:
+            approval_mode = "not_evaluated"
+            violations.append("Approval not evaluated: call already blocked")
+        elif config.requires_approval or require_human_approval:
             if self.approval_verifier is not None:
+                approval_mode = "verified_token"
                 ok, why = self.approval_verifier.verify(
                     kwargs.get("approval_token"), action_type, input_data)
                 human_approved = ok
                 if not ok:
                     safe = False
                     violations.append(f"Approval token rejected: {why}")
+            elif self.require_verified_approval:
+                approval_mode = "refused_unverified"
+                safe = False
+                violations.append("Approval verifier required but not configured; boolean flag refused")
             else:
                 # Legacy boolean flag (prototype); see orasr.approval for signed tokens.
-                human_approved = kwargs.get("human_approved", False)
+                approval_mode = "legacy_boolean"
+                human_approved = bool(kwargs.get("human_approved", False))
                 if not human_approved:
                     safe = False
                     violations.append("Human approval required but not provided")
@@ -327,7 +349,8 @@ class ORASRRouter:
         staged = (self.staged_execution and isinstance(action, StagedAction)
                   and (GateType.POSTCONDITION in config.gates or not action.reversible))
         if safe and staged:
-            # Two-phase execution: G4 checks the staged output before commit.
+            # Staged execution: G4 checks the staged output before commit.
+            prepared = None
             try:
                 prepared = action.prepare(input_data)
                 context["action_result"] = prepared
@@ -348,6 +371,11 @@ class ORASRRouter:
                 safe = False
                 committed = False
                 violations.append(f"Action execution failed: {e}")
+                if action.abort is not None and prepared is not None:
+                    try:
+                        action.abort(prepared)
+                    except Exception as e2:  # report, never mask the original failure
+                        violations.append(f"Abort failed: {e2}")
         elif safe:
             try:
                 action_result = action(input_data)
@@ -394,17 +422,22 @@ class ORASRRouter:
                 "action_type": action_type,
                 "committed": committed,
                 "compensated": compensated,
+                "approval_mode": approval_mode,
             },
         )
 
         if self.audit_log is not None:
+            try:
+                a_hash = _action_hash(action_type, input_data)
+            except ValueError:
+                a_hash = None  # input not canonicalisable (and therefore never approvable)
             self.audit_log.append({
                 "timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
                 "pathway": pathway.name,
                 "risk_score": risk_score if not invalid_risk else repr(risk_score),
                 "effective_risk": None if invalid_risk else effective_risk,
                 "action_type": action_type,
-                "action_hash": _action_hash(action_type, input_data),
+                "action_hash": a_hash,
                 "gates_passed": gates_passed,
                 "violations": violations,
                 "safe": safe,

@@ -29,9 +29,45 @@ from dataclasses import dataclass, field
 from typing import Any, Callable, Dict, Iterable, Optional, Set, Tuple
 
 
+def _check_canonical(obj: Any, path: str = "$") -> None:
+    """Admit only JSON types: dict with str keys, list/tuple, str, bool, None,
+    int and finite float. Anything else (non-string keys, sets, NaN/inf,
+    arbitrary objects) raises ValueError, so two distinct inputs cannot share a
+    serialisation (v1.3.0 used ``default=str``, under which {1: 'a'} and
+    {'1': 'a'} collided)."""
+    if obj is None or isinstance(obj, (bool, str)):
+        return
+    if isinstance(obj, int):
+        return
+    if isinstance(obj, float):
+        if obj != obj or obj in (float("inf"), float("-inf")):
+            raise ValueError(f"non-finite number at {path}")
+        return
+    if isinstance(obj, (list, tuple)):
+        for i, v in enumerate(obj):
+            _check_canonical(v, f"{path}[{i}]")
+        return
+    if isinstance(obj, dict):
+        for k, v in obj.items():
+            if not isinstance(k, str):
+                raise ValueError(f"non-string key {k!r} at {path}")
+            _check_canonical(v, f"{path}.{k}")
+        return
+    raise ValueError(f"type {type(obj).__name__} at {path} is not JSON")
+
+
+def canonical_json(obj: Any) -> str:
+    """Deterministic JSON: JSON types only, sorted keys, no insignificant
+    whitespace, UTF-8, finite numbers. Close to RFC 8785 (JCS) for the inputs
+    used here; number formatting follows Python's repr, so a verifier written
+    in another language must use the same rule."""
+    _check_canonical(obj)
+    return json.dumps(obj, sort_keys=True, separators=(",", ":"), ensure_ascii=False,
+                      allow_nan=False)
+
+
 def action_hash(action_type: Optional[str], input_data: Any) -> str:
-    payload = json.dumps({"type": action_type, "input": input_data}, sort_keys=True,
-                         separators=(",", ":"), default=str)
+    payload = canonical_json({"type": action_type, "input": input_data})
     return hashlib.sha256(payload.encode("utf-8")).hexdigest()
 
 
@@ -68,6 +104,7 @@ class ApprovalVerifier:
     allowed_roles: Dict[Optional[str], Set[str]]
     default_roles: Set[str] = field(default_factory=lambda: {"attending_physician"})
     clock: Callable[[], float] = time.time
+    clock_skew_s: float = 0.0
     _seen: Set[str] = field(default_factory=set)
     _lock: threading.Lock = field(default_factory=threading.Lock)
 
@@ -80,10 +117,15 @@ class ApprovalVerifier:
         roles = self.allowed_roles.get(action_type, self.default_roles)
         if token.role not in roles:
             return False, f"role {token.role!r} not authorized for {action_type!r}"
-        if token.action_hash != action_hash(action_type, input_data):
+        try:
+            bound = action_hash(action_type, input_data)
+        except ValueError as e:
+            return False, f"input not canonicalisable: {e}"
+        if token.action_hash != bound:
             return False, "token bound to a different action"
         now = self.clock()
-        if now < token.issued_at or now > token.expires_at:
+        skew = max(0.0, float(self.clock_skew_s))
+        if now < token.issued_at - skew or now > token.expires_at + skew:
             return False, "token outside validity window"
         with self._lock:
             if token.nonce in self._seen:

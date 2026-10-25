@@ -1,0 +1,5757 @@
+{
+  "seed": 42,
+  "version": "1.3.1",
+  "A_B_mitigation_grid_ci": {
+    "n_replicates": 20,
+    "ci_method": "mean +/- t(0.975, 19) * SD / sqrt(20) over replicates",
+    "summary": {
+      "E0_none": {
+        "M0_none": {
+          "down_safe_pct": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 20.0,
+            "sd": 0.0,
+            "ci95": [
+              20.0,
+              20.0
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.5,
+            "sd": 0.0,
+            "ci95": [
+              2.5,
+              2.5
+            ]
+          }
+        },
+        "M1_guard_band_0.60": {
+          "down_safe_pct": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 30.83,
+            "sd": 0.0,
+            "ci95": [
+              30.83,
+              30.83
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.608,
+            "sd": 0.0,
+            "ci95": [
+              2.608,
+              2.608
+            ]
+          }
+        },
+        "M2_uncertainty_k1": {
+          "down_safe_pct": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 30.955,
+            "sd": 0.178,
+            "ci95": [
+              30.872,
+              31.038
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.845,
+            "sd": 0.003,
+            "ci95": [
+              2.844,
+              2.847
+            ]
+          }
+        },
+        "M3_type_floor": {
+          "down_safe_pct": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 24.23,
+            "sd": 0.0,
+            "ci95": [
+              24.23,
+              24.23
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.542,
+            "sd": 0.0,
+            "ci95": [
+              2.542,
+              2.542
+            ]
+          }
+        },
+        "M4_guard_plus_floor": {
+          "down_safe_pct": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 34.05,
+            "sd": 0.0,
+            "ci95": [
+              34.05,
+              34.05
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.641,
+            "sd": 0.0,
+            "ci95": [
+              2.641,
+              2.641
+            ]
+          }
+        },
+        "M5_completeness_check_plus_floor": {
+          "down_safe_pct": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 24.23,
+            "sd": 0.0,
+            "ci95": [
+              24.23,
+              24.23
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.542,
+            "sd": 0.0,
+            "ci95": [
+              2.542,
+              2.542
+            ]
+          }
+        }
+      },
+      "E1_gaussian": {
+        "M0_none": {
+          "down_safe_pct": {
+            "mean": 13.348,
+            "sd": 0.674,
+            "ci95": [
+              13.032,
+              13.663
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 13.119,
+            "sd": 1.116,
+            "ci95": [
+              12.596,
+              13.641
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 13.445,
+            "sd": 0.823,
+            "ci95": [
+              13.06,
+              13.83
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 21.714,
+            "sd": 0.192,
+            "ci95": [
+              21.624,
+              21.804
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 6.838,
+            "sd": 0.805,
+            "ci95": [
+              6.461,
+              7.215
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.524,
+            "sd": 0.006,
+            "ci95": [
+              2.521,
+              2.526
+            ]
+          }
+        },
+        "M1_guard_band_0.60": {
+          "down_safe_pct": {
+            "mean": 2.84,
+            "sd": 0.332,
+            "ci95": [
+              2.685,
+              2.995
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 2.6,
+            "sd": 0.593,
+            "ci95": [
+              2.323,
+              2.878
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 2.942,
+            "sd": 0.401,
+            "ci95": [
+              2.755,
+              3.13
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 31.459,
+            "sd": 0.252,
+            "ci95": [
+              31.34,
+              31.577
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 6.838,
+            "sd": 0.805,
+            "ci95": [
+              6.461,
+              7.215
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.621,
+            "sd": 0.006,
+            "ci95": [
+              2.619,
+              2.624
+            ]
+          }
+        },
+        "M2_uncertainty_k1": {
+          "down_safe_pct": {
+            "mean": 3.815,
+            "sd": 0.337,
+            "ci95": [
+              3.657,
+              3.973
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 3.587,
+            "sd": 0.694,
+            "ci95": [
+              3.262,
+              3.912
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 3.912,
+            "sd": 0.509,
+            "ci95": [
+              3.674,
+              4.15
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 31.598,
+            "sd": 0.244,
+            "ci95": [
+              31.483,
+              31.712
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 1.867,
+            "sd": 0.425,
+            "ci95": [
+              1.668,
+              2.066
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.85,
+            "sd": 0.007,
+            "ci95": [
+              2.847,
+              2.853
+            ]
+          }
+        },
+        "M3_type_floor": {
+          "down_safe_pct": {
+            "mean": 6.545,
+            "sd": 0.458,
+            "ci95": [
+              6.331,
+              6.759
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 7.166,
+            "sd": 0.98,
+            "ci95": [
+              6.707,
+              7.624
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 6.28,
+            "sd": 0.586,
+            "ci95": [
+              6.006,
+              6.554
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 26.896,
+            "sd": 0.197,
+            "ci95": [
+              26.804,
+              26.988
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 6.082,
+            "sd": 0.767,
+            "ci95": [
+              5.723,
+              6.441
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.585,
+            "sd": 0.005,
+            "ci95": [
+              2.583,
+              2.588
+            ]
+          }
+        },
+        "M4_guard_plus_floor": {
+          "down_safe_pct": {
+            "mean": 1.365,
+            "sd": 0.266,
+            "ci95": [
+              1.241,
+              1.489
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 1.421,
+            "sd": 0.475,
+            "ci95": [
+              1.199,
+              1.643
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 1.341,
+            "sd": 0.299,
+            "ci95": [
+              1.201,
+              1.481
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 34.882,
+            "sd": 0.219,
+            "ci95": [
+              34.779,
+              34.984
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 6.082,
+            "sd": 0.767,
+            "ci95": [
+              5.723,
+              6.441
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.665,
+            "sd": 0.005,
+            "ci95": [
+              2.663,
+              2.668
+            ]
+          }
+        },
+        "M5_completeness_check_plus_floor": {
+          "down_safe_pct": {
+            "mean": 6.545,
+            "sd": 0.458,
+            "ci95": [
+              6.331,
+              6.759
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 7.166,
+            "sd": 0.98,
+            "ci95": [
+              6.707,
+              7.624
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 6.28,
+            "sd": 0.586,
+            "ci95": [
+              6.006,
+              6.554
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 26.896,
+            "sd": 0.197,
+            "ci95": [
+              26.804,
+              26.988
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 6.082,
+            "sd": 0.767,
+            "ci95": [
+              5.723,
+              6.441
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.585,
+            "sd": 0.005,
+            "ci95": [
+              2.583,
+              2.588
+            ]
+          }
+        }
+      },
+      "E2_heteroscedastic": {
+        "M0_none": {
+          "down_safe_pct": {
+            "mean": 12.883,
+            "sd": 0.803,
+            "ci95": [
+              12.507,
+              13.258
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 12.926,
+            "sd": 1.223,
+            "ci95": [
+              12.354,
+              13.499
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 12.864,
+            "sd": 0.955,
+            "ci95": [
+              12.417,
+              13.311
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 21.722,
+            "sd": 0.278,
+            "ci95": [
+              21.592,
+              21.851
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 7.081,
+            "sd": 0.641,
+            "ci95": [
+              6.781,
+              7.381
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.52,
+            "sd": 0.005,
+            "ci95": [
+              2.518,
+              2.523
+            ]
+          }
+        },
+        "M1_guard_band_0.60": {
+          "down_safe_pct": {
+            "mean": 3.645,
+            "sd": 0.437,
+            "ci95": [
+              3.44,
+              3.85
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 3.645,
+            "sd": 0.842,
+            "ci95": [
+              3.252,
+              4.039
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 3.645,
+            "sd": 0.473,
+            "ci95": [
+              3.424,
+              3.866
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 31.512,
+            "sd": 0.306,
+            "ci95": [
+              31.369,
+              31.655
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 7.081,
+            "sd": 0.641,
+            "ci95": [
+              6.781,
+              7.381
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.618,
+            "sd": 0.006,
+            "ci95": [
+              2.615,
+              2.621
+            ]
+          }
+        },
+        "M2_uncertainty_k1": {
+          "down_safe_pct": {
+            "mean": 2.845,
+            "sd": 0.313,
+            "ci95": [
+              2.698,
+              2.992
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 2.968,
+            "sd": 0.537,
+            "ci95": [
+              2.717,
+              3.219
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 2.792,
+            "sd": 0.383,
+            "ci95": [
+              2.613,
+              2.971
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 31.354,
+            "sd": 0.179,
+            "ci95": [
+              31.27,
+              31.438
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 1.4,
+            "sd": 0.487,
+            "ci95": [
+              1.172,
+              1.628
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.836,
+            "sd": 0.006,
+            "ci95": [
+              2.833,
+              2.839
+            ]
+          }
+        },
+        "M3_type_floor": {
+          "down_safe_pct": {
+            "mean": 6.25,
+            "sd": 0.388,
+            "ci95": [
+              6.068,
+              6.432
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 6.99,
+            "sd": 1.02,
+            "ci95": [
+              6.512,
+              7.467
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 5.934,
+            "sd": 0.601,
+            "ci95": [
+              5.653,
+              6.215
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 26.896,
+            "sd": 0.177,
+            "ci95": [
+              26.814,
+              26.979
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 6.355,
+            "sd": 0.684,
+            "ci95": [
+              6.035,
+              6.675
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.581,
+            "sd": 0.005,
+            "ci95": [
+              2.579,
+              2.583
+            ]
+          }
+        },
+        "M4_guard_plus_floor": {
+          "down_safe_pct": {
+            "mean": 1.752,
+            "sd": 0.25,
+            "ci95": [
+              1.636,
+              1.869
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 2.032,
+            "sd": 0.624,
+            "ci95": [
+              1.74,
+              2.324
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 1.633,
+            "sd": 0.286,
+            "ci95": [
+              1.499,
+              1.767
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 35.029,
+            "sd": 0.261,
+            "ci95": [
+              34.907,
+              35.151
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 6.355,
+            "sd": 0.684,
+            "ci95": [
+              6.035,
+              6.675
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.663,
+            "sd": 0.005,
+            "ci95": [
+              2.66,
+              2.665
+            ]
+          }
+        },
+        "M5_completeness_check_plus_floor": {
+          "down_safe_pct": {
+            "mean": 6.25,
+            "sd": 0.388,
+            "ci95": [
+              6.068,
+              6.432
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 6.99,
+            "sd": 1.02,
+            "ci95": [
+              6.512,
+              7.467
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 5.934,
+            "sd": 0.601,
+            "ci95": [
+              5.653,
+              6.215
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 26.896,
+            "sd": 0.177,
+            "ci95": [
+              26.814,
+              26.979
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 6.355,
+            "sd": 0.684,
+            "ci95": [
+              6.035,
+              6.675
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.581,
+            "sd": 0.005,
+            "ci95": [
+              2.579,
+              2.583
+            ]
+          }
+        }
+      },
+      "E3_subgroup_bias": {
+        "M0_none": {
+          "down_safe_pct": {
+            "mean": 19.765,
+            "sd": 0.432,
+            "ci95": [
+              19.563,
+              19.967
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 50.527,
+            "sd": 1.33,
+            "ci95": [
+              49.904,
+              51.149
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 6.644,
+            "sd": 0.487,
+            "ci95": [
+              6.416,
+              6.872
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 17.557,
+            "sd": 0.147,
+            "ci95": [
+              17.489,
+              17.626
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 10.652,
+            "sd": 1.328,
+            "ci95": [
+              10.03,
+              11.273
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.369,
+            "sd": 0.004,
+            "ci95": [
+              2.367,
+              2.372
+            ]
+          }
+        },
+        "M1_guard_band_0.60": {
+          "down_safe_pct": {
+            "mean": 5.4,
+            "sd": 0.41,
+            "ci95": [
+              5.208,
+              5.592
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 17.742,
+            "sd": 1.384,
+            "ci95": [
+              17.095,
+              18.39
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 0.136,
+            "sd": 0.122,
+            "ci95": [
+              0.078,
+              0.193
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 26.698,
+            "sd": 0.104,
+            "ci95": [
+              26.649,
+              26.747
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 10.652,
+            "sd": 1.328,
+            "ci95": [
+              10.03,
+              11.273
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.461,
+            "sd": 0.004,
+            "ci95": [
+              2.459,
+              2.463
+            ]
+          }
+        },
+        "M2_uncertainty_k1": {
+          "down_safe_pct": {
+            "mean": 6.383,
+            "sd": 0.453,
+            "ci95": [
+              6.171,
+              6.594
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 19.841,
+            "sd": 1.477,
+            "ci95": [
+              19.15,
+              20.532
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 0.642,
+            "sd": 0.185,
+            "ci95": [
+              0.555,
+              0.729
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 26.825,
+            "sd": 0.223,
+            "ci95": [
+              26.72,
+              26.929
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 3.378,
+            "sd": 0.593,
+            "ci95": [
+              3.101,
+              3.656
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.697,
+            "sd": 0.004,
+            "ci95": [
+              2.695,
+              2.699
+            ]
+          }
+        },
+        "M3_type_floor": {
+          "down_safe_pct": {
+            "mean": 10.192,
+            "sd": 0.36,
+            "ci95": [
+              10.024,
+              10.361
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 27.375,
+            "sd": 0.875,
+            "ci95": [
+              26.965,
+              27.784
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 2.864,
+            "sd": 0.394,
+            "ci95": [
+              2.679,
+              3.048
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 23.563,
+            "sd": 0.123,
+            "ci95": [
+              23.505,
+              23.62
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 9.311,
+            "sd": 1.242,
+            "ci95": [
+              8.73,
+              9.892
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.444,
+            "sd": 0.004,
+            "ci95": [
+              2.442,
+              2.446
+            ]
+          }
+        },
+        "M4_guard_plus_floor": {
+          "down_safe_pct": {
+            "mean": 3.042,
+            "sd": 0.289,
+            "ci95": [
+              2.907,
+              3.178
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 10.059,
+            "sd": 0.972,
+            "ci95": [
+              9.603,
+              10.514
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 0.05,
+            "sd": 0.074,
+            "ci95": [
+              0.016,
+              0.084
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 30.693,
+            "sd": 0.103,
+            "ci95": [
+              30.645,
+              30.741
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 9.311,
+            "sd": 1.242,
+            "ci95": [
+              8.73,
+              9.892
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.516,
+            "sd": 0.004,
+            "ci95": [
+              2.514,
+              2.517
+            ]
+          }
+        },
+        "M5_completeness_check_plus_floor": {
+          "down_safe_pct": {
+            "mean": 10.192,
+            "sd": 0.36,
+            "ci95": [
+              10.024,
+              10.361
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 27.375,
+            "sd": 0.875,
+            "ci95": [
+              26.965,
+              27.784
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 2.864,
+            "sd": 0.394,
+            "ci95": [
+              2.679,
+              3.048
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 23.563,
+            "sd": 0.123,
+            "ci95": [
+              23.505,
+              23.62
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 9.311,
+            "sd": 1.242,
+            "ci95": [
+              8.73,
+              9.892
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.444,
+            "sd": 0.004,
+            "ci95": [
+              2.442,
+              2.446
+            ]
+          }
+        }
+      },
+      "E4_correlated_encounter": {
+        "M0_none": {
+          "down_safe_pct": {
+            "mean": 13.545,
+            "sd": 0.881,
+            "ci95": [
+              13.133,
+              13.957
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 13.888,
+            "sd": 0.995,
+            "ci95": [
+              13.422,
+              14.354
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 13.399,
+            "sd": 1.048,
+            "ci95": [
+              12.908,
+              13.889
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 21.682,
+            "sd": 0.196,
+            "ci95": [
+              21.591,
+              21.774
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 7.092,
+            "sd": 1.232,
+            "ci95": [
+              6.515,
+              7.668
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.522,
+            "sd": 0.007,
+            "ci95": [
+              2.519,
+              2.525
+            ]
+          }
+        },
+        "M1_guard_band_0.60": {
+          "down_safe_pct": {
+            "mean": 2.843,
+            "sd": 0.406,
+            "ci95": [
+              2.653,
+              3.032
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 2.918,
+            "sd": 0.749,
+            "ci95": [
+              2.568,
+              3.268
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 2.81,
+            "sd": 0.46,
+            "ci95": [
+              2.595,
+              3.025
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 31.468,
+            "sd": 0.294,
+            "ci95": [
+              31.331,
+              31.606
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 7.092,
+            "sd": 1.232,
+            "ci95": [
+              6.515,
+              7.668
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.62,
+            "sd": 0.008,
+            "ci95": [
+              2.616,
+              2.623
+            ]
+          }
+        },
+        "M2_uncertainty_k1": {
+          "down_safe_pct": {
+            "mean": 3.72,
+            "sd": 0.356,
+            "ci95": [
+              3.553,
+              3.887
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 3.645,
+            "sd": 0.639,
+            "ci95": [
+              3.347,
+              3.944
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 3.752,
+            "sd": 0.488,
+            "ci95": [
+              3.523,
+              3.98
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 31.592,
+            "sd": 0.3,
+            "ci95": [
+              31.451,
+              31.733
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 1.844,
+            "sd": 0.48,
+            "ci95": [
+              1.62,
+              2.068
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.849,
+            "sd": 0.006,
+            "ci95": [
+              2.846,
+              2.852
+            ]
+          }
+        },
+        "M3_type_floor": {
+          "down_safe_pct": {
+            "mean": 6.815,
+            "sd": 0.533,
+            "ci95": [
+              6.566,
+              7.064
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 7.784,
+            "sd": 0.694,
+            "ci95": [
+              7.46,
+              8.109
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 6.402,
+            "sd": 0.671,
+            "ci95": [
+              6.088,
+              6.716
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 26.869,
+            "sd": 0.202,
+            "ci95": [
+              26.775,
+              26.963
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 6.237,
+            "sd": 1.227,
+            "ci95": [
+              5.662,
+              6.811
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.583,
+            "sd": 0.007,
+            "ci95": [
+              2.58,
+              2.587
+            ]
+          }
+        },
+        "M4_guard_plus_floor": {
+          "down_safe_pct": {
+            "mean": 1.365,
+            "sd": 0.22,
+            "ci95": [
+              1.262,
+              1.468
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 1.597,
+            "sd": 0.478,
+            "ci95": [
+              1.373,
+              1.82
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 1.266,
+            "sd": 0.246,
+            "ci95": [
+              1.151,
+              1.381
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 34.901,
+            "sd": 0.29,
+            "ci95": [
+              34.765,
+              35.037
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 6.237,
+            "sd": 1.227,
+            "ci95": [
+              5.662,
+              6.811
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.664,
+            "sd": 0.008,
+            "ci95": [
+              2.66,
+              2.667
+            ]
+          }
+        },
+        "M5_completeness_check_plus_floor": {
+          "down_safe_pct": {
+            "mean": 6.815,
+            "sd": 0.533,
+            "ci95": [
+              6.566,
+              7.064
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 7.784,
+            "sd": 0.694,
+            "ci95": [
+              7.46,
+              8.109
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 6.402,
+            "sd": 0.671,
+            "ci95": [
+              6.088,
+              6.716
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 26.869,
+            "sd": 0.202,
+            "ci95": [
+              26.775,
+              26.963
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 6.237,
+            "sd": 1.227,
+            "ci95": [
+              5.662,
+              6.811
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.583,
+            "sd": 0.007,
+            "ci95": [
+              2.58,
+              2.587
+            ]
+          }
+        }
+      },
+      "E5_common_mode": {
+        "M0_none": {
+          "down_safe_pct": {
+            "mean": 12.872,
+            "sd": 0.673,
+            "ci95": [
+              12.558,
+              13.187
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 12.918,
+            "sd": 1.376,
+            "ci95": [
+              12.274,
+              13.562
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 12.853,
+            "sd": 0.964,
+            "ci95": [
+              12.402,
+              13.304
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 19.322,
+            "sd": 0.169,
+            "ci95": [
+              19.243,
+              19.401
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 13.486,
+            "sd": 1.122,
+            "ci95": [
+              12.961,
+              14.011
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.45,
+            "sd": 0.007,
+            "ci95": [
+              2.447,
+              2.453
+            ]
+          }
+        },
+        "M1_guard_band_0.60": {
+          "down_safe_pct": {
+            "mean": 3.507,
+            "sd": 0.45,
+            "ci95": [
+              3.297,
+              3.718
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 3.445,
+            "sd": 0.778,
+            "ci95": [
+              3.081,
+              3.809
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 3.534,
+            "sd": 0.615,
+            "ci95": [
+              3.247,
+              3.822
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 29.181,
+            "sd": 0.205,
+            "ci95": [
+              29.085,
+              29.277
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 13.486,
+            "sd": 1.122,
+            "ci95": [
+              12.961,
+              14.011
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.549,
+            "sd": 0.007,
+            "ci95": [
+              2.545,
+              2.552
+            ]
+          }
+        },
+        "M2_uncertainty_k1": {
+          "down_safe_pct": {
+            "mean": 3.973,
+            "sd": 0.381,
+            "ci95": [
+              3.794,
+              4.151
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 3.88,
+            "sd": 1.051,
+            "ci95": [
+              3.387,
+              4.372
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 4.012,
+            "sd": 0.576,
+            "ci95": [
+              3.743,
+              4.282
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 29.263,
+            "sd": 0.263,
+            "ci95": [
+              29.14,
+              29.386
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 10.464,
+            "sd": 1.074,
+            "ci95": [
+              9.962,
+              10.967
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.781,
+            "sd": 0.006,
+            "ci95": [
+              2.779,
+              2.784
+            ]
+          }
+        },
+        "M3_type_floor": {
+          "down_safe_pct": {
+            "mean": 6.47,
+            "sd": 0.538,
+            "ci95": [
+              6.218,
+              6.722
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 7.517,
+            "sd": 1.298,
+            "ci95": [
+              6.909,
+              8.124
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 6.024,
+            "sd": 0.544,
+            "ci95": [
+              5.769,
+              6.278
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 24.66,
+            "sd": 0.138,
+            "ci95": [
+              24.596,
+              24.725
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 13.082,
+            "sd": 1.029,
+            "ci95": [
+              12.601,
+              13.564
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.512,
+            "sd": 0.006,
+            "ci95": [
+              2.509,
+              2.515
+            ]
+          }
+        },
+        "M4_guard_plus_floor": {
+          "down_safe_pct": {
+            "mean": 1.762,
+            "sd": 0.29,
+            "ci95": [
+              1.627,
+              1.898
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 1.94,
+            "sd": 0.661,
+            "ci95": [
+              1.63,
+              2.249
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 1.687,
+            "sd": 0.38,
+            "ci95": [
+              1.509,
+              1.865
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 32.858,
+            "sd": 0.189,
+            "ci95": [
+              32.77,
+              32.946
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 13.082,
+            "sd": 1.029,
+            "ci95": [
+              12.601,
+              13.564
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.594,
+            "sd": 0.006,
+            "ci95": [
+              2.591,
+              2.597
+            ]
+          }
+        },
+        "M5_completeness_check_plus_floor": {
+          "down_safe_pct": {
+            "mean": 2.938,
+            "sd": 0.319,
+            "ci95": [
+              2.788,
+              3.087
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 3.554,
+            "sd": 0.587,
+            "ci95": [
+              3.279,
+              3.828
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 2.675,
+            "sd": 0.276,
+            "ci95": [
+              2.545,
+              2.804
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 33.092,
+            "sd": 0.411,
+            "ci95": [
+              32.899,
+              33.284
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 2.979,
+            "sd": 0.734,
+            "ci95": [
+              2.636,
+              3.323
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.71,
+            "sd": 0.008,
+            "ci95": [
+              2.706,
+              2.714
+            ]
+          }
+        }
+      },
+      "E6_calibration_drift": {
+        "M0_none": {
+          "down_safe_pct": {
+            "mean": 47.85,
+            "sd": 0.0,
+            "ci95": [
+              47.85,
+              47.85
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 47.993,
+            "sd": 0.0,
+            "ci95": [
+              47.993,
+              47.993
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 47.789,
+            "sd": 0.0,
+            "ci95": [
+              47.789,
+              47.789
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 10.43,
+            "sd": 0.0,
+            "ci95": [
+              10.43,
+              10.43
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 16.252,
+            "sd": 1.245,
+            "ci95": [
+              15.67,
+              16.835
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.194,
+            "sd": 0.0,
+            "ci95": [
+              2.194,
+              2.194
+            ]
+          }
+        },
+        "M1_guard_band_0.60": {
+          "down_safe_pct": {
+            "mean": 19.85,
+            "sd": 0.0,
+            "ci95": [
+              19.85,
+              19.85
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 19.9,
+            "sd": 0.0,
+            "ci95": [
+              19.9,
+              19.9
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 19.829,
+            "sd": 0.0,
+            "ci95": [
+              19.829,
+              19.829
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 16.03,
+            "sd": 0.0,
+            "ci95": [
+              16.03,
+              16.03
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 16.252,
+            "sd": 1.245,
+            "ci95": [
+              15.67,
+              16.835
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.25,
+            "sd": 0.0,
+            "ci95": [
+              2.25,
+              2.25
+            ]
+          }
+        },
+        "M2_uncertainty_k1": {
+          "down_safe_pct": {
+            "mean": 18.997,
+            "sd": 0.62,
+            "ci95": [
+              18.708,
+              19.287
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 19.181,
+            "sd": 1.319,
+            "ci95": [
+              18.563,
+              19.798
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 18.919,
+            "sd": 0.595,
+            "ci95": [
+              18.641,
+              19.198
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 16.403,
+            "sd": 0.134,
+            "ci95": [
+              16.34,
+              16.466
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 1.633,
+            "sd": 0.651,
+            "ci95": [
+              1.329,
+              1.937
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.588,
+            "sd": 0.004,
+            "ci95": [
+              2.586,
+              2.589
+            ]
+          }
+        },
+        "M3_type_floor": {
+          "down_safe_pct": {
+            "mean": 23.9,
+            "sd": 0.0,
+            "ci95": [
+              23.9,
+              23.9
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 25.418,
+            "sd": 0.0,
+            "ci95": [
+              25.418,
+              25.418
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 23.252,
+            "sd": 0.0,
+            "ci95": [
+              23.252,
+              23.252
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 19.45,
+            "sd": 0.0,
+            "ci95": [
+              19.45,
+              19.45
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 14.384,
+            "sd": 1.046,
+            "ci95": [
+              13.894,
+              14.873
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.306,
+            "sd": 0.0,
+            "ci95": [
+              2.306,
+              2.306
+            ]
+          }
+        },
+        "M4_guard_plus_floor": {
+          "down_safe_pct": {
+            "mean": 9.35,
+            "sd": 0.0,
+            "ci95": [
+              9.35,
+              9.35
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 11.204,
+            "sd": 0.0,
+            "ci95": [
+              11.204,
+              11.204
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 8.559,
+            "sd": 0.0,
+            "ci95": [
+              8.559,
+              8.559
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 22.36,
+            "sd": 0.0,
+            "ci95": [
+              22.36,
+              22.36
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 14.384,
+            "sd": 1.046,
+            "ci95": [
+              13.894,
+              14.873
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.335,
+            "sd": 0.0,
+            "ci95": [
+              2.335,
+              2.335
+            ]
+          }
+        },
+        "M5_completeness_check_plus_floor": {
+          "down_safe_pct": {
+            "mean": 23.9,
+            "sd": 0.0,
+            "ci95": [
+              23.9,
+              23.9
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 25.418,
+            "sd": 0.0,
+            "ci95": [
+              25.418,
+              25.418
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 23.252,
+            "sd": 0.0,
+            "ci95": [
+              23.252,
+              23.252
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 19.45,
+            "sd": 0.0,
+            "ci95": [
+              19.45,
+              19.45
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 14.384,
+            "sd": 1.046,
+            "ci95": [
+              13.894,
+              14.873
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.306,
+            "sd": 0.0,
+            "ci95": [
+              2.306,
+              2.306
+            ]
+          }
+        }
+      },
+      "E7_attack": {
+        "M0_none": {
+          "down_safe_pct": {
+            "mean": 33.3,
+            "sd": 0.0,
+            "ci95": [
+              33.3,
+              33.3
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 33.11,
+            "sd": 0.0,
+            "ci95": [
+              33.11,
+              33.11
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 33.381,
+            "sd": 0.0,
+            "ci95": [
+              33.381,
+              33.381
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 13.34,
+            "sd": 0.0,
+            "ci95": [
+              13.34,
+              13.34
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 17.37,
+            "sd": 1.294,
+            "ci95": [
+              16.764,
+              17.976
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.21,
+            "sd": 0.0,
+            "ci95": [
+              2.21,
+              2.21
+            ]
+          }
+        },
+        "M1_guard_band_0.60": {
+          "down_safe_pct": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 20.0,
+            "sd": 0.0,
+            "ci95": [
+              20.0,
+              20.0
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 17.37,
+            "sd": 1.294,
+            "ci95": [
+              16.764,
+              17.976
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.276,
+            "sd": 0.0,
+            "ci95": [
+              2.276,
+              2.276
+            ]
+          }
+        },
+        "M2_uncertainty_k1": {
+          "down_safe_pct": {
+            "mean": 6.77,
+            "sd": 0.463,
+            "ci95": [
+              6.553,
+              6.987
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 6.681,
+            "sd": 0.841,
+            "ci95": [
+              6.287,
+              7.074
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 6.808,
+            "sd": 0.492,
+            "ci95": [
+              6.578,
+              7.038
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 20.766,
+            "sd": 0.163,
+            "ci95": [
+              20.69,
+              20.842
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 3.456,
+            "sd": 0.649,
+            "ci95": [
+              3.152,
+              3.759
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.51,
+            "sd": 0.003,
+            "ci95": [
+              2.508,
+              2.511
+            ]
+          }
+        },
+        "M3_type_floor": {
+          "down_safe_pct": {
+            "mean": 16.55,
+            "sd": 0.0,
+            "ci95": [
+              16.55,
+              16.55
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 18.395,
+            "sd": 0.0,
+            "ci95": [
+              18.395,
+              18.395
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 15.763,
+            "sd": 0.0,
+            "ci95": [
+              15.763,
+              15.763
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 20.92,
+            "sd": 0.0,
+            "ci95": [
+              20.92,
+              20.92
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 15.471,
+            "sd": 1.115,
+            "ci95": [
+              14.949,
+              15.993
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.308,
+            "sd": 0.0,
+            "ci95": [
+              2.308,
+              2.308
+            ]
+          }
+        },
+        "M4_guard_plus_floor": {
+          "down_safe_pct": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 24.23,
+            "sd": 0.0,
+            "ci95": [
+              24.23,
+              24.23
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 15.471,
+            "sd": 1.115,
+            "ci95": [
+              14.949,
+              15.993
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.341,
+            "sd": 0.0,
+            "ci95": [
+              2.341,
+              2.341
+            ]
+          }
+        },
+        "M5_completeness_check_plus_floor": {
+          "down_safe_pct": {
+            "mean": 16.55,
+            "sd": 0.0,
+            "ci95": [
+              16.55,
+              16.55
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 18.395,
+            "sd": 0.0,
+            "ci95": [
+              18.395,
+              18.395
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 15.763,
+            "sd": 0.0,
+            "ci95": [
+              15.763,
+              15.763
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 20.92,
+            "sd": 0.0,
+            "ci95": [
+              20.92,
+              20.92
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 15.471,
+            "sd": 1.115,
+            "ci95": [
+              14.949,
+              15.993
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.308,
+            "sd": 0.0,
+            "ci95": [
+              2.308,
+              2.308
+            ]
+          }
+        }
+      },
+      "E8_empirical_ED": {
+        "M0_none": {
+          "down_safe_pct": {
+            "mean": 97.055,
+            "sd": 0.394,
+            "ci95": [
+              96.871,
+              97.239
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 97.258,
+            "sd": 0.723,
+            "ci95": [
+              96.919,
+              97.596
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 96.969,
+            "sd": 0.464,
+            "ci95": [
+              96.751,
+              97.186
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 0.589,
+            "sd": 0.079,
+            "ci95": [
+              0.552,
+              0.626
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 94.184,
+            "sd": 0.85,
+            "ci95": [
+              93.786,
+              94.582
+            ]
+          },
+          "gates_per_call": {
+            "mean": 1.082,
+            "sd": 0.005,
+            "ci95": [
+              1.08,
+              1.085
+            ]
+          }
+        },
+        "M1_guard_band_0.60": {
+          "down_safe_pct": {
+            "mean": 97.055,
+            "sd": 0.394,
+            "ci95": [
+              96.871,
+              97.239
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 97.258,
+            "sd": 0.723,
+            "ci95": [
+              96.919,
+              97.596
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 96.969,
+            "sd": 0.464,
+            "ci95": [
+              96.751,
+              97.186
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 0.589,
+            "sd": 0.079,
+            "ci95": [
+              0.552,
+              0.626
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 94.184,
+            "sd": 0.85,
+            "ci95": [
+              93.786,
+              94.582
+            ]
+          },
+          "gates_per_call": {
+            "mean": 1.082,
+            "sd": 0.005,
+            "ci95": [
+              1.08,
+              1.085
+            ]
+          }
+        },
+        "M2_uncertainty_k1": {
+          "down_safe_pct": {
+            "mean": 97.055,
+            "sd": 0.394,
+            "ci95": [
+              96.871,
+              97.239
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 97.258,
+            "sd": 0.723,
+            "ci95": [
+              96.919,
+              97.596
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 96.969,
+            "sd": 0.464,
+            "ci95": [
+              96.751,
+              97.186
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 0.589,
+            "sd": 0.079,
+            "ci95": [
+              0.552,
+              0.626
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 76.583,
+            "sd": 1.88,
+            "ci95": [
+              75.703,
+              77.463
+            ]
+          },
+          "gates_per_call": {
+            "mean": 1.445,
+            "sd": 0.007,
+            "ci95": [
+              1.441,
+              1.448
+            ]
+          }
+        },
+        "M3_type_floor": {
+          "down_safe_pct": {
+            "mean": 48.39,
+            "sd": 0.209,
+            "ci95": [
+              48.292,
+              48.488
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 49.632,
+            "sd": 0.487,
+            "ci95": [
+              49.404,
+              49.86
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 47.86,
+            "sd": 0.294,
+            "ci95": [
+              47.723,
+              47.998
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 14.552,
+            "sd": 0.042,
+            "ci95": [
+              14.532,
+              14.572
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 75.001,
+            "sd": 1.158,
+            "ci95": [
+              74.46,
+              75.543
+            ]
+          },
+          "gates_per_call": {
+            "mean": 1.472,
+            "sd": 0.004,
+            "ci95": [
+              1.471,
+              1.474
+            ]
+          }
+        },
+        "M4_guard_plus_floor": {
+          "down_safe_pct": {
+            "mean": 48.39,
+            "sd": 0.209,
+            "ci95": [
+              48.292,
+              48.488
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 49.632,
+            "sd": 0.487,
+            "ci95": [
+              49.404,
+              49.86
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 47.86,
+            "sd": 0.294,
+            "ci95": [
+              47.723,
+              47.998
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 14.552,
+            "sd": 0.042,
+            "ci95": [
+              14.532,
+              14.572
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 75.001,
+            "sd": 1.158,
+            "ci95": [
+              74.46,
+              75.543
+            ]
+          },
+          "gates_per_call": {
+            "mean": 1.472,
+            "sd": 0.004,
+            "ci95": [
+              1.471,
+              1.474
+            ]
+          }
+        },
+        "M5_completeness_check_plus_floor": {
+          "down_safe_pct": {
+            "mean": 48.39,
+            "sd": 0.209,
+            "ci95": [
+              48.292,
+              48.488
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 49.632,
+            "sd": 0.487,
+            "ci95": [
+              49.404,
+              49.86
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 47.86,
+            "sd": 0.294,
+            "ci95": [
+              47.723,
+              47.998
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 14.552,
+            "sd": 0.042,
+            "ci95": [
+              14.532,
+              14.572
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 75.001,
+            "sd": 1.158,
+            "ci95": [
+              74.46,
+              75.543
+            ]
+          },
+          "gates_per_call": {
+            "mean": 1.472,
+            "sd": 0.004,
+            "ci95": [
+              1.471,
+              1.474
+            ]
+          }
+        }
+      },
+      "E3_subgroup_bias_s10": {
+        "M0_none": {
+          "down_safe_pct": {
+            "mean": 24.358,
+            "sd": 0.639,
+            "ci95": [
+              24.058,
+              24.657
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 50.075,
+            "sd": 1.707,
+            "ci95": [
+              49.277,
+              50.874
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 13.388,
+            "sd": 0.83,
+            "ci95": [
+              13.0,
+              13.776
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 18.221,
+            "sd": 0.221,
+            "ci95": [
+              18.118,
+              18.324
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 13.09,
+            "sd": 1.24,
+            "ci95": [
+              12.51,
+              13.671
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.378,
+            "sd": 0.007,
+            "ci95": [
+              2.375,
+              2.381
+            ]
+          }
+        },
+        "M1_guard_band_0.60": {
+          "down_safe_pct": {
+            "mean": 8.963,
+            "sd": 0.585,
+            "ci95": [
+              8.689,
+              9.236
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 23.035,
+            "sd": 1.519,
+            "ci95": [
+              22.324,
+              23.746
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 2.96,
+            "sd": 0.434,
+            "ci95": [
+              2.757,
+              3.163
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 27.113,
+            "sd": 0.239,
+            "ci95": [
+              27.001,
+              27.225
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 13.09,
+            "sd": 1.24,
+            "ci95": [
+              12.51,
+              13.671
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.467,
+            "sd": 0.007,
+            "ci95": [
+              2.464,
+              2.47
+            ]
+          }
+        },
+        "M2_uncertainty_k1": {
+          "down_safe_pct": {
+            "mean": 9.783,
+            "sd": 0.528,
+            "ci95": [
+              9.535,
+              10.03
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 23.846,
+            "sd": 1.296,
+            "ci95": [
+              23.24,
+              24.453
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 3.784,
+            "sd": 0.499,
+            "ci95": [
+              3.55,
+              4.017
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 27.277,
+            "sd": 0.244,
+            "ci95": [
+              27.163,
+              27.391
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 5.172,
+            "sd": 0.882,
+            "ci95": [
+              4.759,
+              5.585
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.7,
+            "sd": 0.005,
+            "ci95": [
+              2.698,
+              2.703
+            ]
+          }
+        },
+        "M3_type_floor": {
+          "down_safe_pct": {
+            "mean": 12.417,
+            "sd": 0.467,
+            "ci95": [
+              12.199,
+              12.636
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 26.706,
+            "sd": 1.273,
+            "ci95": [
+              26.11,
+              27.301
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 6.323,
+            "sd": 0.593,
+            "ci95": [
+              6.045,
+              6.601
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 24.568,
+            "sd": 0.17,
+            "ci95": [
+              24.488,
+              24.648
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 11.573,
+            "sd": 1.116,
+            "ci95": [
+              11.05,
+              12.095
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.459,
+            "sd": 0.006,
+            "ci95": [
+              2.456,
+              2.462
+            ]
+          }
+        },
+        "M4_guard_plus_floor": {
+          "down_safe_pct": {
+            "mean": 4.76,
+            "sd": 0.431,
+            "ci95": [
+              4.558,
+              4.962
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 12.776,
+            "sd": 1.223,
+            "ci95": [
+              12.203,
+              13.348
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 1.341,
+            "sd": 0.226,
+            "ci95": [
+              1.235,
+              1.447
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 31.386,
+            "sd": 0.235,
+            "ci95": [
+              31.275,
+              31.496
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 11.573,
+            "sd": 1.116,
+            "ci95": [
+              11.05,
+              12.095
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.527,
+            "sd": 0.007,
+            "ci95": [
+              2.524,
+              2.531
+            ]
+          }
+        },
+        "M5_completeness_check_plus_floor": {
+          "down_safe_pct": {
+            "mean": 12.417,
+            "sd": 0.467,
+            "ci95": [
+              12.199,
+              12.636
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 26.706,
+            "sd": 1.273,
+            "ci95": [
+              26.11,
+              27.301
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 6.323,
+            "sd": 0.593,
+            "ci95": [
+              6.045,
+              6.601
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 24.568,
+            "sd": 0.17,
+            "ci95": [
+              24.488,
+              24.648
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 11.573,
+            "sd": 1.116,
+            "ci95": [
+              11.05,
+              12.095
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.459,
+            "sd": 0.006,
+            "ci95": [
+              2.456,
+              2.462
+            ]
+          }
+        }
+      },
+      "E5_common_mode_s10": {
+        "M0_none": {
+          "down_safe_pct": {
+            "mean": 18.42,
+            "sd": 0.761,
+            "ci95": [
+              18.064,
+              18.776
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 18.395,
+            "sd": 1.54,
+            "ci95": [
+              17.674,
+              19.116
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 18.431,
+            "sd": 0.798,
+            "ci95": [
+              18.057,
+              18.804
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 20.241,
+            "sd": 0.151,
+            "ci95": [
+              20.171,
+              20.312
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 16.627,
+            "sd": 1.54,
+            "ci95": [
+              15.906,
+              17.348
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.46,
+            "sd": 0.005,
+            "ci95": [
+              2.457,
+              2.462
+            ]
+          }
+        },
+        "M1_guard_band_0.60": {
+          "down_safe_pct": {
+            "mean": 6.18,
+            "sd": 0.495,
+            "ci95": [
+              5.949,
+              6.411
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 6.271,
+            "sd": 0.962,
+            "ci95": [
+              5.821,
+              6.721
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 6.141,
+            "sd": 0.685,
+            "ci95": [
+              5.821,
+              6.462
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 29.594,
+            "sd": 0.254,
+            "ci95": [
+              29.475,
+              29.713
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 16.627,
+            "sd": 1.54,
+            "ci95": [
+              15.906,
+              17.348
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.553,
+            "sd": 0.006,
+            "ci95": [
+              2.55,
+              2.556
+            ]
+          }
+        },
+        "M2_uncertainty_k1": {
+          "down_safe_pct": {
+            "mean": 7.008,
+            "sd": 0.513,
+            "ci95": [
+              6.767,
+              7.248
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 7.132,
+            "sd": 1.001,
+            "ci95": [
+              6.664,
+              7.6
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 6.954,
+            "sd": 0.687,
+            "ci95": [
+              6.633,
+              7.276
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 29.747,
+            "sd": 0.307,
+            "ci95": [
+              29.603,
+              29.89
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 12.025,
+            "sd": 1.364,
+            "ci95": [
+              11.387,
+              12.664
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.784,
+            "sd": 0.007,
+            "ci95": [
+              2.781,
+              2.787
+            ]
+          }
+        },
+        "M3_type_floor": {
+          "down_safe_pct": {
+            "mean": 9.273,
+            "sd": 0.659,
+            "ci95": [
+              8.964,
+              9.581
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 10.1,
+            "sd": 1.205,
+            "ci95": [
+              9.536,
+              10.664
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 8.919,
+            "sd": 0.608,
+            "ci95": [
+              8.635,
+              9.204
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 25.938,
+            "sd": 0.176,
+            "ci95": [
+              25.856,
+              26.021
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 15.882,
+            "sd": 1.506,
+            "ci95": [
+              15.177,
+              16.587
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.529,
+            "sd": 0.005,
+            "ci95": [
+              2.527,
+              2.532
+            ]
+          }
+        },
+        "M4_guard_plus_floor": {
+          "down_safe_pct": {
+            "mean": 3.167,
+            "sd": 0.45,
+            "ci95": [
+              2.957,
+              3.378
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 3.411,
+            "sd": 0.834,
+            "ci95": [
+              3.021,
+              3.802
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 3.063,
+            "sd": 0.522,
+            "ci95": [
+              2.819,
+              3.308
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 33.423,
+            "sd": 0.245,
+            "ci95": [
+              33.308,
+              33.538
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 15.882,
+            "sd": 1.506,
+            "ci95": [
+              15.177,
+              16.587
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.604,
+            "sd": 0.006,
+            "ci95": [
+              2.601,
+              2.607
+            ]
+          }
+        },
+        "M5_completeness_check_plus_floor": {
+          "down_safe_pct": {
+            "mean": 6.055,
+            "sd": 0.497,
+            "ci95": [
+              5.822,
+              6.288
+            ]
+          },
+          "down_safe_subgroup_pct": {
+            "mean": 6.706,
+            "sd": 1.11,
+            "ci95": [
+              6.186,
+              7.225
+            ]
+          },
+          "down_safe_nonsubgroup_pct": {
+            "mean": 5.777,
+            "sd": 0.429,
+            "ci95": [
+              5.577,
+              5.978
+            ]
+          },
+          "safe_share_pct": {
+            "mean": 34.187,
+            "sd": 0.501,
+            "ci95": [
+              33.952,
+              34.422
+            ]
+          },
+          "overdose_missed_pct": {
+            "mean": 5.629,
+            "sd": 0.843,
+            "ci95": [
+              5.234,
+              6.023
+            ]
+          },
+          "gates_per_call": {
+            "mean": 2.723,
+            "sd": 0.01,
+            "ci95": [
+              2.718,
+              2.728
+            ]
+          }
+        }
+      }
+    },
+    "paired_differences": {
+      "E0_none": {
+        "M1_guard_band_0.60 - M2_uncertainty_k1: down_safe_pct": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "M1_guard_band_0.60 - M2_uncertainty_k1: safe_share_pct": {
+          "mean": -0.125,
+          "sd": 0.178,
+          "ci95": [
+            -0.208,
+            -0.042
+          ]
+        },
+        "M1_guard_band_0.60 - M2_uncertainty_k1: overdose_missed_pct": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "M1_guard_band_0.60 - M0_none: down_safe_pct": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "M1_guard_band_0.60 - M0_none: safe_share_pct": {
+          "mean": 10.83,
+          "sd": 0.0,
+          "ci95": [
+            10.83,
+            10.83
+          ]
+        },
+        "M1_guard_band_0.60 - M0_none: overdose_missed_pct": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "M2_uncertainty_k1 - M0_none: down_safe_pct": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "M2_uncertainty_k1 - M0_none: safe_share_pct": {
+          "mean": 10.955,
+          "sd": 0.178,
+          "ci95": [
+            10.872,
+            11.038
+          ]
+        },
+        "M2_uncertainty_k1 - M0_none: overdose_missed_pct": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "M4_guard_plus_floor - M3_type_floor: down_safe_pct": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "M4_guard_plus_floor - M3_type_floor: safe_share_pct": {
+          "mean": 9.82,
+          "sd": 0.0,
+          "ci95": [
+            9.82,
+            9.82
+          ]
+        },
+        "M4_guard_plus_floor - M3_type_floor: overdose_missed_pct": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "M5_completeness_check_plus_floor - M4_guard_plus_floor: down_safe_pct": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "M5_completeness_check_plus_floor - M4_guard_plus_floor: safe_share_pct": {
+          "mean": -9.82,
+          "sd": 0.0,
+          "ci95": [
+            -9.82,
+            -9.82
+          ]
+        },
+        "M5_completeness_check_plus_floor - M4_guard_plus_floor: overdose_missed_pct": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "E1_gaussian": {
+        "M1_guard_band_0.60 - M2_uncertainty_k1: down_safe_pct": {
+          "mean": -0.975,
+          "sd": 0.359,
+          "ci95": [
+            -1.143,
+            -0.807
+          ]
+        },
+        "M1_guard_band_0.60 - M2_uncertainty_k1: safe_share_pct": {
+          "mean": -0.139,
+          "sd": 0.145,
+          "ci95": [
+            -0.207,
+            -0.071
+          ]
+        },
+        "M1_guard_band_0.60 - M2_uncertainty_k1: overdose_missed_pct": {
+          "mean": 4.971,
+          "sd": 0.725,
+          "ci95": [
+            4.632,
+            5.31
+          ]
+        },
+        "M1_guard_band_0.60 - M0_none: down_safe_pct": {
+          "mean": -10.507,
+          "sd": 0.636,
+          "ci95": [
+            -10.805,
+            -10.21
+          ]
+        },
+        "M1_guard_band_0.60 - M0_none: safe_share_pct": {
+          "mean": 9.745,
+          "sd": 0.255,
+          "ci95": [
+            9.625,
+            9.864
+          ]
+        },
+        "M1_guard_band_0.60 - M0_none: overdose_missed_pct": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "M2_uncertainty_k1 - M0_none: down_safe_pct": {
+          "mean": -9.533,
+          "sd": 0.627,
+          "ci95": [
+            -9.826,
+            -9.239
+          ]
+        },
+        "M2_uncertainty_k1 - M0_none: safe_share_pct": {
+          "mean": 9.883,
+          "sd": 0.241,
+          "ci95": [
+            9.771,
+            9.996
+          ]
+        },
+        "M2_uncertainty_k1 - M0_none: overdose_missed_pct": {
+          "mean": -4.971,
+          "sd": 0.725,
+          "ci95": [
+            -5.31,
+            -4.632
+          ]
+        },
+        "M4_guard_plus_floor - M3_type_floor: down_safe_pct": {
+          "mean": -5.18,
+          "sd": 0.4,
+          "ci95": [
+            -5.367,
+            -4.993
+          ]
+        },
+        "M4_guard_plus_floor - M3_type_floor: safe_share_pct": {
+          "mean": 7.985,
+          "sd": 0.261,
+          "ci95": [
+            7.863,
+            8.108
+          ]
+        },
+        "M4_guard_plus_floor - M3_type_floor: overdose_missed_pct": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "M5_completeness_check_plus_floor - M4_guard_plus_floor: down_safe_pct": {
+          "mean": 5.18,
+          "sd": 0.4,
+          "ci95": [
+            4.993,
+            5.367
+          ]
+        },
+        "M5_completeness_check_plus_floor - M4_guard_plus_floor: safe_share_pct": {
+          "mean": -7.985,
+          "sd": 0.261,
+          "ci95": [
+            -8.108,
+            -7.863
+          ]
+        },
+        "M5_completeness_check_plus_floor - M4_guard_plus_floor: overdose_missed_pct": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "E2_heteroscedastic": {
+        "M1_guard_band_0.60 - M2_uncertainty_k1: down_safe_pct": {
+          "mean": 0.8,
+          "sd": 0.326,
+          "ci95": [
+            0.647,
+            0.953
+          ]
+        },
+        "M1_guard_band_0.60 - M2_uncertainty_k1: safe_share_pct": {
+          "mean": 0.158,
+          "sd": 0.235,
+          "ci95": [
+            0.048,
+            0.268
+          ]
+        },
+        "M1_guard_band_0.60 - M2_uncertainty_k1: overdose_missed_pct": {
+          "mean": 5.681,
+          "sd": 0.798,
+          "ci95": [
+            5.308,
+            6.054
+          ]
+        },
+        "M1_guard_band_0.60 - M0_none: down_safe_pct": {
+          "mean": -9.238,
+          "sd": 0.8,
+          "ci95": [
+            -9.612,
+            -8.863
+          ]
+        },
+        "M1_guard_band_0.60 - M0_none: safe_share_pct": {
+          "mean": 9.79,
+          "sd": 0.345,
+          "ci95": [
+            9.629,
+            9.952
+          ]
+        },
+        "M1_guard_band_0.60 - M0_none: overdose_missed_pct": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "M2_uncertainty_k1 - M0_none: down_safe_pct": {
+          "mean": -10.038,
+          "sd": 0.878,
+          "ci95": [
+            -10.448,
+            -9.627
+          ]
+        },
+        "M2_uncertainty_k1 - M0_none: safe_share_pct": {
+          "mean": 9.633,
+          "sd": 0.282,
+          "ci95": [
+            9.5,
+            9.765
+          ]
+        },
+        "M2_uncertainty_k1 - M0_none: overdose_missed_pct": {
+          "mean": -5.681,
+          "sd": 0.798,
+          "ci95": [
+            -6.054,
+            -5.308
+          ]
+        },
+        "M4_guard_plus_floor - M3_type_floor: down_safe_pct": {
+          "mean": -4.497,
+          "sd": 0.415,
+          "ci95": [
+            -4.692,
+            -4.303
+          ]
+        },
+        "M4_guard_plus_floor - M3_type_floor: safe_share_pct": {
+          "mean": 8.132,
+          "sd": 0.273,
+          "ci95": [
+            8.005,
+            8.26
+          ]
+        },
+        "M4_guard_plus_floor - M3_type_floor: overdose_missed_pct": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "M5_completeness_check_plus_floor - M4_guard_plus_floor: down_safe_pct": {
+          "mean": 4.497,
+          "sd": 0.415,
+          "ci95": [
+            4.303,
+            4.692
+          ]
+        },
+        "M5_completeness_check_plus_floor - M4_guard_plus_floor: safe_share_pct": {
+          "mean": -8.132,
+          "sd": 0.273,
+          "ci95": [
+            -8.26,
+            -8.005
+          ]
+        },
+        "M5_completeness_check_plus_floor - M4_guard_plus_floor: overdose_missed_pct": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "E3_subgroup_bias": {
+        "M1_guard_band_0.60 - M2_uncertainty_k1: down_safe_pct": {
+          "mean": -0.982,
+          "sd": 0.394,
+          "ci95": [
+            -1.167,
+            -0.798
+          ]
+        },
+        "M1_guard_band_0.60 - M2_uncertainty_k1: safe_share_pct": {
+          "mean": -0.127,
+          "sd": 0.208,
+          "ci95": [
+            -0.224,
+            -0.029
+          ]
+        },
+        "M1_guard_band_0.60 - M2_uncertainty_k1: overdose_missed_pct": {
+          "mean": 7.273,
+          "sd": 1.028,
+          "ci95": [
+            6.792,
+            7.755
+          ]
+        },
+        "M1_guard_band_0.60 - M0_none: down_safe_pct": {
+          "mean": -14.365,
+          "sd": 0.621,
+          "ci95": [
+            -14.656,
+            -14.074
+          ]
+        },
+        "M1_guard_band_0.60 - M0_none: safe_share_pct": {
+          "mean": 9.14,
+          "sd": 0.134,
+          "ci95": [
+            9.078,
+            9.203
+          ]
+        },
+        "M1_guard_band_0.60 - M0_none: overdose_missed_pct": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "M2_uncertainty_k1 - M0_none: down_safe_pct": {
+          "mean": -13.383,
+          "sd": 0.539,
+          "ci95": [
+            -13.635,
+            -13.13
+          ]
+        },
+        "M2_uncertainty_k1 - M0_none: safe_share_pct": {
+          "mean": 9.267,
+          "sd": 0.229,
+          "ci95": [
+            9.16,
+            9.374
+          ]
+        },
+        "M2_uncertainty_k1 - M0_none: overdose_missed_pct": {
+          "mean": -7.273,
+          "sd": 1.028,
+          "ci95": [
+            -7.755,
+            -6.792
+          ]
+        },
+        "M4_guard_plus_floor - M3_type_floor: down_safe_pct": {
+          "mean": -7.15,
+          "sd": 0.482,
+          "ci95": [
+            -7.376,
+            -6.924
+          ]
+        },
+        "M4_guard_plus_floor - M3_type_floor: safe_share_pct": {
+          "mean": 7.13,
+          "sd": 0.138,
+          "ci95": [
+            7.066,
+            7.195
+          ]
+        },
+        "M4_guard_plus_floor - M3_type_floor: overdose_missed_pct": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "M5_completeness_check_plus_floor - M4_guard_plus_floor: down_safe_pct": {
+          "mean": 7.15,
+          "sd": 0.482,
+          "ci95": [
+            6.924,
+            7.376
+          ]
+        },
+        "M5_completeness_check_plus_floor - M4_guard_plus_floor: safe_share_pct": {
+          "mean": -7.13,
+          "sd": 0.138,
+          "ci95": [
+            -7.195,
+            -7.066
+          ]
+        },
+        "M5_completeness_check_plus_floor - M4_guard_plus_floor: overdose_missed_pct": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "E4_correlated_encounter": {
+        "M1_guard_band_0.60 - M2_uncertainty_k1: down_safe_pct": {
+          "mean": -0.878,
+          "sd": 0.34,
+          "ci95": [
+            -1.037,
+            -0.718
+          ]
+        },
+        "M1_guard_band_0.60 - M2_uncertainty_k1: safe_share_pct": {
+          "mean": -0.123,
+          "sd": 0.182,
+          "ci95": [
+            -0.209,
+            -0.038
+          ]
+        },
+        "M1_guard_band_0.60 - M2_uncertainty_k1: overdose_missed_pct": {
+          "mean": 5.248,
+          "sd": 1.02,
+          "ci95": [
+            4.77,
+            5.725
+          ]
+        },
+        "M1_guard_band_0.60 - M0_none: down_safe_pct": {
+          "mean": -10.703,
+          "sd": 0.857,
+          "ci95": [
+            -11.104,
+            -10.301
+          ]
+        },
+        "M1_guard_band_0.60 - M0_none: safe_share_pct": {
+          "mean": 9.786,
+          "sd": 0.259,
+          "ci95": [
+            9.665,
+            9.907
+          ]
+        },
+        "M1_guard_band_0.60 - M0_none: overdose_missed_pct": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "M2_uncertainty_k1 - M0_none: down_safe_pct": {
+          "mean": -9.825,
+          "sd": 0.799,
+          "ci95": [
+            -10.199,
+            -9.451
+          ]
+        },
+        "M2_uncertainty_k1 - M0_none: safe_share_pct": {
+          "mean": 9.909,
+          "sd": 0.265,
+          "ci95": [
+            9.785,
+            10.034
+          ]
+        },
+        "M2_uncertainty_k1 - M0_none: overdose_missed_pct": {
+          "mean": -5.248,
+          "sd": 1.02,
+          "ci95": [
+            -5.725,
+            -4.77
+          ]
+        },
+        "M4_guard_plus_floor - M3_type_floor: down_safe_pct": {
+          "mean": -5.45,
+          "sd": 0.525,
+          "ci95": [
+            -5.696,
+            -5.204
+          ]
+        },
+        "M4_guard_plus_floor - M3_type_floor: safe_share_pct": {
+          "mean": 8.032,
+          "sd": 0.201,
+          "ci95": [
+            7.938,
+            8.126
+          ]
+        },
+        "M4_guard_plus_floor - M3_type_floor: overdose_missed_pct": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "M5_completeness_check_plus_floor - M4_guard_plus_floor: down_safe_pct": {
+          "mean": 5.45,
+          "sd": 0.525,
+          "ci95": [
+            5.204,
+            5.696
+          ]
+        },
+        "M5_completeness_check_plus_floor - M4_guard_plus_floor: safe_share_pct": {
+          "mean": -8.032,
+          "sd": 0.201,
+          "ci95": [
+            -8.126,
+            -7.938
+          ]
+        },
+        "M5_completeness_check_plus_floor - M4_guard_plus_floor: overdose_missed_pct": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "E5_common_mode": {
+        "M1_guard_band_0.60 - M2_uncertainty_k1: down_safe_pct": {
+          "mean": -0.465,
+          "sd": 0.289,
+          "ci95": [
+            -0.6,
+            -0.33
+          ]
+        },
+        "M1_guard_band_0.60 - M2_uncertainty_k1: safe_share_pct": {
+          "mean": -0.082,
+          "sd": 0.216,
+          "ci95": [
+            -0.183,
+            0.019
+          ]
+        },
+        "M1_guard_band_0.60 - M2_uncertainty_k1: overdose_missed_pct": {
+          "mean": 3.022,
+          "sd": 0.676,
+          "ci95": [
+            2.706,
+            3.338
+          ]
+        },
+        "M1_guard_band_0.60 - M0_none: down_safe_pct": {
+          "mean": -9.365,
+          "sd": 0.615,
+          "ci95": [
+            -9.653,
+            -9.077
+          ]
+        },
+        "M1_guard_band_0.60 - M0_none: safe_share_pct": {
+          "mean": 9.859,
+          "sd": 0.232,
+          "ci95": [
+            9.75,
+            9.968
+          ]
+        },
+        "M1_guard_band_0.60 - M0_none: overdose_missed_pct": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "M2_uncertainty_k1 - M0_none: down_safe_pct": {
+          "mean": -8.9,
+          "sd": 0.619,
+          "ci95": [
+            -9.19,
+            -8.61
+          ]
+        },
+        "M2_uncertainty_k1 - M0_none: safe_share_pct": {
+          "mean": 9.941,
+          "sd": 0.228,
+          "ci95": [
+            9.834,
+            10.048
+          ]
+        },
+        "M2_uncertainty_k1 - M0_none: overdose_missed_pct": {
+          "mean": -3.022,
+          "sd": 0.676,
+          "ci95": [
+            -3.338,
+            -2.706
+          ]
+        },
+        "M4_guard_plus_floor - M3_type_floor: down_safe_pct": {
+          "mean": -4.707,
+          "sd": 0.48,
+          "ci95": [
+            -4.932,
+            -4.483
+          ]
+        },
+        "M4_guard_plus_floor - M3_type_floor: safe_share_pct": {
+          "mean": 8.197,
+          "sd": 0.217,
+          "ci95": [
+            8.096,
+            8.299
+          ]
+        },
+        "M4_guard_plus_floor - M3_type_floor: overdose_missed_pct": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "M5_completeness_check_plus_floor - M4_guard_plus_floor: down_safe_pct": {
+          "mean": 1.175,
+          "sd": 0.4,
+          "ci95": [
+            0.988,
+            1.362
+          ]
+        },
+        "M5_completeness_check_plus_floor - M4_guard_plus_floor: safe_share_pct": {
+          "mean": 0.234,
+          "sd": 0.553,
+          "ci95": [
+            -0.025,
+            0.492
+          ]
+        },
+        "M5_completeness_check_plus_floor - M4_guard_plus_floor: overdose_missed_pct": {
+          "mean": -10.103,
+          "sd": 1.062,
+          "ci95": [
+            -10.6,
+            -9.605
+          ]
+        }
+      },
+      "E6_calibration_drift": {
+        "M1_guard_band_0.60 - M2_uncertainty_k1: down_safe_pct": {
+          "mean": 0.853,
+          "sd": 0.62,
+          "ci95": [
+            0.563,
+            1.142
+          ]
+        },
+        "M1_guard_band_0.60 - M2_uncertainty_k1: safe_share_pct": {
+          "mean": -0.373,
+          "sd": 0.134,
+          "ci95": [
+            -0.436,
+            -0.31
+          ]
+        },
+        "M1_guard_band_0.60 - M2_uncertainty_k1: overdose_missed_pct": {
+          "mean": 14.619,
+          "sd": 1.176,
+          "ci95": [
+            14.069,
+            15.17
+          ]
+        },
+        "M1_guard_band_0.60 - M0_none: down_safe_pct": {
+          "mean": -28.0,
+          "sd": 0.0,
+          "ci95": [
+            -28.0,
+            -28.0
+          ]
+        },
+        "M1_guard_band_0.60 - M0_none: safe_share_pct": {
+          "mean": 5.6,
+          "sd": 0.0,
+          "ci95": [
+            5.6,
+            5.6
+          ]
+        },
+        "M1_guard_band_0.60 - M0_none: overdose_missed_pct": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "M2_uncertainty_k1 - M0_none: down_safe_pct": {
+          "mean": -28.853,
+          "sd": 0.62,
+          "ci95": [
+            -29.142,
+            -28.563
+          ]
+        },
+        "M2_uncertainty_k1 - M0_none: safe_share_pct": {
+          "mean": 5.973,
+          "sd": 0.134,
+          "ci95": [
+            5.91,
+            6.036
+          ]
+        },
+        "M2_uncertainty_k1 - M0_none: overdose_missed_pct": {
+          "mean": -14.619,
+          "sd": 1.176,
+          "ci95": [
+            -15.17,
+            -14.069
+          ]
+        },
+        "M4_guard_plus_floor - M3_type_floor: down_safe_pct": {
+          "mean": -14.55,
+          "sd": 0.0,
+          "ci95": [
+            -14.55,
+            -14.55
+          ]
+        },
+        "M4_guard_plus_floor - M3_type_floor: safe_share_pct": {
+          "mean": 2.91,
+          "sd": 0.0,
+          "ci95": [
+            2.91,
+            2.91
+          ]
+        },
+        "M4_guard_plus_floor - M3_type_floor: overdose_missed_pct": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "M5_completeness_check_plus_floor - M4_guard_plus_floor: down_safe_pct": {
+          "mean": 14.55,
+          "sd": 0.0,
+          "ci95": [
+            14.55,
+            14.55
+          ]
+        },
+        "M5_completeness_check_plus_floor - M4_guard_plus_floor: safe_share_pct": {
+          "mean": -2.91,
+          "sd": 0.0,
+          "ci95": [
+            -2.91,
+            -2.91
+          ]
+        },
+        "M5_completeness_check_plus_floor - M4_guard_plus_floor: overdose_missed_pct": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "E7_attack": {
+        "M1_guard_band_0.60 - M2_uncertainty_k1: down_safe_pct": {
+          "mean": -6.77,
+          "sd": 0.463,
+          "ci95": [
+            -6.987,
+            -6.553
+          ]
+        },
+        "M1_guard_band_0.60 - M2_uncertainty_k1: safe_share_pct": {
+          "mean": -0.766,
+          "sd": 0.163,
+          "ci95": [
+            -0.842,
+            -0.69
+          ]
+        },
+        "M1_guard_band_0.60 - M2_uncertainty_k1: overdose_missed_pct": {
+          "mean": 13.914,
+          "sd": 1.273,
+          "ci95": [
+            13.318,
+            14.51
+          ]
+        },
+        "M1_guard_band_0.60 - M0_none: down_safe_pct": {
+          "mean": -33.3,
+          "sd": 0.0,
+          "ci95": [
+            -33.3,
+            -33.3
+          ]
+        },
+        "M1_guard_band_0.60 - M0_none: safe_share_pct": {
+          "mean": 6.66,
+          "sd": 0.0,
+          "ci95": [
+            6.66,
+            6.66
+          ]
+        },
+        "M1_guard_band_0.60 - M0_none: overdose_missed_pct": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "M2_uncertainty_k1 - M0_none: down_safe_pct": {
+          "mean": -26.53,
+          "sd": 0.463,
+          "ci95": [
+            -26.747,
+            -26.313
+          ]
+        },
+        "M2_uncertainty_k1 - M0_none: safe_share_pct": {
+          "mean": 7.426,
+          "sd": 0.163,
+          "ci95": [
+            7.35,
+            7.502
+          ]
+        },
+        "M2_uncertainty_k1 - M0_none: overdose_missed_pct": {
+          "mean": -13.914,
+          "sd": 1.273,
+          "ci95": [
+            -14.51,
+            -13.318
+          ]
+        },
+        "M4_guard_plus_floor - M3_type_floor: down_safe_pct": {
+          "mean": -16.55,
+          "sd": 0.0,
+          "ci95": [
+            -16.55,
+            -16.55
+          ]
+        },
+        "M4_guard_plus_floor - M3_type_floor: safe_share_pct": {
+          "mean": 3.31,
+          "sd": 0.0,
+          "ci95": [
+            3.31,
+            3.31
+          ]
+        },
+        "M4_guard_plus_floor - M3_type_floor: overdose_missed_pct": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "M5_completeness_check_plus_floor - M4_guard_plus_floor: down_safe_pct": {
+          "mean": 16.55,
+          "sd": 0.0,
+          "ci95": [
+            16.55,
+            16.55
+          ]
+        },
+        "M5_completeness_check_plus_floor - M4_guard_plus_floor: safe_share_pct": {
+          "mean": -3.31,
+          "sd": 0.0,
+          "ci95": [
+            -3.31,
+            -3.31
+          ]
+        },
+        "M5_completeness_check_plus_floor - M4_guard_plus_floor: overdose_missed_pct": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "E8_empirical_ED": {
+        "M1_guard_band_0.60 - M2_uncertainty_k1: down_safe_pct": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "M1_guard_band_0.60 - M2_uncertainty_k1: safe_share_pct": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "M1_guard_band_0.60 - M2_uncertainty_k1: overdose_missed_pct": {
+          "mean": 17.601,
+          "sd": 1.679,
+          "ci95": [
+            16.815,
+            18.386
+          ]
+        },
+        "M1_guard_band_0.60 - M0_none: down_safe_pct": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "M1_guard_band_0.60 - M0_none: safe_share_pct": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "M1_guard_band_0.60 - M0_none: overdose_missed_pct": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "M2_uncertainty_k1 - M0_none: down_safe_pct": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "M2_uncertainty_k1 - M0_none: safe_share_pct": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "M2_uncertainty_k1 - M0_none: overdose_missed_pct": {
+          "mean": -17.601,
+          "sd": 1.679,
+          "ci95": [
+            -18.386,
+            -16.815
+          ]
+        },
+        "M4_guard_plus_floor - M3_type_floor: down_safe_pct": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "M4_guard_plus_floor - M3_type_floor: safe_share_pct": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "M4_guard_plus_floor - M3_type_floor: overdose_missed_pct": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "M5_completeness_check_plus_floor - M4_guard_plus_floor: down_safe_pct": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "M5_completeness_check_plus_floor - M4_guard_plus_floor: safe_share_pct": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "M5_completeness_check_plus_floor - M4_guard_plus_floor: overdose_missed_pct": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "E3_subgroup_bias_s10": {
+        "M1_guard_band_0.60 - M2_uncertainty_k1: down_safe_pct": {
+          "mean": -0.82,
+          "sd": 0.416,
+          "ci95": [
+            -1.015,
+            -0.625
+          ]
+        },
+        "M1_guard_band_0.60 - M2_uncertainty_k1: safe_share_pct": {
+          "mean": -0.164,
+          "sd": 0.166,
+          "ci95": [
+            -0.242,
+            -0.086
+          ]
+        },
+        "M1_guard_band_0.60 - M2_uncertainty_k1: overdose_missed_pct": {
+          "mean": 7.918,
+          "sd": 0.981,
+          "ci95": [
+            7.459,
+            8.377
+          ]
+        },
+        "M1_guard_band_0.60 - M0_none: down_safe_pct": {
+          "mean": -15.395,
+          "sd": 0.788,
+          "ci95": [
+            -15.764,
+            -15.026
+          ]
+        },
+        "M1_guard_band_0.60 - M0_none: safe_share_pct": {
+          "mean": 8.892,
+          "sd": 0.274,
+          "ci95": [
+            8.764,
+            9.02
+          ]
+        },
+        "M1_guard_band_0.60 - M0_none: overdose_missed_pct": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "M2_uncertainty_k1 - M0_none: down_safe_pct": {
+          "mean": -14.575,
+          "sd": 0.722,
+          "ci95": [
+            -14.913,
+            -14.237
+          ]
+        },
+        "M2_uncertainty_k1 - M0_none: safe_share_pct": {
+          "mean": 9.056,
+          "sd": 0.296,
+          "ci95": [
+            8.917,
+            9.195
+          ]
+        },
+        "M2_uncertainty_k1 - M0_none: overdose_missed_pct": {
+          "mean": -7.918,
+          "sd": 0.981,
+          "ci95": [
+            -8.377,
+            -7.459
+          ]
+        },
+        "M4_guard_plus_floor - M3_type_floor: down_safe_pct": {
+          "mean": -7.657,
+          "sd": 0.594,
+          "ci95": [
+            -7.935,
+            -7.38
+          ]
+        },
+        "M4_guard_plus_floor - M3_type_floor: safe_share_pct": {
+          "mean": 6.817,
+          "sd": 0.258,
+          "ci95": [
+            6.697,
+            6.938
+          ]
+        },
+        "M4_guard_plus_floor - M3_type_floor: overdose_missed_pct": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "M5_completeness_check_plus_floor - M4_guard_plus_floor: down_safe_pct": {
+          "mean": 7.657,
+          "sd": 0.594,
+          "ci95": [
+            7.38,
+            7.935
+          ]
+        },
+        "M5_completeness_check_plus_floor - M4_guard_plus_floor: safe_share_pct": {
+          "mean": -6.817,
+          "sd": 0.258,
+          "ci95": [
+            -6.938,
+            -6.697
+          ]
+        },
+        "M5_completeness_check_plus_floor - M4_guard_plus_floor: overdose_missed_pct": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "E5_common_mode_s10": {
+        "M1_guard_band_0.60 - M2_uncertainty_k1: down_safe_pct": {
+          "mean": -0.827,
+          "sd": 0.368,
+          "ci95": [
+            -1.0,
+            -0.655
+          ]
+        },
+        "M1_guard_band_0.60 - M2_uncertainty_k1: safe_share_pct": {
+          "mean": -0.153,
+          "sd": 0.217,
+          "ci95": [
+            -0.254,
+            -0.051
+          ]
+        },
+        "M1_guard_band_0.60 - M2_uncertainty_k1: overdose_missed_pct": {
+          "mean": 4.602,
+          "sd": 0.849,
+          "ci95": [
+            4.204,
+            4.999
+          ]
+        },
+        "M1_guard_band_0.60 - M0_none: down_safe_pct": {
+          "mean": -12.24,
+          "sd": 0.532,
+          "ci95": [
+            -12.489,
+            -11.991
+          ]
+        },
+        "M1_guard_band_0.60 - M0_none: safe_share_pct": {
+          "mean": 9.352,
+          "sd": 0.27,
+          "ci95": [
+            9.226,
+            9.479
+          ]
+        },
+        "M1_guard_band_0.60 - M0_none: overdose_missed_pct": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "M2_uncertainty_k1 - M0_none: down_safe_pct": {
+          "mean": -11.412,
+          "sd": 0.601,
+          "ci95": [
+            -11.694,
+            -11.131
+          ]
+        },
+        "M2_uncertainty_k1 - M0_none: safe_share_pct": {
+          "mean": 9.505,
+          "sd": 0.319,
+          "ci95": [
+            9.356,
+            9.654
+          ]
+        },
+        "M2_uncertainty_k1 - M0_none: overdose_missed_pct": {
+          "mean": -4.602,
+          "sd": 0.849,
+          "ci95": [
+            -4.999,
+            -4.204
+          ]
+        },
+        "M4_guard_plus_floor - M3_type_floor: down_safe_pct": {
+          "mean": -6.105,
+          "sd": 0.574,
+          "ci95": [
+            -6.374,
+            -5.836
+          ]
+        },
+        "M4_guard_plus_floor - M3_type_floor: safe_share_pct": {
+          "mean": 7.484,
+          "sd": 0.262,
+          "ci95": [
+            7.362,
+            7.607
+          ]
+        },
+        "M4_guard_plus_floor - M3_type_floor: overdose_missed_pct": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "M5_completeness_check_plus_floor - M4_guard_plus_floor: down_safe_pct": {
+          "mean": 2.888,
+          "sd": 0.656,
+          "ci95": [
+            2.581,
+            3.194
+          ]
+        },
+        "M5_completeness_check_plus_floor - M4_guard_plus_floor: safe_share_pct": {
+          "mean": 0.764,
+          "sd": 0.546,
+          "ci95": [
+            0.508,
+            1.02
+          ]
+        },
+        "M5_completeness_check_plus_floor - M4_guard_plus_floor: overdose_missed_pct": {
+          "mean": -10.253,
+          "sd": 1.267,
+          "ci95": [
+            -10.846,
+            -9.66
+          ]
+        }
+      }
+    },
+    "max_abs_deviation_from_mitigation_comparison_json": 0.005,
+    "harmonised_models": {
+      "E3_subgroup_bias_s10": "subgroup bias 0.15 + N(0, 0.10^2) for all",
+      "E5_common_mode_s10": "10% corrupted encounters shift -0.20 + N(0, 0.10^2) for all"
+    },
+    "noise_by_model": {
+      "E1": "N(0,0.10^2)",
+      "E2": "N(0,s^2), s~U(0.02,0.18)",
+      "E3": "subgroup -0.15 + N(0,0.05^2)",
+      "E4": "total SD 0.10, ICC 0.81",
+      "E5": "corrupted -0.20 (no noise); others N(0,0.05^2)",
+      "E6": "deterministic drift",
+      "E7": "deterministic -0.10",
+      "E8": "empirical resampling"
+    }
+  },
+  "C_attack_sweep": {
+    "rows": [
+      {
+        "delta": 0.05,
+        "M0_none": {
+          "down_safe_pct": 17.65,
+          "safe_share_pct": 16.47
+        },
+        "M1_guard_band_0.60": {
+          "down_safe_pct": 0.0,
+          "safe_share_pct": 25.22
+        },
+        "M2_uncertainty_k1": {
+          "down_safe_pct": 0.9,
+          "safe_share_pct": 25.55
+        },
+        "M3_type_floor": {
+          "down_safe_pct": 8.35,
+          "safe_share_pct": 22.56
+        },
+        "M4_guard_plus_floor": {
+          "down_safe_pct": 0.0,
+          "safe_share_pct": 28.98
+        },
+        "M5_completeness_check_plus_floor": {
+          "down_safe_pct": 8.35,
+          "safe_share_pct": 22.56
+        }
+      },
+      {
+        "delta": 0.1,
+        "M0_none": {
+          "down_safe_pct": 33.3,
+          "safe_share_pct": 13.34
+        },
+        "M1_guard_band_0.60": {
+          "down_safe_pct": 0.0,
+          "safe_share_pct": 20.0
+        },
+        "M2_uncertainty_k1": {
+          "down_safe_pct": 7.1,
+          "safe_share_pct": 20.7
+        },
+        "M3_type_floor": {
+          "down_safe_pct": 16.55,
+          "safe_share_pct": 20.92
+        },
+        "M4_guard_plus_floor": {
+          "down_safe_pct": 0.0,
+          "safe_share_pct": 24.23
+        },
+        "M5_completeness_check_plus_floor": {
+          "down_safe_pct": 16.55,
+          "safe_share_pct": 20.92
+        }
+      },
+      {
+        "delta": 0.15,
+        "M0_none": {
+          "down_safe_pct": 49.9,
+          "safe_share_pct": 10.02
+        },
+        "M1_guard_band_0.60": {
+          "down_safe_pct": 17.65,
+          "safe_share_pct": 16.47
+        },
+        "M2_uncertainty_k1": {
+          "down_safe_pct": 18.4,
+          "safe_share_pct": 16.69
+        },
+        "M3_type_floor": {
+          "down_safe_pct": 24.9,
+          "safe_share_pct": 19.25
+        },
+        "M4_guard_plus_floor": {
+          "down_safe_pct": 8.35,
+          "safe_share_pct": 22.56
+        },
+        "M5_completeness_check_plus_floor": {
+          "down_safe_pct": 24.9,
+          "safe_share_pct": 19.25
+        }
+      },
+      {
+        "delta": 0.2,
+        "M0_none": {
+          "down_safe_pct": 66.2,
+          "safe_share_pct": 6.76
+        },
+        "M1_guard_band_0.60": {
+          "down_safe_pct": 33.3,
+          "safe_share_pct": 13.34
+        },
+        "M2_uncertainty_k1": {
+          "down_safe_pct": 34.55,
+          "safe_share_pct": 13.09
+        },
+        "M3_type_floor": {
+          "down_safe_pct": 33.35,
+          "safe_share_pct": 17.56
+        },
+        "M4_guard_plus_floor": {
+          "down_safe_pct": 16.55,
+          "safe_share_pct": 20.92
+        },
+        "M5_completeness_check_plus_floor": {
+          "down_safe_pct": 33.35,
+          "safe_share_pct": 17.56
+        }
+      },
+      {
+        "delta": 0.3,
+        "M0_none": {
+          "down_safe_pct": 100.0,
+          "safe_share_pct": 0.0
+        },
+        "M1_guard_band_0.60": {
+          "down_safe_pct": 66.2,
+          "safe_share_pct": 6.76
+        },
+        "M2_uncertainty_k1": {
+          "down_safe_pct": 66.05,
+          "safe_share_pct": 6.79
+        },
+        "M3_type_floor": {
+          "down_safe_pct": 49.8,
+          "safe_share_pct": 14.27
+        },
+        "M4_guard_plus_floor": {
+          "down_safe_pct": 33.35,
+          "safe_share_pct": 17.56
+        },
+        "M5_completeness_check_plus_floor": {
+          "down_safe_pct": 49.8,
+          "safe_share_pct": 14.27
+        }
+      }
+    ],
+    "note": "non-adaptive subtraction; uninformative sigma_hat ~ U(0.02, 0.18)"
+  },
+  "E_misrouting_exact": {
+    "sigma": 0.1,
+    "n_safe": 2000,
+    "rows": [
+      {
+        "theta2": 0.5,
+        "cohort_conditional_pct": 0.28,
+        "mc_se_pp_20_replicates": 0.03
+      },
+      {
+        "theta2": 0.55,
+        "cohort_conditional_pct": 0.98,
+        "mc_se_pp_20_replicates": 0.05
+      },
+      {
+        "theta2": 0.6,
+        "cohort_conditional_pct": 2.8,
+        "mc_se_pp_20_replicates": 0.08
+      },
+      {
+        "theta2": 0.65,
+        "cohort_conditional_pct": 6.63,
+        "mc_se_pp_20_replicates": 0.12
+      },
+      {
+        "theta2": 0.7,
+        "cohort_conditional_pct": 13.34,
+        "mc_se_pp_20_replicates": 0.17
+      }
+    ],
+    "note": "expectation of Phi((theta2 - rho)/sigma) over the seed-42 Safe stratum; the closed form of Eq. (guard) assumes rho uniform on [0.7, 1]"
+  },
+  "G_threshold_extended": {
+    "theta2_star_vs_r": [
+      {
+        "r": 3,
+        "eta_S": 0.25,
+        "theta2_star": 1.0
+      },
+      {
+        "r": 3,
+        "eta_S": 0.5,
+        "theta2_star": 0.66689
+      },
+      {
+        "r": 3,
+        "eta_S": 0.9,
+        "theta2_star": 0.37049
+      },
+      {
+        "r": 10,
+        "eta_S": 0.25,
+        "theta2_star": 0.40013
+      },
+      {
+        "r": 10,
+        "eta_S": 0.5,
+        "theta2_star": 0.20007
+      },
+      {
+        "r": 10,
+        "eta_S": 0.9,
+        "theta2_star": 0.11115
+      },
+      {
+        "r": 30,
+        "eta_S": 0.25,
+        "theta2_star": 0.13338
+      },
+      {
+        "r": 30,
+        "eta_S": 0.5,
+        "theta2_star": 0.06669
+      },
+      {
+        "r": 30,
+        "eta_S": 0.9,
+        "theta2_star": 0.03705
+      },
+      {
+        "r": 100,
+        "eta_S": 0.25,
+        "theta2_star": 0.04001
+      },
+      {
+        "r": 100,
+        "eta_S": 0.5,
+        "theta2_star": 0.02001
+      },
+      {
+        "r": 100,
+        "eta_S": 0.9,
+        "theta2_star": 0.01111
+      },
+      {
+        "r": 1000,
+        "eta_S": 0.25,
+        "theta2_star": 0.004
+      },
+      {
+        "r": 1000,
+        "eta_S": 0.5,
+        "theta2_star": 0.002
+      },
+      {
+        "r": 1000,
+        "eta_S": 0.9,
+        "theta2_star": 0.00111
+      },
+      {
+        "r": 10000,
+        "eta_S": 0.25,
+        "theta2_star": 0.0004
+      },
+      {
+        "r": 10000,
+        "eta_S": 0.5,
+        "theta2_star": 0.0002
+      },
+      {
+        "r": 10000,
+        "eta_S": 0.9,
+        "theta2_star": 0.00011
+      }
+    ],
+    "false_block_extension": [
+      {
+        "q_N": 0.0,
+        "B_over_A": 1.0,
+        "r": 10,
+        "c_s": 0.01,
+        "eta": 0.5,
+        "theta1_star": 0.00013,
+        "theta2_star": 0.20007,
+        "three_tiers_optimal": true
+      },
+      {
+        "q_N": 0.0,
+        "B_over_A": 1.0,
+        "r": 10,
+        "c_s": 10.0,
+        "eta": 0.5,
+        "theta1_star": 0.13333,
+        "theta2_star": 0.26667,
+        "three_tiers_optimal": true
+      },
+      {
+        "q_N": 0.0,
+        "B_over_A": 1.0,
+        "r": 100,
+        "c_s": 0.01,
+        "eta": 0.5,
+        "theta1_star": 1e-05,
+        "theta2_star": 0.02001,
+        "three_tiers_optimal": true
+      },
+      {
+        "q_N": 0.0,
+        "B_over_A": 1.0,
+        "r": 100,
+        "c_s": 10.0,
+        "eta": 0.5,
+        "theta1_star": 0.01333,
+        "theta2_star": 0.02667,
+        "three_tiers_optimal": true
+      },
+      {
+        "q_N": 0.0,
+        "B_over_A": 1.0,
+        "r": 1000,
+        "c_s": 0.01,
+        "eta": 0.5,
+        "theta1_star": 0.0,
+        "theta2_star": 0.002,
+        "three_tiers_optimal": true
+      },
+      {
+        "q_N": 0.0,
+        "B_over_A": 1.0,
+        "r": 1000,
+        "c_s": 10.0,
+        "eta": 0.5,
+        "theta1_star": 0.00133,
+        "theta2_star": 0.00267,
+        "three_tiers_optimal": true
+      },
+      {
+        "q_N": 0.0,
+        "B_over_A": 10.0,
+        "r": 10,
+        "c_s": 0.01,
+        "eta": 0.5,
+        "theta1_star": 0.00013,
+        "theta2_star": 0.20007,
+        "three_tiers_optimal": true
+      },
+      {
+        "q_N": 0.0,
+        "B_over_A": 10.0,
+        "r": 10,
+        "c_s": 10.0,
+        "eta": 0.5,
+        "theta1_star": 0.13333,
+        "theta2_star": 0.26667,
+        "three_tiers_optimal": true
+      },
+      {
+        "q_N": 0.0,
+        "B_over_A": 10.0,
+        "r": 100,
+        "c_s": 0.01,
+        "eta": 0.5,
+        "theta1_star": 1e-05,
+        "theta2_star": 0.02001,
+        "three_tiers_optimal": true
+      },
+      {
+        "q_N": 0.0,
+        "B_over_A": 10.0,
+        "r": 100,
+        "c_s": 10.0,
+        "eta": 0.5,
+        "theta1_star": 0.01333,
+        "theta2_star": 0.02667,
+        "three_tiers_optimal": true
+      },
+      {
+        "q_N": 0.0,
+        "B_over_A": 10.0,
+        "r": 1000,
+        "c_s": 0.01,
+        "eta": 0.5,
+        "theta1_star": 0.0,
+        "theta2_star": 0.002,
+        "three_tiers_optimal": true
+      },
+      {
+        "q_N": 0.0,
+        "B_over_A": 10.0,
+        "r": 1000,
+        "c_s": 10.0,
+        "eta": 0.5,
+        "theta1_star": 0.00133,
+        "theta2_star": 0.00267,
+        "three_tiers_optimal": true
+      },
+      {
+        "q_N": 0.088,
+        "B_over_A": 1.0,
+        "r": 10,
+        "c_s": 0.01,
+        "eta": 0.5,
+        "theta1_star": 0.01773,
+        "theta2_star": 0.20007,
+        "three_tiers_optimal": true
+      },
+      {
+        "q_N": 0.088,
+        "B_over_A": 1.0,
+        "r": 10,
+        "c_s": 10.0,
+        "eta": 0.5,
+        "theta1_star": 0.15093,
+        "theta2_star": 0.26667,
+        "three_tiers_optimal": true
+      },
+      {
+        "q_N": 0.088,
+        "B_over_A": 1.0,
+        "r": 100,
+        "c_s": 0.01,
+        "eta": 0.5,
+        "theta1_star": 0.00177,
+        "theta2_star": 0.02001,
+        "three_tiers_optimal": true
+      },
+      {
+        "q_N": 0.088,
+        "B_over_A": 1.0,
+        "r": 100,
+        "c_s": 10.0,
+        "eta": 0.5,
+        "theta1_star": 0.01509,
+        "theta2_star": 0.02667,
+        "three_tiers_optimal": true
+      },
+      {
+        "q_N": 0.088,
+        "B_over_A": 1.0,
+        "r": 1000,
+        "c_s": 0.01,
+        "eta": 0.5,
+        "theta1_star": 0.00018,
+        "theta2_star": 0.002,
+        "three_tiers_optimal": true
+      },
+      {
+        "q_N": 0.088,
+        "B_over_A": 1.0,
+        "r": 1000,
+        "c_s": 10.0,
+        "eta": 0.5,
+        "theta1_star": 0.00151,
+        "theta2_star": 0.00267,
+        "three_tiers_optimal": true
+      },
+      {
+        "q_N": 0.088,
+        "B_over_A": 10.0,
+        "r": 10,
+        "c_s": 0.01,
+        "eta": 0.5,
+        "theta1_star": 0.17613,
+        "theta2_star": 0.20007,
+        "three_tiers_optimal": true
+      },
+      {
+        "q_N": 0.088,
+        "B_over_A": 10.0,
+        "r": 10,
+        "c_s": 10.0,
+        "eta": 0.5,
+        "theta1_star": 0.30933,
+        "theta2_star": 0.26667,
+        "three_tiers_optimal": false
+      },
+      {
+        "q_N": 0.088,
+        "B_over_A": 10.0,
+        "r": 100,
+        "c_s": 0.01,
+        "eta": 0.5,
+        "theta1_star": 0.01761,
+        "theta2_star": 0.02001,
+        "three_tiers_optimal": true
+      },
+      {
+        "q_N": 0.088,
+        "B_over_A": 10.0,
+        "r": 100,
+        "c_s": 10.0,
+        "eta": 0.5,
+        "theta1_star": 0.03093,
+        "theta2_star": 0.02667,
+        "three_tiers_optimal": false
+      },
+      {
+        "q_N": 0.088,
+        "B_over_A": 10.0,
+        "r": 1000,
+        "c_s": 0.01,
+        "eta": 0.5,
+        "theta1_star": 0.00176,
+        "theta2_star": 0.002,
+        "three_tiers_optimal": true
+      },
+      {
+        "q_N": 0.088,
+        "B_over_A": 10.0,
+        "r": 1000,
+        "c_s": 10.0,
+        "eta": 0.5,
+        "theta1_star": 0.00309,
+        "theta2_star": 0.00267,
+        "three_tiers_optimal": false
+      }
+    ],
+    "model": "Fast vs Normal: rho*H*eta_N >= 2c + q_N*B (q_N = false-block probability of G2/G3 on a harmless action, B = cost of a false block); Normal vs Safe: rho*H*eta_S >= c + A + q_S*B (q_S = 0 here: approval and G4 add no automated block). Three tiers are optimal only if theta1* < theta2*; otherwise the Normal tier is never cost-optimal.",
+    "q_N_source": "8.8% firing on unmodified Normal-pathway prescriptions (Table realchecks) as an upper bound"
+  },
+  "H_delay_closed_form": {
+    "formula": "P(fallback) = P(T1 > D) * P(T2 > D - W); P(escalate) = P(T1 > W); T ~ lognormal(ln m, 1)",
+    "rows": [
+      {
+        "median_s": 30.0,
+        "escalate_after_s": 60.0,
+        "fallback_closed_form_pct": 0.0,
+        "fallback_mc_pct": 0.0,
+        "escalated_closed_form_pct": 24.41,
+        "escalated_mc_pct": 24.31
+      },
+      {
+        "median_s": 30.0,
+        "escalate_after_s": 120.0,
+        "fallback_closed_form_pct": 0.0,
+        "fallback_mc_pct": 0.0,
+        "escalated_closed_form_pct": 8.28,
+        "escalated_mc_pct": 8.35
+      },
+      {
+        "median_s": 30.0,
+        "escalate_after_s": 300.0,
+        "fallback_closed_form_pct": 0.0,
+        "fallback_mc_pct": 0.0,
+        "escalated_closed_form_pct": 1.07,
+        "escalated_mc_pct": 1.11
+      },
+      {
+        "median_s": 30.0,
+        "escalate_after_s": 600.0,
+        "fallback_closed_form_pct": 0.0,
+        "fallback_mc_pct": 0.0,
+        "escalated_closed_form_pct": 0.14,
+        "escalated_mc_pct": 0.14
+      },
+      {
+        "median_s": 30.0,
+        "escalate_after_s": null,
+        "fallback_closed_form_pct": 0.03,
+        "fallback_mc_pct": 0.04,
+        "escalated_closed_form_pct": null,
+        "escalated_mc_pct": null
+      },
+      {
+        "median_s": 300.0,
+        "escalate_after_s": 60.0,
+        "fallback_closed_form_pct": 2.06,
+        "fallback_mc_pct": 2.04,
+        "escalated_closed_form_pct": 94.62,
+        "escalated_mc_pct": 94.71
+      },
+      {
+        "median_s": 300.0,
+        "escalate_after_s": 120.0,
+        "fallback_closed_form_pct": 2.31,
+        "fallback_mc_pct": 2.27,
+        "escalated_closed_form_pct": 82.02,
+        "escalated_mc_pct": 82.15
+      },
+      {
+        "median_s": 300.0,
+        "escalate_after_s": 300.0,
+        "fallback_closed_form_pct": 3.32,
+        "fallback_mc_pct": 3.25,
+        "escalated_closed_form_pct": 50.0,
+        "escalated_mc_pct": 50.04
+      },
+      {
+        "median_s": 300.0,
+        "escalate_after_s": 600.0,
+        "fallback_closed_form_pct": 6.8,
+        "fallback_mc_pct": 6.69,
+        "escalated_closed_form_pct": 24.41,
+        "escalated_mc_pct": 24.37
+      },
+      {
+        "median_s": 300.0,
+        "escalate_after_s": null,
+        "fallback_closed_form_pct": 13.6,
+        "fallback_mc_pct": 13.48,
+        "escalated_closed_form_pct": null,
+        "escalated_mc_pct": null
+      }
+    ],
+    "max_abs_diff_pp": 0.12
+  },
+  "I_latency_bound": {
+    "E_S3_ms": 5.986,
+    "realised_mean_S3_ms": 5.857,
+    "bound_flat4_rps": 1336.0,
+    "bound_orasr_rps": 2056.0,
+    "bound_ratio": 1.538,
+    "measured_at_64": {
+      "orasr": 1783.0,
+      "flat4": 1223.4
+    },
+    "measured_ratio": 1.457,
+    "note": "G3 with 8 servers is the bottleneck: throughput <= 8 / E[S3] (Flat-4) and 8 / (0.65 E[S3]) (ORASR)"
+  },
+  "J_ed_ci": {
+    "esi12_below_safe": 100,
+    "esi12_n": 103,
+    "pct": 97.1,
+    "wilson95": [
+      91.8,
+      99.0
+    ]
+  },
+  "D_router_equivalence": {
+    "calls_checked": 360000,
+    "pathway_mismatches": 0,
+    "scope": "replicate 0 of every error model x mitigations M0-M3 through ORASRRouter.route"
+  },
+  "F_mimic_demo": {
+    "cluster_bootstrap": {
+      "method": "2,000 resamples of patients (subject_id), percentile 95% CI",
+      "patient_days": 1890.8,
+      "v2": {
+        "fast_pct": {
+          "value": 29.24,
+          "ci95": [
+            27.65,
+            30.94
+          ]
+        },
+        "normal_pct": {
+          "value": 57.4,
+          "ci95": [
+            55.72,
+            59.05
+          ]
+        },
+        "safe_pct": {
+          "value": 13.36,
+          "ci95": [
+            12.39,
+            14.3
+          ]
+        },
+        "gates_per_call": {
+          "value": 2.55,
+          "ci95": [
+            2.51,
+            2.58
+          ]
+        },
+        "approvals_per_1000": {
+          "value": 133.6,
+          "ci95": [
+            123.9,
+            143.0
+          ]
+        },
+        "n_actions": 42913,
+        "n_patients": 100,
+        "approvals_per_patient_day": 3.0
+      },
+      "v2r": {
+        "fast_pct": {
+          "value": 24.34,
+          "ci95": [
+            22.9,
+            25.89
+          ]
+        },
+        "normal_pct": {
+          "value": 64.15,
+          "ci95": [
+            62.65,
+            65.62
+          ]
+        },
+        "safe_pct": {
+          "value": 11.5,
+          "ci95": [
+            10.63,
+            12.38
+          ]
+        },
+        "gates_per_call": {
+          "value": 2.63,
+          "ci95": [
+            2.59,
+            2.66
+          ]
+        },
+        "approvals_per_1000": {
+          "value": 115.0,
+          "ci95": [
+            106.3,
+            123.8
+          ]
+        },
+        "n_actions": 42913,
+        "n_patients": 100,
+        "approvals_per_patient_day": 2.6
+      }
+    },
+    "mapping_v2r_definition": "v2 plus: heparin/saline flushes Fast; potassium chloride/phosphate, magnesium sulfate, lorazepam, midazolam, digoxin, amiodarone Safe only by an IV route (ISMP lists these classes for IV/concentrated use), else Normal; tramadol added (oral opioids are ISMP high-alert); POE respiratory and ADT orders moved from Fast to Normal",
+    "v2_to_v2r_top_moved_prescriptions": [
+      {
+        "drug": "potassium chloride",
+        "route": "po",
+        "from": "SAFE",
+        "to": "NORMAL",
+        "n": 312
+      },
+      {
+        "drug": "potassium chloride replacement (critical care and oncology)",
+        "route": "po",
+        "from": "SAFE",
+        "to": "NORMAL",
+        "n": 154
+      },
+      {
+        "drug": "heparin flush (10 units/ml)",
+        "route": "iv",
+        "from": "SAFE",
+        "to": "FAST",
+        "n": 126
+      },
+      {
+        "drug": "lorazepam",
+        "route": "po/ng",
+        "from": "SAFE",
+        "to": "NORMAL",
+        "n": 96
+      },
+      {
+        "drug": "potassium chloride (powder)",
+        "route": "po/ng",
+        "from": "SAFE",
+        "to": "NORMAL",
+        "n": 40
+      },
+      {
+        "drug": "digoxin",
+        "route": "po/ng",
+        "from": "SAFE",
+        "to": "NORMAL",
+        "n": 31
+      },
+      {
+        "drug": "tramadol (ultram)",
+        "route": "po",
+        "from": "NORMAL",
+        "to": "SAFE",
+        "n": 29
+      },
+      {
+        "drug": "amiodarone",
+        "route": "po/ng",
+        "from": "SAFE",
+        "to": "NORMAL",
+        "n": 29
+      },
+      {
+        "drug": "heparin flush (100 units/ml)",
+        "route": "iv",
+        "from": "SAFE",
+        "to": "FAST",
+        "n": 21
+      },
+      {
+        "drug": "tramadol",
+        "route": "po",
+        "from": "NORMAL",
+        "to": "SAFE",
+        "n": 9
+      }
+    ],
+    "v2_to_v2r_moved_prescriptions_total": 875,
+    "v2_to_v2r_moved_poe": [
+      {
+        "order_type": "ADT orders",
+        "from": "FAST",
+        "to": "NORMAL",
+        "n": 1568
+      },
+      {
+        "order_type": "Respiratory",
+        "from": "FAST",
+        "to": "NORMAL",
+        "n": 687
+      }
+    ],
+    "tenfold_dose_structural_escape": {
+      "FAST": {
+        "dose_covered": 454,
+        "tenfold_within_ceiling": 0,
+        "pct": 0.0,
+        "top": []
+      },
+      "NORMAL": {
+        "dose_covered": 2636,
+        "tenfold_within_ceiling": 562,
+        "pct": 21.3,
+        "top": [
+          {
+            "ingredient": "furosemide",
+            "n": 236
+          },
+          {
+            "ingredient": "metoprolol",
+            "n": 235
+          },
+          {
+            "ingredient": "lisinopril",
+            "n": 38
+          },
+          {
+            "ingredient": "levothyroxine",
+            "n": 16
+          },
+          {
+            "ingredient": "vancomycin",
+            "n": 15
+          }
+        ]
+      },
+      "SAFE": {
+        "dose_covered": 3365,
+        "tenfold_within_ceiling": 624,
+        "pct": 18.5,
+        "top": [
+          {
+            "ingredient": "heparin",
+            "n": 164
+          },
+          {
+            "ingredient": "hydromorphone",
+            "n": 161
+          },
+          {
+            "ingredient": "insulin",
+            "n": 151
+          },
+          {
+            "ingredient": "morphine",
+            "n": 92
+          },
+          {
+            "ingredient": "lorazepam",
+            "n": 20
+          }
+        ]
+      }
+    },
+    "potential_duplicates_by_ingredient": {
+      "FAST": {
+        "n": 175,
+        "pct": 10.3,
+        "top": [
+          {
+            "ingredient": "docusate",
+            "n": 111
+          },
+          {
+            "ingredient": "senna",
+            "n": 64
+          }
+        ]
+      },
+      "NORMAL": {
+        "n": 875,
+        "pct": 7.5,
+        "top": [
+          {
+            "ingredient": "acetaminophen",
+            "n": 209
+          },
+          {
+            "ingredient": "furosemide",
+            "n": 208
+          },
+          {
+            "ingredient": "metoprolol",
+            "n": 158
+          },
+          {
+            "ingredient": "vancomycin",
+            "n": 117
+          },
+          {
+            "ingredient": "aspirin",
+            "n": 49
+          },
+          {
+            "ingredient": "ondansetron",
+            "n": 25
+          }
+        ]
+      },
+      "SAFE": {
+        "n": 2428,
+        "pct": 51.2,
+        "top": [
+          {
+            "ingredient": "insulin",
+            "n": 723
+          },
+          {
+            "ingredient": "potassium chloride",
+            "n": 623
+          },
+          {
+            "ingredient": "heparin",
+            "n": 319
+          },
+          {
+            "ingredient": "magnesium sulfate",
+            "n": 238
+          },
+          {
+            "ingredient": "hydromorphone",
+            "n": 153
+          },
+          {
+            "ingredient": "oxycodone",
+            "n": 92
+          }
+        ]
+      }
+    },
+    "fault_injection_wilson": {
+      "FAST": {
+        "dose_x10": {
+          "detected": 0,
+          "injected": 78,
+          "detected_pct": 0.0,
+          "wilson95": [
+            0.0,
+            4.7
+          ]
+        },
+        "duplicate": {
+          "detected": 0,
+          "injected": 85,
+          "detected_pct": 0.0,
+          "wilson95": [
+            0.0,
+            4.3
+          ]
+        },
+        "interaction": {
+          "detected": 0,
+          "injected": 0,
+          "detected_pct": null,
+          "wilson95": null
+        }
+      },
+      "NORMAL": {
+        "dose_x10": {
+          "detected": 218,
+          "injected": 286,
+          "detected_pct": 76.2,
+          "wilson95": [
+            71.0,
+            80.8
+          ]
+        },
+        "duplicate": {
+          "detected": 310,
+          "injected": 310,
+          "detected_pct": 100.0,
+          "wilson95": [
+            98.8,
+            100.0
+          ]
+        },
+        "interaction": {
+          "detected": 20,
+          "injected": 20,
+          "detected_pct": 100.0,
+          "wilson95": [
+            83.9,
+            100.0
+          ]
+        }
+      },
+      "SAFE": {
+        "dose_x10": {
+          "detected": 127,
+          "injected": 166,
+          "detected_pct": 76.5,
+          "wilson95": [
+            69.5,
+            82.3
+          ]
+        },
+        "duplicate": {
+          "detected": 210,
+          "injected": 210,
+          "detected_pct": 100.0,
+          "wilson95": [
+            98.2,
+            100.0
+          ]
+        },
+        "interaction": {
+          "detected": 147,
+          "injected": 147,
+          "detected_pct": 100.0,
+          "wilson95": [
+            97.5,
+            100.0
+          ]
+        }
+      }
+    },
+    "rescue_triggers": {
+      "per_trigger": {
+        "insulin -> dextrose 50% or glucagon": {
+          "index_orders_by_pathway_v2": {
+            "SAFE": 972
+          },
+          "triggered_index_orders_by_pathway_v2": {
+            "SAFE": 52
+          }
+        },
+        "opioid -> naloxone": {
+          "index_orders_by_pathway_v2": {
+            "SAFE": 904,
+            "NORMAL": 38
+          },
+          "triggered_index_orders_by_pathway_v2": {
+            "SAFE": 2
+          }
+        },
+        "benzodiazepine -> flumazenil": {
+          "index_orders_by_pathway_v2": {
+            "SAFE": 265,
+            "NORMAL": 63
+          },
+          "triggered_index_orders_by_pathway_v2": {}
+        },
+        "warfarin -> phytonadione": {
+          "index_orders_by_pathway_v2": {
+            "SAFE": 129
+          },
+          "triggered_index_orders_by_pathway_v2": {}
+        },
+        "heparin -> protamine": {
+          "index_orders_by_pathway_v2": {
+            "SAFE": 446
+          },
+          "triggered_index_orders_by_pathway_v2": {
+            "SAFE": 1
+          }
+        }
+      },
+      "v1_triggered_on_safe_pct": 100.0,
+      "v2_triggered_on_safe_pct": 100.0,
+      "implicated_index_not_safe_v2": 101
+    }
+  }
+}
