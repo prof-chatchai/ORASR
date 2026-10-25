@@ -27,7 +27,7 @@ setup(
     description="ORASR: Operational Reasoning-Action Safety Routing for Critical AI Systems",
     long_description=long_desc,
     long_description_content_type="text/markdown",
-    url="https://github.com/ChatchaiTritham/ORASR",
+    url="https://github.com/prof-chatchai/ORASR",
     package_dir={"": "src"},
     packages=find_packages(where="src"),
     classifiers=[
